@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)file:///C:/Users/sawno/Downloads/sports_nutrition_app_52.html -->
+<!-- saved from url=(0061)file:///C:/Users/sawno/Downloads/sports_nutrition_app_53.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -636,7 +636,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div style="height:1.5px;width:100%;border-radius:1px;background:linear-gradient(90deg,#1B6E4F,#C8F24E 60%,#FF6E2C)"></div>
         </div>
-        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:&#39;Martian Mono&#39;,monospace;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 2 Jun 2026</p>
+        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:&#39;Martian Mono&#39;,monospace;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 3 Jun 2026</p>
       </div>
       <h1 id="screen-title" style="display:none">Dashboard</h1>
     </div>
@@ -869,15 +869,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
         </div>
 
-        <div class="card">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-            <div class="card-title" style="margin:0">Today's meals</div>
-            <button class="pill pill-blue" style="cursor:pointer;border:none;padding:5px 10px;font-size:11px" onclick="nav(&#39;log&#39;,document.getElementById(&#39;tab-log&#39;))"><span style="font-size:12px;vertical-align:-1px;font-style:normal">✏️</span> Go to log</button>
-          </div>
-          <div id="dash-meals"><div class="empty"><span style=";font-style:normal">🍽️</span><p>No meals logged yet</p></div></div>
-        </div>
-        
-        <!-- TRAINING PHASE (moved) -->
+                <!-- TRAINING PHASE (moved) -->
         <div class="card" id="phase-card">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
             <div class="card-title" style="margin:0">Training phase</div>
@@ -1035,6 +1027,8 @@ select option{background:var(--surface);color:var(--text)}
             <button class="btn" onclick="generateCarbPlan()"><span style=";font-style:normal">📅</span> Generate loading plan</button>
           </div>
           <div id="carb-plan-output" style="display:none">
+            <!-- RACE MODE HERO -->
+            <div id="race-mode-hero"></div>
             <div class="section-label">Your personalised loading plan</div>
             <div id="carb-plan-days"></div>
             <div class="card" style="margin-top:8px">
@@ -1377,7 +1371,7 @@ select option{background:var(--surface);color:var(--text)}
           <div style="position:relative;flex-shrink:0" onclick="changeProfilePhoto()" title="Tap to change photo">
             <div id="profile-photo-wrap" style="width:56px;height:56px;border-radius:50%;background:var(--green-light);overflow:hidden;display:flex;align-items:center;justify-content:center;border:2px solid var(--green)">
               <span style="font-size:26px;color:var(--green);font-style:normal">👤</span>
-              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_52.html">
+              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_53.html">
             </div>
             <div style="position:absolute;bottom:-2px;right:-2px;width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface)">
               <span style="font-size:10px;color:#fff;font-style:normal">📷</span>
@@ -1421,7 +1415,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div id="strava-connected" style="display:none">
             <div class="strava-connected" style="margin-bottom:12px">
-              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_52.html" class="strava-avatar" alt="Strava">
+              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_53.html" class="strava-avatar" alt="Strava">
               <div style="flex:1">
                 <div style="font-size:14px;font-weight:600" id="strava-athlete-name">Connected</div>
                 <div class="strava-badge" style="margin-top:3px">
@@ -1603,7 +1597,7 @@ select option{background:var(--surface);color:var(--text)}
 
 <!-- PHOTO VIEWER -->
 <div class="photo-viewer" id="photo-viewer" onclick="closePhotoViewer()">
-  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_52.html" alt="Progress photo">
+  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_53.html" alt="Progress photo">
   <div class="photo-viewer-meta" id="pv-meta"></div>
   <button style="margin-top:12px;background:var(--coral-light);color:var(--coral-dark);border:none;border-radius:var(--radius-sm);padding:8px 16px;cursor:pointer;font-size:13px" onclick="event.stopPropagation();deletePhoto(window._pvIdx)"><span style=";font-style:normal">🗑️</span> Delete</button>
 </div>
@@ -2119,21 +2113,21 @@ select option{background:var(--surface);color:var(--text)}
 
 <script>
 const RECIPES=[
-  {id:'RCP001',name:'Tofu & Quinoa Power Bowl',cat:'Lunch/Dinner',mealType:'Post-Workout',goal:'All goals',cal:380,prot:28,carbs:38,fat:12,notes:'Marinate tofu 30 mins · roast veg 200°C/20 min'},
-  {id:'RCP002',name:'Overnight Oats & Chia',cat:'Breakfast',mealType:'Pre-Workout',goal:'All goals',cal:340,prot:14,carbs:52,fat:8,notes:'Prep night before · top with berries'},
-  {id:'RCP003',name:'Lentil & Veg Curry',cat:'Lunch/Dinner',mealType:'Any',goal:'Fat Loss / Maintenance',cal:290,prot:16,carbs:42,fat:6,notes:'Serve with brown rice for complete AAs'},
-  {id:'RCP004',name:'Tempeh Stir Fry',cat:'Lunch/Dinner',mealType:'Post-Workout',goal:'Muscle Gain',cal:420,prot:34,carbs:30,fat:14,notes:'High protein · add extra rice for carbs'},
-  {id:'RCP005',name:'Green Smoothie Bowl',cat:'Breakfast',mealType:'Any',goal:'Fat Loss',cal:310,prot:12,carbs:46,fat:9,notes:'Top with hemp seeds for complete protein'},
-  {id:'RCP006',name:'Chickpea & Spinach Bowl',cat:'Lunch/Dinner',mealType:'Any',goal:'All goals',cal:330,prot:18,carbs:44,fat:8,notes:'Add tahini dressing for healthy fats'},
-  {id:'RCP007',name:'Hemp Seed Porridge',cat:'Breakfast',mealType:'Pre-Workout',goal:'Muscle Gain',cal:370,prot:18,carbs:48,fat:10,notes:'Add banana for extra carbs pre-workout'},
-  {id:'RCP008',name:'Black Bean Tacos',cat:'Lunch/Dinner',mealType:'Any',goal:'All goals',cal:360,prot:16,carbs:50,fat:10,notes:'Use corn tortillas · top with avocado'},
-  {id:'RCP009',name:'Edamame & Brown Rice',cat:'Lunch/Dinner',mealType:'Post-Workout',goal:'Muscle Gain',cal:390,prot:22,carbs:52,fat:8,notes:'Quick · meal-prep friendly'},
-  {id:'RCP010',name:'Avocado & Buckwheat Salad',cat:'Lunch/Dinner',mealType:'Any',goal:'Fat Loss',cal:280,prot:10,carbs:32,fat:14,notes:'High healthy fats · filling'},
-  {id:'RCP011',name:'Seitan & Broccoli',cat:'Lunch/Dinner',mealType:'Post-Workout',goal:'Muscle Gain',cal:440,prot:42,carbs:22,fat:12,notes:'Very high protein · add rice if needed'},
-  {id:'RCP012',name:'Miso Soup with Tofu',cat:'Snack',mealType:'Any',goal:'All goals',cal:120,prot:9,carbs:10,fat:5,notes:'Low cal · warming post-workout snack'},
-  {id:'RCP013',name:'Pumpkin Seed Energy Balls',cat:'Snack',mealType:'Pre-Workout',goal:'All goals',cal:180,prot:6,carbs:18,fat:9,notes:'Batch make · store 5 days in fridge'},
-  {id:'RCP014',name:'Edamame & Hummus Plate',cat:'Snack',mealType:'Any',goal:'All goals',cal:210,prot:12,carbs:20,fat:9,notes:'Quick snack · no cooking needed'},
-  {id:'RCP015',name:'Tempeh & Sweet Potato',cat:'Lunch/Dinner',mealType:'Post-Workout',goal:'Muscle Gain',cal:460,prot:36,carbs:42,fat:12,notes:'High protein + complex carbs'},
+  {id:'RCP001',name:'Tofu & Quinoa Power Bowl',cat:'Lunch/Dinner',mealType:'Post-Workout',goal:'All goals',cal:380,prot:28,carbs:38,fat:12,notes:'Marinate tofu 30 mins · roast veg 200°C/20 min',ingredients:['Firm tofu, 150g, pressed and cubed','Cooked quinoa, 100g (≈35g dry)','Tenderstem broccoli, 80g','Red pepper, ½, sliced','Light soy sauce / tamari, 1 tbsp','Rice vinegar, 1 tsp','Maple syrup, 1 tsp','Garlic, 1 clove, grated','Fresh ginger, 1 tsp, grated','Sesame oil, 1 tsp','Sesame seeds, 1 tsp, to finish'],steps:['Press the tofu for 15–20 min to remove moisture, then cut into 2cm cubes.','Whisk soy/tamari, rice vinegar, maple, garlic and ginger into a marinade. Toss the tofu through it and leave 15–30 min.','Heat sesame oil in a non-stick pan over medium-high. Add tofu (reserve the marinade) and fry 8–10 min, turning, until golden on all sides.','Add pepper and broccoli to the pan, splash in the reserved marinade, and stir-fry 4–5 min until just tender with a bite.','Serve over warm quinoa, spooning over any pan juices. Finish with sesame seeds.']},
+  {id:'RCP002',name:'Overnight Oats & Chia',cat:'Breakfast',mealType:'Pre-Workout',goal:'All goals',cal:340,prot:14,carbs:52,fat:8,notes:'Prep night before · top with berries',ingredients:['Rolled oats, 60g','Chia seeds, 1 tbsp (≈12g)','Soy milk (unsweetened, fortified), 200ml','Soy yogurt, 60g','Maple syrup, 1 tsp','Vanilla extract, ¼ tsp','Mixed berries, 80g, to top'],steps:['In a jar or bowl, combine oats, chia, soy milk, soy yogurt, maple and vanilla. Stir well.','Cover and refrigerate overnight (or at least 4 hours), so the chia gels and the oats soften.','In the morning, stir through and loosen with a splash more soy milk if needed.','Top with berries. For a pre-workout boost, add half a sliced banana for extra fast carbs.']},
+  {id:'RCP003',name:'Lentil & Veg Curry',cat:'Lunch/Dinner',mealType:'Any',goal:'Fat Loss / Maintenance',cal:290,prot:16,carbs:42,fat:6,notes:'Serve with brown rice for complete AAs',ingredients:['Dried red lentils, 60g (or 150g cooked)','Chopped tomatoes, 100g (¼ tin)','Onion, ½, diced','Garlic, 1 clove, minced','Fresh ginger, 1 tsp, grated','Curry powder or garam masala, 1 tsp','Ground cumin, ½ tsp','Ground turmeric, ¼ tsp','Low-salt veg stock, 200ml','Baby spinach, large handful (≈30g)','Oil, 1 tsp','Salt and pepper to taste'],steps:['Rinse the red lentils until the water runs clear.','Heat oil in a pan over medium. Soften the onion 4–5 min, then add garlic, ginger and dry spices and cook 1 min until fragrant.','Add lentils, chopped tomatoes and stock. Bring to a simmer.','Cook 18–22 min, stirring now and then, until the lentils are soft and the curry has thickened. Add a splash of water if it gets too dry.','Stir through the spinach until wilted. Season, and serve with brown rice or a wholemeal flatbread to complete the amino acid profile.']},
+  {id:'RCP004',name:'Tempeh Stir Fry',cat:'Lunch/Dinner',mealType:'Post-Workout',goal:'Muscle Gain',cal:420,prot:34,carbs:30,fat:14,notes:'High protein · add extra rice for carbs',ingredients:['Tempeh, 150g, cubed','Cooked white or brown rice, 80g','Mangetout, 60g','Red pepper, ½, sliced','Spring onions, 2, sliced','Tamari/soy, 1½ tbsp','Maple syrup, 1 tsp','Garlic, 1 clove, grated','Fresh ginger, 1 tsp, grated','Sesame oil, 1 tsp'],steps:['Steam the tempeh cubes 8–10 min first — this removes any bitterness and helps it absorb flavour.','Whisk tamari, maple, garlic and ginger into a sauce.','Heat sesame oil over medium-high. Fry tempeh 5–6 min until golden, then add pepper and mangetout and stir-fry 3–4 min.','Pour in the sauce, toss 1 min until glossy. Add spring onions.','Serve over warm rice.']},
+  {id:'RCP005',name:'Green Smoothie Bowl',cat:'Breakfast',mealType:'Any',goal:'Fat Loss',cal:310,prot:12,carbs:46,fat:9,notes:'Top with hemp seeds for complete protein',ingredients:['Frozen banana, 1 medium','Frozen spinach, 50g (or large fresh handful)','Soy milk, 150ml','Soy yogurt, 60g','Ground flaxseed, 1 tsp','Hemp seeds, 1 tbsp, to top','Berries / kiwi, to top'],steps:['Blend banana, spinach, soy milk, soy yogurt and flax until thick and smooth — keep it spoonable, not pourable, so add liquid sparingly.','Pour into a bowl.','Top with hemp seeds and fruit. The hemp adds the complete-protein boost and a little crunch.']},
+  {id:'RCP006',name:'Chickpea & Spinach Bowl',cat:'Lunch/Dinner',mealType:'Any',goal:'All goals',cal:330,prot:18,carbs:44,fat:8,notes:'Add tahini dressing for healthy fats',ingredients:['Chickpeas, 150g cooked (½ tin, drained)','Cooked couscous or bulgur, 80g','Baby spinach, 50g','Cherry tomatoes, 6, halved','Tahini, 2 tsp','Lemon juice, 1 tsp','Garlic, ½ clove, grated','Cumin, ½ tsp','Salt and pepper'],steps:['Warm the chickpeas in a pan with the cumin and a splash of water, 3–4 min.','Loosen tahini with lemon juice, grated garlic and 1–2 tsp water to a drizzle-able dressing.','Wilt the spinach briefly — either in the warm chickpea pan or left raw if you prefer.','Build the bowl: grain base, chickpeas, spinach, tomatoes. Drizzle the tahini dressing over.']},
+  {id:'RCP007',name:'Hemp Seed Porridge',cat:'Breakfast',mealType:'Pre-Workout',goal:'Muscle Gain',cal:370,prot:18,carbs:48,fat:10,notes:'Add banana for extra carbs pre-workout',ingredients:['Rolled oats, 60g','Soy milk (fortified), 250ml','Hemp seeds, 2 tbsp (≈20g)','Maple syrup, 1 tsp','Cinnamon, ¼ tsp','Banana, ½, sliced, to top'],steps:['Combine oats and soy milk in a pan. Bring to a gentle simmer, stirring, 4–5 min until creamy.','Stir through hemp seeds and cinnamon off the heat (keeps the hemp\'s fats intact).','Top with banana and maple. The banana adds quick carbs ahead of training.']},
+  {id:'RCP008',name:'Black Bean Tacos',cat:'Lunch/Dinner',mealType:'Any',goal:'All goals',cal:360,prot:16,carbs:50,fat:10,notes:'Use corn tortillas · top with avocado',ingredients:['Black beans, 150g cooked (½ tin)','Corn tortillas, 3 small','Avocado, ¼, sliced','Red onion, ¼, finely diced','Lime, ½','Cumin, ½ tsp','Smoked paprika, ½ tsp','Fresh coriander','Salt','Oil, 1 tsp'],steps:['Heat oil, add beans, cumin and paprika with a splash of water. Cook 4–5 min, lightly mashing about half for texture. Season.','Warm the corn tortillas in a dry pan, 20–30 sec each side.','Fill with beans, avocado and red onion. Squeeze over lime, scatter coriander.']},
+  {id:'RCP009',name:'Edamame & Brown Rice',cat:'Lunch/Dinner',mealType:'Post-Workout',goal:'Muscle Gain',cal:390,prot:22,carbs:52,fat:8,notes:'Quick · meal-prep friendly',ingredients:['Shelled edamame, 120g','Cooked brown rice, 120g','Carrot, 1 small, grated','Spring onion, 1, sliced','Tamari/soy, 1 tbsp','Rice vinegar, 1 tsp','Sesame oil, 1 tsp','Sesame seeds, to finish'],steps:['Cook edamame in boiling water 3–4 min (or steam from frozen), drain.','Whisk tamari, rice vinegar and sesame oil.','Toss warm rice, edamame, carrot and spring onion with the dressing.','Finish with sesame seeds. Eats well warm or cold — good for prep.']},
+  {id:'RCP010',name:'Avocado & Buckwheat Salad',cat:'Lunch/Dinner',mealType:'Any',goal:'Fat Loss',cal:280,prot:10,carbs:32,fat:14,notes:'High healthy fats · filling',ingredients:['Cooked buckwheat, 100g (≈40g dry)','Avocado, ½, diced','Cucumber, ¼, diced','Cherry tomatoes, 6, halved','Red onion, small handful, finely sliced','Lemon juice, 2 tsp','Olive oil, 1 tsp','Fresh parsley or mint','Salt and pepper'],steps:['Cook buckwheat in plenty of water 10–12 min until tender, drain and cool slightly (rinse under cold water if eating cold).','Whisk lemon juice, olive oil, salt and pepper.','Fold buckwheat, cucumber, tomatoes, onion and herbs through the dressing.','Add the avocado last and toss gently so it holds its shape.']},
+  {id:'RCP011',name:'Seitan & Broccoli',cat:'Lunch/Dinner',mealType:'Post-Workout',goal:'Muscle Gain',cal:440,prot:42,carbs:22,fat:12,notes:'Very high protein · add rice if needed',ingredients:['Seitan, 150g, sliced','Tenderstem broccoli, 100g','Garlic, 2 cloves, sliced','Tamari/soy, 1½ tbsp','Maple syrup, 1 tsp','Cornflour, ½ tsp (to thicken)','Sesame oil, 1 tsp','Chilli flakes, optional','Cooked rice, 50g (optional)'],steps:['Mix tamari, maple, cornflour and 2 tbsp water into a sauce.','Heat sesame oil over medium-high. Sear seitan 3–4 min until browned at the edges. Remove.','Add broccoli and garlic with a splash of water; cook covered 3–4 min until just tender.','Return seitan, pour in the sauce, toss 1–2 min until thickened and glossy. Chilli flakes to taste.']},
+  {id:'RCP012',name:'Miso Soup with Tofu',cat:'Snack',mealType:'Any',goal:'All goals',cal:120,prot:9,carbs:10,fat:5,notes:'Low cal · warming post-workout snack',ingredients:['Silken or firm tofu, 100g, cubed small','Miso paste, 1 tbsp','Dried wakame, 1 tsp (optional)','Spring onion, 1, sliced','Hot water / dashi-style stock, 350ml'],steps:['Heat the water/stock to a gentle steam — not a rolling boil (boiling kills the live cultures and flavour in miso).','In a small bowl, loosen the miso paste with a few spoons of the warm liquid until smooth, then stir back into the pan.','Add tofu and wakame, warm through gently 2–3 min — don\'t boil.','Serve topped with spring onion.']},
+  {id:'RCP013',name:'Pumpkin Seed Energy Balls',cat:'Snack',mealType:'Pre-Workout',goal:'All goals',cal:180,prot:6,carbs:18,fat:9,notes:'Batch make · store 5 days in fridge',ingredients:['Pitted Medjool dates, 100g','Rolled oats, 50g','Pumpkin seeds, 40g','Almond or peanut butter, 1 tbsp','Cocoa powder, 1 tsp','Pinch of salt'],steps:['Blitz the pumpkin seeds and oats in a food processor to a coarse meal.','Add dates, nut butter, cocoa and salt. Blend until it clumps together — add 1 tsp water if dry.','Roll into ~10 balls.','Chill 30 min to firm up. Keeps 5 days in the fridge. Macros are per 2 balls — one serving.']},
+  {id:'RCP014',name:'Edamame & Hummus Plate',cat:'Snack',mealType:'Any',goal:'All goals',cal:210,prot:12,carbs:20,fat:9,notes:'Quick snack · no cooking needed',ingredients:['Shelled edamame, 100g (steamed from frozen)','Hummus, 50g','Carrot and cucumber sticks, 1 portion','Wholemeal pitta, ½, toasted and torn','Lemon wedge','Chilli flakes, optional'],steps:['Steam or microwave the edamame from frozen, 3 min. Season with a little salt.','Plate the hummus, edamame, veg sticks and torn warm pitta.','Squeeze over lemon, scatter chilli if you like. Assembly only — no real cooking.']},
+  {id:'RCP015',name:'Tempeh & Sweet Potato',cat:'Lunch/Dinner',mealType:'Post-Workout',goal:'Muscle Gain',cal:460,prot:36,carbs:42,fat:12,notes:'High protein + complex carbs',ingredients:['Tempeh, 150g, sliced','Sweet potato, 200g, cubed','Tamari/soy, 1½ tbsp','Smoked paprika, 1 tsp','Maple syrup, 1 tsp','Olive oil, 1 tsp','Steamed greens, to serve'],steps:['Heat oven to 200°C/180°C fan. Toss sweet potato cubes in ½ tsp oil and roast 25–30 min until soft and caramelised at the edges.','Steam the tempeh 8 min, then toss in tamari, paprika and maple.','Pan-fry the marinated tempeh in the remaining oil, 4–5 min, until sticky and golden.','Serve tempeh and roasted sweet potato together with steamed greens.']},
 ];
 
 const INGREDIENTS=[
@@ -2145,6 +2139,7 @@ const INGREDIENTS=[
   {name:'Nutritional Yeast',cat:'Protein',cal:325,prot:50,carbs:38,fat:5.0,complete:true,leucine:3.10,iron:18,calcium:20,zinc:14,b12:100,omega3:0.1,iodine:0,magnesium:231,vitD:0,selenium:100,folate:3785},
   {name:'Pea Protein Powder',cat:'Protein',cal:389,prot:80,carbs:8.0,fat:7.0,complete:false,leucine:6.0,iron:10,calcium:50,zinc:4.0,b12:0,omega3:0,iodine:0,magnesium:60,vitD:0,selenium:5,folate:0},
   {name:'Soy Protein Powder',cat:'Protein',cal:338,prot:78,carbs:5.0,fat:3.5,complete:true,leucine:5.8,iron:14,calcium:200,zinc:4.5,b12:0,omega3:0.2,iodine:0,magnesium:50,vitD:0,selenium:8,folate:0},
+  {name:'Soy Protein Isolate 90 (Protein Works)',cat:'Protein',cal:373,prot:90,carbs:1.0,fat:1.5,complete:true,leucine:7.0,iron:5.0,calcium:200,zinc:1.5,b12:0,omega3:0,iodine:0,magnesium:40,vitD:0,selenium:0,folate:0},
   // ── LEGUMES ──────────────────────────────────────────────────────────────
   {name:'Red Lentils (dry)',cat:'Legumes',cal:352,prot:24,carbs:63,fat:1.1,complete:false,leucine:1.74,iron:7.5,calcium:35,zinc:3.3,b12:0,omega3:0.1,iodine:8,magnesium:107,vitD:0,selenium:0.6,folate:479},
   {name:'Green Lentils (dry)',cat:'Legumes',cal:352,prot:26,carbs:60,fat:1.1,complete:false,leucine:1.80,iron:6.5,calcium:56,zinc:3.7,b12:0,omega3:0.2,iodine:8,magnesium:122,vitD:0,selenium:2.8,folate:433},
@@ -2420,7 +2415,7 @@ function renderDashboard(){updateStreak();renderFavChips();renderWater();renderC
   setBar('p',t.prot,p.targetP);setBar('c',t.carbs,p.targetC);setBar('f',t.fat,p.targetF);
   const meals=S.mealLogs[dateKey(0)]||[];
   const el=document.getElementById('dash-meals');
-  el.innerHTML=meals.length?meals.map((m,i)=>`<div class="meal-row"><div class="meal-icon" style="background:${COLORS[i%COLORS.length]}22;color:${COLORS[i%COLORS.length]}"><span style=";font-style:normal">🍜</span></div><div class="meal-info"><div class="meal-name">${m.name}</div><div class="meal-sub">${m.type} · P:${m.prot}g</div></div><div style="font-weight:600;font-size:14px">${Math.round(m.cal)}</div></div>`).join(''):'<div class="empty"><span style=";font-style:normal">🍽️</span><p>No meals logged yet</p></div>';
+  if(el) el.innerHTML=meals.length?meals.map((m,i)=>`<div class="meal-row"><div class="meal-icon" style="background:${COLORS[i%COLORS.length]}22;color:${COLORS[i%COLORS.length]}"><span style=";font-style:normal">🍜</span></div><div class="meal-info"><div class="meal-name">${m.name}</div><div class="meal-sub">${m.type} · P:${m.prot}g</div></div><div style="font-weight:600;font-size:14px">${Math.round(m.cal)}</div></div>`).join(''):'<div class="empty"><span style=";font-style:normal">🍽️</span><p>No meals logged yet</p></div>';
   renderWorkouts();
   const wl=S.weightLog;
   if(wl.length){document.getElementById('dash-wt-card').style.display='block';const cur=wl[wl.length-1].weight;document.getElementById('dash-wt').textContent=cur;if(wl.length>1){const chg=(cur-wl[wl.length-2].weight).toFixed(1);document.getElementById('dash-wt-chg').innerHTML=`<span class="pill ${parseFloat(chg)<=0?'pill-green':'pill-coral'}">${parseFloat(chg)>0?'+':''}${chg} kg</span>`;}}
@@ -2458,8 +2453,47 @@ function setRecipeCat(cat,btn){recipeCat=cat;document.querySelectorAll('.stab').
 function showRecipe(id){
   activeRecipe=RECIPES.find(r=>r.id===id);if(!activeRecipe)return;const r=activeRecipe;const CC={'Breakfast':'green','Lunch/Dinner':'blue','Snack':'amber'};
   document.getElementById('rm-title').innerHTML=r.name+` <button class="modal-close" onclick="closeModal('recipe-modal')"><span style="font-size:16px;font-style:normal">✕</span></button>`;
-  document.getElementById('rm-body').innerHTML=`<div class="stats-row stats-4" style="margin-bottom:12px"><div class="stat-box"><div class="stat-val">${r.cal}</div><div class="stat-lbl">kcal</div></div><div class="stat-box"><div class="stat-val">${r.prot}g</div><div class="stat-lbl">protein</div></div><div class="stat-box"><div class="stat-val">${r.carbs}g</div><div class="stat-lbl">carbs</div></div><div class="stat-box"><div class="stat-val">${r.fat}g</div><div class="stat-lbl">fat</div></div></div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px"><span class="pill pill-${CC[r.cat]||'green'}">${r.cat}</span><span class="pill pill-amber">${r.mealType}</span><span class="pill pill-blue">${r.goal}</span></div>${r.notes?`<div style="font-size:13px;color:var(--text2);background:var(--gray-light);padding:10px 12px;border-radius:var(--radius-sm);line-height:1.5">${r.notes}</div>`:''}`;
+  // Macros row
+  let html_=`<div class="stats-row stats-4" style="margin-bottom:12px"><div class="stat-box"><div class="stat-val">${r.cal}</div><div class="stat-lbl">kcal</div></div><div class="stat-box"><div class="stat-val">${r.prot}g</div><div class="stat-lbl">protein</div></div><div class="stat-box"><div class="stat-val">${r.carbs}g</div><div class="stat-lbl">carbs</div></div><div class="stat-box"><div class="stat-val">${r.fat}g</div><div class="stat-lbl">fat</div></div></div>`;
+  // Tags
+  html_+=`<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px"><span class="pill pill-${CC[r.cat]||'green'}">${r.cat}</span><span class="pill pill-amber">${r.mealType}</span><span class="pill pill-blue">${r.goal}</span></div>`;
+  // Ingredients
+  if(r.ingredients&&r.ingredients.length){
+    html_+=`<div style="font-family:'Fraunces',serif;font-size:16px;font-weight:600;margin:4px 0 8px">Ingredients</div>`;
+    html_+=`<div style="font-size:10px;color:var(--text3);margin-bottom:8px">Serves 1</div>`;
+    html_+=`<ul style="margin:0 0 16px;padding-left:18px;line-height:1.7">`+r.ingredients.map(i=>`<li style="font-size:13.5px;color:var(--text);margin-bottom:2px">${i}</li>`).join('')+`</ul>`;
+  }
+  // Method
+  if(r.steps&&r.steps.length){
+    html_+=`<div style="font-family:'Fraunces',serif;font-size:16px;font-weight:600;margin:4px 0 10px">Method</div>`;
+    html_+=`<ol style="margin:0 0 16px;padding-left:20px;line-height:1.6">`+r.steps.map(s=>`<li style="font-size:13.5px;color:var(--text);margin-bottom:10px;padding-left:2px">${s}</li>`).join('')+`</ol>`;
+  }
+  // Chef note (from the original notes field)
+  if(r.notes){html_+=`<div style="font-size:12.5px;color:var(--text2);background:var(--gray-light);padding:10px 12px;border-radius:var(--radius-sm);line-height:1.5;margin-bottom:14px"><strong>Tip:</strong> ${r.notes}</div>`;}
+  // Log this meal button
+  html_+=`<button class="btn" style="width:100%" onclick="logRecipe('${r.id}')">✓ Log this meal</button>`;
+  document.getElementById('rm-body').innerHTML=html_;
   openModal('recipe-modal');
+}
+
+// Log a recipe straight into today's meals with its macros + leucine
+function logRecipe(id){
+  const r=RECIPES.find(x=>x.id===id);if(!r)return;
+  const key=dateKey(0);
+  if(!S.mealLogs[key])S.mealLogs[key]=[];
+  // Map the recipe meal category to an eating occasion
+  let mealType='Meal';
+  const h=new Date().getHours();
+  if(r.cat==='Breakfast')mealType='Breakfast';
+  else if(r.cat==='Snack')mealType='Snack';
+  else mealType=(h<15?'Lunch':'Dinner');
+  const _lr=leucineForPortion(r.name,r.prot,r.cat==='Breakfast'?'Breakfast':'Lunch/Dinner');
+  S.mealLogs[key].push({type:mealType,name:r.name,cal:r.cal,prot:r.prot,carbs:r.carbs,fat:r.fat,leucine:parseFloat(_lr.leu.toFixed(2)),leucineKnown:_lr.known,cat:r.cat==='Breakfast'?'Breakfast':'Lunch/Dinner',fromRecipe:true});
+  saveState();
+  closeModal('recipe-modal');
+  toast(r.name+' logged!');
+  if(typeof renderDashboard==='function')renderDashboard();
+  if(typeof renderLog==='function')renderLog();
 }
 function addRecipeToLog(){if(!activeRecipe)return;closeModal('recipe-modal');openAddMeal(0,activeRecipe);}
 
@@ -3503,6 +3537,7 @@ function generateCarbPlan() {
   if (cs) cs.innerHTML = ['🍚 White rice — best glycogen loader. Low fibre, fast absorbing.','🍝 White pasta — high carb density, low GI distress.','🍌 Banana — portable, 23g carbs each.','🍞 White bread with jam — simple, low fibre.','📅 Medjool dates — 18g carbs each.','🥤 Sports drinks — fluid + carbs + electrolytes.'].map(s=>`<div>${s}</div>`).join('');
   const out = document.getElementById('carb-plan-output');
   if (out) out.style.display='block';
+  renderRaceModeHero();
   toast('Loading plan generated!');
 }
 
@@ -3519,19 +3554,6 @@ function setPlanSubTab(tab, btn) {
 }
 
 // ── LEUCINE + PROTEIN INTELLIGENCE ──────────────────────────────────────────
-function estimateLeucineMg(meal) {
-  const nameLower = meal.name.toLowerCase();
-  let totalLeu = 0, matched = false;
-  INGREDIENTS.forEach(ing => {
-    const ingWords = ing.name.toLowerCase().split(/[\s(]/)[0];
-    if (ingWords.length > 3 && nameLower.includes(ingWords) && ing.leucine) {
-      const portionFactor = ing.prot > 0 ? (meal.prot / ing.prot) : 1;
-      totalLeu += ing.leucine * portionFactor; matched = true;
-    }
-  });
-  if (!matched && meal.prot > 0) totalLeu = meal.prot * 0.062;
-  return totalLeu;
-}
 
 function renderLeucineAnalysis() {
   const summaryEl = document.getElementById('leucine-summary');
@@ -3676,7 +3698,7 @@ function renderSmartMealPlan() {
     const cat=slot.slot==='Breakfast'?'Breakfast':slot.slot==='Snacks'?'Snack':'Lunch/Dinner';
     const suitable=RECIPES.filter(r=>r.cat.includes(cat)||(todayType==='hard'&&r.mealType==='Post-Workout'));
     const best=suitable.sort((a,b)=>Math.abs(a.prot-slot.targetProt)-Math.abs(b.prot-slot.targetProt))[0];
-    const leu=best?estimateLeucineMg(best):0;
+    const leu=best?leucineForPortion(best.name,best.prot,best.cat).leu:0;
     const leuMet=leu>=2.5, leuPct=Math.min(100,Math.round(leu/2.5*100));
     return `<div class="card" style="margin-bottom:8px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><div style="font-size:13px;font-weight:600">${slot.slot}</div><div style="font-size:11px;color:var(--text2)">~${slot.targetCal} kcal · ${slot.targetProt}g protein</div></div>
@@ -4168,10 +4190,20 @@ function getDailyTargets() {
 
   // Protein meals hitting leucine threshold
   const meals = S.mealLogs[dateKey(0)] || [];
-  const leucineMeals = typeof estimateLeucineMg === 'function'
-    ? meals.filter(m => estimateLeucineMg(m) >= 2.5).length
-    : 0;
-  const proteinMealsNeeded = 4;
+  // Count eating occasions that clear the 2.5g leucine MPS threshold,
+  // grouping logged items by meal type (matches the Insights analysis).
+  const _occ = {};
+  meals.forEach(m => {
+    const k = (m.type && m.type !== 'Meal') ? m.type : 'Meal';
+    if (!_occ[k]) _occ[k] = 0;
+    let l;
+    if (m.leucine != null) l = m.leucine;
+    else { const e = leucineForPortion(m.name, m.prot, m.cat); l = e.leu; }
+    _occ[k] += l;
+  });
+  const _occKeys = Object.keys(_occ);
+  const leucineMeals = _occKeys.filter(k => _occ[k] >= 2.5).length;
+  const proteinMealsNeeded = _occKeys.length > 0 ? Math.max(_occKeys.length, 1) : 4;
 
   // Check supplement log
   const suppLog = (S.suppLog || {})[dateKey(0)] || {};
@@ -6544,6 +6576,86 @@ function compressImage(file, maxDim, quality) {
     reader.onerror = reject;
     reader.readAsDataURL(file);
   });
+}
+
+
+
+// ══════════════════════════════════════════════════════════════════════════
+// RACE MODE HERO — dramatic carb-loading countdown panel
+// ══════════════════════════════════════════════════════════════════════════
+function renderRaceModeHero() {
+  const el = document.getElementById('race-mode-hero');
+  if (!el) return;
+  if (!S.event || !S.event.date) { el.innerHTML = ''; return; }
+
+  const w = (S.profile && S.profile.weight) || 73;
+  const eventType = S.event.type || 'endurance';
+  const carbTargets = { endurance:{load:10,taper:7,normal:5,raceDay:1.5}, team:{load:8,taper:6,normal:5,raceDay:1.5}, strength:{load:6,taper:5,normal:5,raceDay:1.0} };
+  const tg = carbTargets[eventType] || carbTargets.endurance;
+
+  const eventDate = new Date(S.event.date + 'T00:00:00');
+  const today = new Date(); today.setHours(0,0,0,0);
+  const daysOut = Math.round((eventDate - today) / (1000*60*60*24));
+
+  // Only show the hero in the run-up window (race day to 5 days before)
+  if (daysOut < 0 || daysOut > 5) { el.innerHTML = ''; return; }
+
+  // Today's carb target (g/kg) by phase
+  let gPerKg, phaseLabel;
+  if (daysOut === 0)      { gPerKg = tg.raceDay; phaseLabel = 'RACE DAY'; }
+  else if (daysOut <= 2)  { gPerKg = tg.load;    phaseLabel = 'PEAK WEEK'; }
+  else if (daysOut === 3) { gPerKg = tg.taper;   phaseLabel = 'TAPER'; }
+  else                    { gPerKg = tg.normal;  phaseLabel = 'PRE-LOAD'; }
+
+  const carbTarget = Math.round(w * gPerKg);
+  // Today's actual carbs logged
+  const consumed = Math.round(getTotals(0).carbs);
+  const pct = Math.min(100, Math.round(consumed / carbTarget * 100));
+
+  // T-minus label
+  const tMinus = daysOut === 0 ? 'TODAY' : 'T-' + daysOut;
+  const eventName = S.event.name || 'Your event';
+
+  // Distance label by type
+  const distLabel = { endurance:'Endurance event', team:'Team sport', strength:'Strength / HIIT' }[eventType] || '';
+
+  el.innerHTML = `
+  <div style="position:relative;background:linear-gradient(160deg,#0A3D2C 0%,#061d15 100%);border-radius:18px;padding:20px;margin-bottom:14px;overflow:hidden;box-shadow:0 8px 28px rgba(6,29,21,0.4)">
+    <!-- faint grid lines -->
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(200,242,78,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(200,242,78,0.04) 1px,transparent 1px);background-size:40px 40px;pointer-events:none"></div>
+    <div style="position:relative">
+      <!-- top row: brand + race mode pill -->
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <div style="font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:.25em;color:#7FD9A6;text-transform:uppercase">Carb Loading</div>
+        <div style="display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(200,242,78,0.4);border-radius:20px;padding:4px 11px">
+          <span style="width:6px;height:6px;border-radius:50%;background:#FF6E2C;box-shadow:0 0 6px #FF6E2C"></span>
+          <span style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:.15em;color:#C8F24E">${phaseLabel}</span>
+        </div>
+      </div>
+      <!-- event name + T-minus -->
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px">
+        <div style="flex:1;min-width:0">
+          <div style="font-family:'Fraunces',serif;font-size:26px;font-weight:600;color:#fff;line-height:1.1;margin-bottom:3px">${eventName}</div>
+          <div style="font-size:12px;color:#7FD9A6">${distLabel}</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0;margin-left:12px">
+          <div style="font-family:'Fraunces',serif;font-size:42px;font-weight:700;color:#FF6E2C;line-height:0.9">${tMinus}</div>
+          ${daysOut>0?'<div style="font-family:\'Martian Mono\',monospace;font-size:9px;letter-spacing:.2em;color:#7FD9A6;text-transform:uppercase">days</div>':''}
+        </div>
+      </div>
+      <!-- glycogen load bar -->
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
+        <div style="font-family:'Martian Mono',monospace;font-size:9px;letter-spacing:.2em;color:#7FD9A6;text-transform:uppercase">Glycogen Load</div>
+        <div style="font-size:20px;font-weight:700;color:#fff">${pct}%</div>
+      </div>
+      <div style="height:14px;border-radius:8px;background:rgba(255,255,255,0.08);overflow:hidden;position:relative">
+        <div style="height:100%;width:${pct}%;border-radius:8px;background:linear-gradient(90deg,#1B6E4F 0%,#C8F24E 55%,#FF6E2C 100%);box-shadow:0 0 12px rgba(200,242,78,0.4);transition:width .5s"></div>
+      </div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.7);margin-top:8px">
+        ${consumed} / ${carbTarget} g carbs · <strong style="color:#C8F24E">${gPerKg} g/kg</strong> today
+      </div>
+    </div>
+  </div>`;
 }
 
 
