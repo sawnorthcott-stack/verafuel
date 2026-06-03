@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)file:///C:/Users/sawno/Downloads/sports_nutrition_app_53.html -->
+<!-- saved from url=(0061)file:///C:/Users/sawno/Downloads/sports_nutrition_app_54.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -683,7 +683,15 @@ select option{background:var(--surface);color:var(--text)}
       <div class="sp">
         <!-- SMART NUDGES -->
         <div id="carbload-flash" style="display:none;margin-bottom:12px"></div>
-        <div id="dash-nudges"></div>
+        <div id="dash-nudges">
+    <div style="background:var(--blue-light);border-radius:var(--radius);padding:13px 15px;margin-bottom:10px;display:flex;gap:11px;align-items:flex-start">
+      <span style="font-size:20px;flex-shrink:0;font-style:normal">💧</span>
+      <div style="flex:1">
+        <div style="font-size:13px;font-weight:700;color:var(--blue-dark);margin-bottom:2px">Hydration low</div>
+        <div style="font-size:12px;color:var(--text);line-height:1.5;opacity:.85">Only 0 of 8 glasses so far. Dehydration impairs performance and nutrient transport — top up through the afternoon.</div>
+      </div>
+    </div>
+  </div>
 
         
         <div id="streak-card" class="streak-badge" style="display:none">
@@ -828,11 +836,11 @@ select option{background:var(--surface);color:var(--text)}
             </div>
           </div>
           <div class="mbar">
-            <div class="mbar-head"><span style="font-weight:500">Protein</span><span id="d-p-lbl" style="color:var(--text2)">0/161g</span></div>
+            <div class="mbar-head"><span style="font-weight:500">Protein</span><span id="d-p-lbl" style="color:var(--text2)">0/177g</span></div>
             <div class="mbar-track"><div id="d-p-bar" class="mbar-fill" style="background:var(--green);width:0%"></div></div>
           </div>
           <div class="mbar">
-            <div class="mbar-head"><span style="font-weight:500">Carbs</span><span id="d-c-lbl" style="color:var(--text2)">0/452g</span></div>
+            <div class="mbar-head"><span style="font-weight:500">Carbs</span><span id="d-c-lbl" style="color:var(--text2)">0/384g</span></div>
             <div class="mbar-track"><div id="d-c-bar" class="mbar-fill" style="background:var(--amber);width:0%"></div></div>
           </div>
           <div class="mbar" style="margin-bottom:0">
@@ -1024,7 +1032,10 @@ select option{background:var(--surface);color:var(--text)}
                 <option value="strength">Strength / HIIT — Crossfit, Powerlifting</option>
               </select>
             </div>
-            <button class="btn" onclick="generateCarbPlan()"><span style=";font-style:normal">📅</span> Generate loading plan</button>
+            <div style="display:flex;gap:8px">
+              <button class="btn" style="flex:1" onclick="generateCarbPlan()"><span style=";font-style:normal">📅</span> Generate loading plan</button>
+            </div>
+            <button id="clear-event-btn" onclick="clearCarbEvent()" style="display:none;width:100%;margin-top:8px;padding:11px;background:transparent;border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text2);font-size:13px;font-weight:600;cursor:pointer;font-family:&#39;Inter&#39;,sans-serif">Clear event &amp; turn off carb loading</button>
           </div>
           <div id="carb-plan-output" style="display:none">
             <!-- RACE MODE HERO -->
@@ -1371,7 +1382,7 @@ select option{background:var(--surface);color:var(--text)}
           <div style="position:relative;flex-shrink:0" onclick="changeProfilePhoto()" title="Tap to change photo">
             <div id="profile-photo-wrap" style="width:56px;height:56px;border-radius:50%;background:var(--green-light);overflow:hidden;display:flex;align-items:center;justify-content:center;border:2px solid var(--green)">
               <span style="font-size:26px;color:var(--green);font-style:normal">👤</span>
-              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_53.html">
+              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_54.html">
             </div>
             <div style="position:absolute;bottom:-2px;right:-2px;width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface)">
               <span style="font-size:10px;color:#fff;font-style:normal">📷</span>
@@ -1415,7 +1426,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div id="strava-connected" style="display:none">
             <div class="strava-connected" style="margin-bottom:12px">
-              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_53.html" class="strava-avatar" alt="Strava">
+              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_54.html" class="strava-avatar" alt="Strava">
               <div style="flex:1">
                 <div style="font-size:14px;font-weight:600" id="strava-athlete-name">Connected</div>
                 <div class="strava-badge" style="margin-top:3px">
@@ -1597,7 +1608,7 @@ select option{background:var(--surface);color:var(--text)}
 
 <!-- PHOTO VIEWER -->
 <div class="photo-viewer" id="photo-viewer" onclick="closePhotoViewer()">
-  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_53.html" alt="Progress photo">
+  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_54.html" alt="Progress photo">
   <div class="photo-viewer-meta" id="pv-meta"></div>
   <button style="margin-top:12px;background:var(--coral-light);color:var(--coral-dark);border:none;border-radius:var(--radius-sm);padding:8px 16px;cursor:pointer;font-size:13px" onclick="event.stopPropagation();deletePhoto(window._pvIdx)"><span style=";font-style:normal">🗑️</span> Delete</button>
 </div>
@@ -2405,14 +2416,15 @@ function renderDashboard(){updateStreak();renderFavChips();renderWater();renderC
     if(trv)trv.textContent=typeEmoji[todayType]||'💪';
   }catch(e){}
   const t=getTotals(0),p=S.profile;
-  const circ=2*Math.PI*66,pct=p.targetCal?Math.min(t.cal/p.targetCal,1):0;
+  const AT=getAdjustedTargets();
+  const circ=2*Math.PI*66,pct=AT.cal?Math.min(t.cal/AT.cal,1):0;
   document.getElementById('ring-cal').style.strokeDashoffset=(circ*(1-pct)).toFixed(1);
   document.getElementById('ring-val').textContent=Math.round(t.cal);
-  document.getElementById('ring-target').textContent=p.targetCal;
+  document.getElementById('ring-target').textContent=AT.cal;
   const pp=Math.round(pct*100);
   document.getElementById('ring-pill').innerHTML=`<span class="pill ${pct<0.5?'pill-coral':pct<0.9?'pill-amber':'pill-green'}">${pp}%</span>`;
   const setBar=(id,val,tgt)=>{const pct2=tgt?Math.min(100,Math.round(val/tgt*100)):0;const bar=document.getElementById('d-'+id+'-bar');const lbl=document.getElementById('d-'+id+'-lbl');if(bar)bar.style.width=pct2+'%';if(lbl)lbl.textContent=Math.round(val)+'/'+(tgt||'?')+'g';};
-  setBar('p',t.prot,p.targetP);setBar('c',t.carbs,p.targetC);setBar('f',t.fat,p.targetF);
+  setBar('p',t.prot,AT.prot);setBar('c',t.carbs,AT.carbs);setBar('f',t.fat,AT.fat);
   const meals=S.mealLogs[dateKey(0)]||[];
   const el=document.getElementById('dash-meals');
   if(el) el.innerHTML=meals.length?meals.map((m,i)=>`<div class="meal-row"><div class="meal-icon" style="background:${COLORS[i%COLORS.length]}22;color:${COLORS[i%COLORS.length]}"><span style=";font-style:normal">🍜</span></div><div class="meal-info"><div class="meal-name">${m.name}</div><div class="meal-sub">${m.type} · P:${m.prot}g</div></div><div style="font-weight:600;font-size:14px">${Math.round(m.cal)}</div></div>`).join(''):'<div class="empty"><span style=";font-style:normal">🍽️</span><p>No meals logged yet</p></div>';
@@ -3537,6 +3549,7 @@ function generateCarbPlan() {
   if (cs) cs.innerHTML = ['🍚 White rice — best glycogen loader. Low fibre, fast absorbing.','🍝 White pasta — high carb density, low GI distress.','🍌 Banana — portable, 23g carbs each.','🍞 White bread with jam — simple, low fibre.','📅 Medjool dates — 18g carbs each.','🥤 Sports drinks — fluid + carbs + electrolytes.'].map(s=>`<div>${s}</div>`).join('');
   const out = document.getElementById('carb-plan-output');
   if (out) out.style.display='block';
+  const cb=document.getElementById('clear-event-btn'); if(cb) cb.style.display='block';
   renderRaceModeHero();
   toast('Loading plan generated!');
 }
@@ -3693,11 +3706,24 @@ function renderSmartMealPlan() {
     {slot:'Dinner',targetCal:Math.round(adjCal*0.30),targetProt:Math.round(adjProt*0.30)},
     {slot:'Snacks',targetCal:Math.round(adjCal*0.15),targetProt:Math.round(adjProt*0.15)},
   ];
+  var _usedRecipeIds=[];
   container.innerHTML=`<div class="card" style="margin-bottom:10px"><div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><div class="card-title" style="margin:0">Today — ${t.emoji} ${t.label} day</div></div><div style="font-size:12px;color:var(--text2);line-height:1.5">${t.rationale}</div></div>`+
   mealSlots.map(slot=>{
     const cat=slot.slot==='Breakfast'?'Breakfast':slot.slot==='Snacks'?'Snack':'Lunch/Dinner';
-    const suitable=RECIPES.filter(r=>r.cat.includes(cat)||(todayType==='hard'&&r.mealType==='Post-Workout'));
-    const best=suitable.sort((a,b)=>Math.abs(a.prot-slot.targetProt)-Math.abs(b.prot-slot.targetProt))[0];
+    // Match recipes to the slot's meal category (don't let Post-Workout bleed across every slot)
+    let suitable=RECIPES.filter(r=>r.cat===cat);
+    // On hard days, prefer higher-protein options within the right category
+    if(todayType==='hard'){ suitable=suitable.slice().sort((a,b)=>b.prot-a.prot); }
+    // Exclude recipes already chosen for an earlier slot today
+    let pool=suitable.filter(r=>!_usedRecipeIds.includes(r.id));
+    if(pool.length===0) pool=suitable; // fall back if we run out
+    // Rank by closeness to this slot's protein target, then pick with daily rotation
+    const ranked=pool.slice().sort((a,b)=>Math.abs(a.prot-slot.targetProt)-Math.abs(b.prot-slot.targetProt));
+    // Rotate through good matches day-to-day so it isn't identical every day
+    const dayNum=new Date().getDate();
+    const topN=ranked.slice(0,Math.min(3,ranked.length));
+    const best=topN.length?topN[dayNum%topN.length]:ranked[0];
+    if(best)_usedRecipeIds.push(best.id);
     const leu=best?leucineForPortion(best.name,best.prot,best.cat).leu:0;
     const leuMet=leu>=2.5, leuPct=Math.min(100,Math.round(leu/2.5*100));
     return `<div class="card" style="margin-bottom:8px">
@@ -6589,25 +6615,18 @@ function renderRaceModeHero() {
   if (!S.event || !S.event.date) { el.innerHTML = ''; return; }
 
   const w = (S.profile && S.profile.weight) || 73;
-  const eventType = S.event.type || 'endurance';
-  const carbTargets = { endurance:{load:10,taper:7,normal:5,raceDay:1.5}, team:{load:8,taper:6,normal:5,raceDay:1.5}, strength:{load:6,taper:5,normal:5,raceDay:1.0} };
-  const tg = carbTargets[eventType] || carbTargets.endurance;
 
-  const eventDate = new Date(S.event.date + 'T00:00:00');
-  const today = new Date(); today.setHours(0,0,0,0);
-  const daysOut = Math.round((eventDate - today) / (1000*60*60*24));
+  // Use the SAME phase logic as the carb-loading targets — single source of truth,
+  // so the hero and the daily numbers can never drift apart.
+  const phase = getCarbLoadPhase();
+  if (!phase) { el.innerHTML = ''; return; }   // outside the loading window (4 days → race day)
+  const daysOut = phase.daysOut;
 
-  // Only show the hero in the run-up window (race day to 5 days before)
-  if (daysOut < 0 || daysOut > 5) { el.innerHTML = ''; return; }
-
-  // Today's carb target (g/kg) by phase
-  let gPerKg, phaseLabel;
-  if (daysOut === 0)      { gPerKg = tg.raceDay; phaseLabel = 'RACE DAY'; }
-  else if (daysOut <= 2)  { gPerKg = tg.load;    phaseLabel = 'PEAK WEEK'; }
-  else if (daysOut === 3) { gPerKg = tg.taper;   phaseLabel = 'TAPER'; }
-  else                    { gPerKg = tg.normal;  phaseLabel = 'PRE-LOAD'; }
-
-  const carbTarget = Math.round(w * gPerKg);
+  // Map the phase to a bold hero label
+  const phaseLabels = { raceday:'RACE DAY', load2:'PEAK WEEK', load1:'PEAK WEEK', taper:'TAPER', pre:'PRE-LOAD' };
+  const phaseLabel = phaseLabels[phase.phase] || 'LOADING';
+  const carbTarget = phase.carbTarget;
+  const gPerKg = (carbTarget / w).toFixed(1);
   // Today's actual carbs logged
   const consumed = Math.round(getTotals(0).carbs);
   const pct = Math.min(100, Math.round(consumed / carbTarget * 100));
@@ -6656,6 +6675,51 @@ function renderRaceModeHero() {
       </div>
     </div>
   </div>`;
+}
+
+
+
+// Fully clear a carb-loading event — removes the event, hero, banner and opt-in
+function clearCarbEvent() {
+  S.event = { name:'', date:'', type:'endurance' };
+  S.carbLoadOptIn = false;
+  saveState();
+  // Hide all the carb-loading visuals
+  const out = document.getElementById('carb-plan-output');
+  if (out) out.style.display = 'none';
+  const hero = document.getElementById('race-mode-hero');
+  if (hero) hero.innerHTML = '';
+  const clearBtn = document.getElementById('clear-event-btn');
+  if (clearBtn) clearBtn.style.display = 'none';
+  // Clear the input fields
+  const en = document.getElementById('event-name'); if (en) en.value = '';
+  const ed = document.getElementById('event-date'); if (ed) ed.value = '';
+  updateEventBanner();
+  renderDashboard();
+  toast('Event cleared');
+}
+
+
+
+// Adjusted daily macro targets — single source of truth for training-day scaling.
+// Returns {cal,prot,carbs,fat} after applying the training-type multipliers and
+// any opted-in carb-loading override. Used by the dashboard AND the plan page.
+function getAdjustedTargets() {
+  const p = S.profile;
+  const todayType = (S.trainingWeek && S.trainingWeek[dateKey(0)]) || 'easy';
+  const tt = (typeof TRAINING_TYPES !== 'undefined') ? TRAINING_TYPES[todayType] : null;
+  let cal  = tt ? Math.round(p.targetCal * tt.calMult)  : p.targetCal;
+  let prot = tt ? Math.round(p.targetP   * tt.protMult) : p.targetP;
+  let carbs= tt ? Math.round(p.targetC   * tt.carbMult) : p.targetC;
+  let fat  = tt ? Math.round(p.targetF   * tt.fatMult)  : p.targetF;
+  // Carb-loading override (only when opted in)
+  const clPhase = (typeof carbLoadActive === 'function') ? carbLoadActive() : null;
+  if (clPhase) {
+    if (clPhase.carbTarget) carbs = clPhase.carbTarget;
+    if (clPhase.calTarget)  cal   = clPhase.calTarget;
+    if (clPhase.protTarget) prot  = clPhase.protTarget;
+  }
+  return { cal, prot, carbs, fat, type: todayType };
 }
 
 
