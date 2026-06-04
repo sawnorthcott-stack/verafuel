@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)file:///C:/Users/sawno/Downloads/sports_nutrition_app_60.html -->
+<!-- saved from url=(0061)file:///C:/Users/sawno/Downloads/sports_nutrition_app_61.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -395,7 +395,15 @@ select option{background:var(--surface);color:var(--text)}
 .fc-mt-btn.active{background:var(--green);color:#fff;border-color:var(--green)}
 </style>
 <link rel="stylesheet" href="./index_files/css2(1)">
-  <script src="./index_files/quagga.min.js.download"></script>
+  <script src="./index_files/quagga.min.js.download" onerror="loadQuaggaFallback()"></script>
+  <script>
+    function loadQuaggaFallback(){
+      if (typeof Quagga !== 'undefined') return;
+      var s=document.createElement('script');
+      s.src='https://unpkg.com/@ericblade/quagga2/dist/quagga.min.js';
+      document.head.appendChild(s);
+    }
+  </script>
 </head>
 <body>
 
@@ -637,7 +645,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div style="height:1.5px;width:100%;border-radius:1px;background:linear-gradient(90deg,#1B6E4F,#C8F24E 60%,#FF6E2C)"></div>
         </div>
-        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:&#39;Martian Mono&#39;,monospace;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 4 Jun 2026  ·  v0604.1924</p>
+        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:&#39;Martian Mono&#39;,monospace;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 4 Jun 2026  ·  v0604.1930</p>
       </div>
       <h1 id="screen-title" style="display:none">Dashboard</h1>
     </div>
@@ -1392,7 +1400,7 @@ select option{background:var(--surface);color:var(--text)}
           <div style="position:relative;flex-shrink:0" onclick="changeProfilePhoto()" title="Tap to change photo">
             <div id="profile-photo-wrap" style="width:56px;height:56px;border-radius:50%;background:var(--green-light);overflow:hidden;display:flex;align-items:center;justify-content:center;border:2px solid var(--green)">
               <span style="font-size:26px;color:var(--green);font-style:normal">👤</span>
-              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_60.html">
+              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_61.html">
             </div>
             <div style="position:absolute;bottom:-2px;right:-2px;width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface)">
               <span style="font-size:10px;color:#fff;font-style:normal">📷</span>
@@ -1436,7 +1444,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div id="strava-connected" style="display:none">
             <div class="strava-connected" style="margin-bottom:12px">
-              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_60.html" class="strava-avatar" alt="Strava">
+              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_61.html" class="strava-avatar" alt="Strava">
               <div style="flex:1">
                 <div style="font-size:14px;font-weight:600" id="strava-athlete-name">Connected</div>
                 <div class="strava-badge" style="margin-top:3px">
@@ -1618,7 +1626,7 @@ select option{background:var(--surface);color:var(--text)}
 
 <!-- PHOTO VIEWER -->
 <div class="photo-viewer" id="photo-viewer" onclick="closePhotoViewer()">
-  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_60.html" alt="Progress photo">
+  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_61.html" alt="Progress photo">
   <div class="photo-viewer-meta" id="pv-meta"></div>
   <button style="margin-top:12px;background:var(--coral-light);color:var(--coral-dark);border:none;border-radius:var(--radius-sm);padding:8px 16px;cursor:pointer;font-size:13px" onclick="event.stopPropagation();deletePhoto(window._pvIdx)"><span style=";font-style:normal">🗑️</span> Delete</button>
 </div>
@@ -2371,7 +2379,7 @@ function updateSub(){
   try{
     const d=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
     const name=S.profile.name||'Set up profile';
-    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0604.1924';
+    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0604.1930';
   }catch(e){}
 }
 
@@ -6785,7 +6793,12 @@ let _scanHit = false;
 
 async function startCameraScan() {
   showBcStatus('Starting camera…', '');
-  const ready = await waitForScanner(8000);
+  let ready = await waitForScanner(6000);
+  if (!ready) {
+    // Try the fallback CDN, then wait again
+    if (typeof loadQuaggaFallback === 'function') loadQuaggaFallback();
+    ready = await waitForScanner(5000);
+  }
   if (!ready) {
     showBcStatus('Couldn\'t load the scanner (check your connection). You can still enter the barcode number manually below.', 'error');
     return;
@@ -7103,7 +7116,7 @@ if(!S.profile.phase)S.profile.phase='bulk';
 updateSub();
 try{renderDashboard();}catch(e){
   console.error('Dashboard render error:',e);
-  document.getElementById('screen-sub').textContent='Simon · tap profile to set up  ·  v0604.1924';
+  document.getElementById('screen-sub').textContent='Simon · tap profile to set up  ·  v0604.1930';
 }
 renderRecipes();
 // renderIngredients removed
