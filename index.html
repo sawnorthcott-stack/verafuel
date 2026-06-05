@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)file:///C:/Users/sawno/Downloads/sports_nutrition_app_62.html -->
+<!-- saved from url=(0061)file:///C:/Users/sawno/Downloads/sports_nutrition_app_63.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -394,7 +394,7 @@ select option{background:var(--surface);color:var(--text)}
 .fc-mt-btn{flex:1;padding:9px 4px;font-size:12px;font-weight:600;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface);color:var(--text2);cursor:pointer;font-family:'Inter',sans-serif;transition:all .12s}
 .fc-mt-btn.active{background:var(--green);color:#fff;border-color:var(--green)}
 
-/* Barcode scanner — constrain Quagga's injected video to a fixed viewport */
+/* Barcode scanner — fixed-height camera viewport */
 #bc-reader{position:relative;width:100%;height:260px;border-radius:var(--radius);overflow:hidden;background:#000}
 #bc-reader video,#bc-reader canvas{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;height:100%;object-fit:cover}
 #bc-reader canvas.drawingBuffer{display:none}
@@ -445,15 +445,6 @@ select option{background:var(--surface);color:var(--text)}
 .briefing-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#C8F24E,#7FD9A6);transition:width .5s ease}
 </style>
 <link rel="stylesheet" href="./index_files/css2(1)">
-  <script src="./index_files/quagga.min.js.download" onerror="loadQuaggaFallback()"></script>
-  <script>
-    function loadQuaggaFallback(){
-      if (typeof Quagga !== 'undefined') return;
-      var s=document.createElement('script');
-      s.src='https://unpkg.com/@ericblade/quagga2/dist/quagga.min.js';
-      document.head.appendChild(s);
-    }
-  </script>
 </head>
 <body>
 
@@ -695,7 +686,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div style="height:1.5px;width:100%;border-radius:1px;background:linear-gradient(90deg,#1B6E4F,#C8F24E 60%,#FF6E2C)"></div>
         </div>
-        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:&#39;Martian Mono&#39;,monospace;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 5 Jun 2026  ·  v0605.1043</p>
+        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:&#39;Martian Mono&#39;,monospace;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 5 Jun 2026  ·  v0605.1454</p>
       </div>
       <h1 id="screen-title" style="display:none">Dashboard</h1>
     </div>
@@ -745,15 +736,15 @@ select option{background:var(--surface);color:var(--text)}
           <div class="briefing-grid"></div>
           <div class="briefing-inner">
             <div class="briefing-eyebrow">
-              <span class="be-label" id="briefing-label">Morning Briefing</span>
+              <span class="be-label" id="briefing-label">Afternoon Briefing</span>
               <span class="be-day" id="briefing-day">Friday 5 Jun</span>
             </div>
-            <div class="briefing-greeting" id="briefing-greeting">Good morning, Simon.</div>
+            <div class="briefing-greeting" id="briefing-greeting">Good afternoon, Simon.</div>
             <div class="briefing-headline" id="briefing-headline">An <strong>easy day</strong>. Steady fuelling — moderate carbs, solid protein to keep adaptation ticking over.</div>
             <div class="briefing-chips" id="briefing-chips"><div class="briefing-chip"><span class="bc-emoji">🚶</span><div class="bc-text"><div class="bc-label">Today</div><div class="bc-val">Easy</div></div></div><div class="briefing-chip"><span class="bc-emoji">🍚</span><div class="bc-text"><div class="bc-label">Carbs</div><div class="bc-val lime">384g</div></div></div><div class="briefing-chip"><span class="bc-emoji">🥩</span><div class="bc-text"><div class="bc-label">Protein</div><div class="bc-val">177g</div></div></div></div>
             <div class="briefing-priority" id="briefing-priority" style="display: flex;">
               <span class="bp-icon">🎯</span>
-              <span class="bp-text" id="briefing-priority-text">Log <strong>last night's sleep</strong> first — it sets your true readiness score for the day.</span>
+              <span class="bp-text" id="briefing-priority-text">Spread your <strong>177g protein</strong> across 3–4 meals — even timing drives muscle synthesis better than one big hit.</span>
             </div>
             <div class="briefing-progress" id="briefing-progress" style="display:none">
               <div class="bp-row">
@@ -768,11 +759,11 @@ select option{background:var(--surface);color:var(--text)}
         <!-- SMART NUDGES -->
         <div id="carbload-flash" style="display:none;margin-bottom:12px"></div>
         <div id="dash-nudges">
-    <div style="background:var(--gray-light);border-radius:var(--radius);padding:13px 15px;margin-bottom:10px;display:flex;gap:11px;align-items:flex-start">
-      <span style="font-size:20px;flex-shrink:0;font-style:normal">😴</span>
+    <div style="background:var(--blue-light);border-radius:var(--radius);padding:13px 15px;margin-bottom:10px;display:flex;gap:11px;align-items:flex-start">
+      <span style="font-size:20px;flex-shrink:0;font-style:normal">💧</span>
       <div style="flex:1">
-        <div style="font-size:13px;font-weight:700;color:var(--text2);margin-bottom:2px">Log last night’s sleep</div>
-        <div style="font-size:12px;color:var(--text);line-height:1.5;opacity:.85">Sleep is the biggest recovery driver. Log it in Insights → Recovery to see your readiness score for today.</div>
+        <div style="font-size:13px;font-weight:700;color:var(--blue-dark);margin-bottom:2px">Hydration low</div>
+        <div style="font-size:12px;color:var(--text);line-height:1.5;opacity:.85">Only 0 of 8 glasses so far. Dehydration impairs performance and nutrient transport — top up through the afternoon.</div>
       </div>
     </div>
   </div>
@@ -1475,7 +1466,7 @@ select option{background:var(--surface);color:var(--text)}
           <div style="position:relative;flex-shrink:0" onclick="changeProfilePhoto()" title="Tap to change photo">
             <div id="profile-photo-wrap" style="width:56px;height:56px;border-radius:50%;background:var(--green-light);overflow:hidden;display:flex;align-items:center;justify-content:center;border:2px solid var(--green)">
               <span style="font-size:26px;color:var(--green);font-style:normal">👤</span>
-              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_62.html">
+              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_63.html">
             </div>
             <div style="position:absolute;bottom:-2px;right:-2px;width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface)">
               <span style="font-size:10px;color:#fff;font-style:normal">📷</span>
@@ -1519,7 +1510,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div id="strava-connected" style="display:none">
             <div class="strava-connected" style="margin-bottom:12px">
-              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_62.html" class="strava-avatar" alt="Strava">
+              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_63.html" class="strava-avatar" alt="Strava">
               <div style="flex:1">
                 <div style="font-size:14px;font-weight:600" id="strava-athlete-name">Connected</div>
                 <div class="strava-badge" style="margin-top:3px">
@@ -1701,7 +1692,7 @@ select option{background:var(--surface);color:var(--text)}
 
 <!-- PHOTO VIEWER -->
 <div class="photo-viewer" id="photo-viewer" onclick="closePhotoViewer()">
-  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_62.html" alt="Progress photo">
+  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_63.html" alt="Progress photo">
   <div class="photo-viewer-meta" id="pv-meta"></div>
   <button style="margin-top:12px;background:var(--coral-light);color:var(--coral-dark);border:none;border-radius:var(--radius-sm);padding:8px 16px;cursor:pointer;font-size:13px" onclick="event.stopPropagation();deletePhoto(window._pvIdx)"><span style=";font-style:normal">🗑️</span> Delete</button>
 </div>
@@ -2457,7 +2448,7 @@ function updateSub(){
   try{
     const d=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
     const name=S.profile.name||'Set up profile';
-    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0605.1043';
+    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0605.1454';
   }catch(e){}
 }
 
@@ -4747,6 +4738,14 @@ function searchFoods(query) {
   const q = (query || '').toLowerCase().trim();
   const resultsEl = document.getElementById('food-search-results');
   if (!resultsEl) return;
+  // One-time delegated click handler — robust to any characters in food names
+  if (!resultsEl._foodClickBound) {
+    resultsEl.addEventListener('click', (e) => {
+      const row = e.target.closest('.food-result-row');
+      if (row && row.dataset.food != null) selectIngredient(row.dataset.food);
+    });
+    resultsEl._foodClickBound = true;
+  }
 
   // Combine built-in ingredients + custom foods
   const allFoods = [...INGREDIENTS, ...(S.customFoods || [])];
@@ -4786,16 +4785,23 @@ function searchFoods(query) {
     return;
   }
 
+  // HTML-escape any value going into an attribute or text node, so food names
+  // containing quotes, apostrophes, ampersands, < or > can never break the markup
+  // or the click handler. (Fixes "some foods can't be selected".)
+  const esc = s => String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
   resultsEl.innerHTML = favSection + filtered.map(ing => {
     const leuClass = ing.leucine >= 2.5 ? 'var(--green)' : ing.leucine >= 1.5 ? 'var(--amber)' : 'var(--text3)';
-    return `<div onclick="selectIngredient('${ing.name.replace(/'/g, "\\'")}')"
+    const leuTxt = (ing.leucine != null) ? esc(ing.leucine) + 'g' : '—';
+    return `<div class="food-result-row" data-food="${esc(ing.name)}"
          style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
-        <div style="font-size:14px;font-weight:500">${ing.name}</div>
-        <div style="font-size:11px;color:var(--text2);margin-top:2px">${ing.cat} · ${ing.cal} kcal · P:${ing.prot}g C:${ing.carbs}g F:${ing.fat}g per 100g</div>
+        <div style="font-size:14px;font-weight:500">${esc(ing.name)}</div>
+        <div style="font-size:11px;color:var(--text2);margin-top:2px">${esc(ing.cat)} · ${ing.cal} kcal · P:${ing.prot}g C:${ing.carbs}g F:${ing.fat}g per 100g</div>
       </div>
       <div style="text-align:right;flex-shrink:0">
-        <div style="font-size:10px;color:${leuClass}">Leu ${ing.leucine}g</div>
+        <div style="font-size:10px;color:${leuClass}">Leu ${leuTxt}</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
     </div>`;
@@ -6947,46 +6953,148 @@ function getAdjustedTargets() {
 
 
 // ══════════════════════════════════════════════════════════════════════════
-// CAMERA BARCODE SCANNER — uses Quagga2 to read 1D product barcodes (EAN/UPC)
+// CAMERA BARCODE SCANNER — native BarcodeDetector (built into iOS Safari 17+
+// and Android Chrome). Falls back to the ZXing library if the browser lacks it.
+// No reliance on Quagga; this is the device's own barcode engine.
 // ══════════════════════════════════════════════════════════════════════════
-let _bcScanner = null;
+let _bcStream = null;       // MediaStream
+let _bcRAF = null;          // requestAnimationFrame handle
+let _bcDetector = null;     // BarcodeDetector instance
+let _bcZxing = null;        // ZXing reader (fallback)
+let _bcScanHit = false;
+let _bcVideo = null;
 
-// Poll for the Quagga scanner library to be available (loads from CDN)
-function waitForScanner(timeoutMs) {
+async function startCameraScan() {
+  _bcScanHit = false;
+  showBcStatus('Starting camera…', '');
+  const wrap = document.getElementById('bc-camera-wrap');
+  const btn  = document.getElementById('bc-scan-btn');
+  if (wrap) wrap.style.display = 'block';
+  if (btn)  btn.style.display = 'none';
+
+  // Build the video element fresh inside the reader container
+  const reader = document.getElementById('bc-reader');
+  if (!reader) { showBcStatus('Scanner unavailable.', 'error'); return; }
+  reader.innerHTML = '<div class="bc-target"></div>';
+  const video = document.createElement('video');
+  video.setAttribute('playsinline', 'true');
+  video.setAttribute('muted', 'true');
+  video.muted = true;
+  video.style.cssText = 'position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;height:100%;object-fit:cover';
+  reader.insertBefore(video, reader.firstChild);
+  _bcVideo = video;
+
+  // 1) Get the camera
+  try {
+    _bcStream = await navigator.mediaDevices.getUserMedia({
+      video: {
+        facingMode: { ideal: 'environment' },
+        width:  { ideal: 1280 },
+        height: { ideal: 720 }
+      },
+      audio: false
+    });
+  } catch (err) {
+    showBcStatus('Camera access denied. Allow camera in your browser settings, or enter the barcode manually below.', 'error');
+    if (wrap) wrap.style.display = 'none';
+    if (btn)  btn.style.display = 'block';
+    return;
+  }
+  video.srcObject = _bcStream;
+  try { await video.play(); } catch (e) {}
+
+  // Best-effort continuous autofocus + expose torch if supported
+  try {
+    const track = _bcStream.getVideoTracks()[0];
+    const caps = track.getCapabilities ? track.getCapabilities() : {};
+    const adv = [];
+    if (caps.focusMode && caps.focusMode.includes('continuous')) adv.push({ focusMode: 'continuous' });
+    if (adv.length) track.applyConstraints({ advanced: adv }).catch(()=>{});
+    const tb = document.getElementById('bc-torch-btn');
+    if (tb && caps.torch) { tb.style.display = 'block'; tb._track = track; }
+  } catch (e) {}
+
+  // 2) Prefer the native BarcodeDetector
+  if ('BarcodeDetector' in window) {
+    try {
+      let formats = ['ean_13','ean_8','upc_a','upc_e','code_128','code_39'];
+      try {
+        const supported = await window.BarcodeDetector.getSupportedFormats();
+        formats = formats.filter(f => supported.includes(f));
+        if (!formats.length) formats = supported;
+      } catch (e) {}
+      _bcDetector = new window.BarcodeDetector({ formats });
+      showBcStatus('Point at a barcode — hold steady, fill the box.', '');
+      _bcScanLoopNative();
+      return;
+    } catch (e) {
+      _bcDetector = null;  // fall through to ZXing
+    }
+  }
+
+  // 3) Fallback: ZXing library (loaded on demand)
+  showBcStatus('Loading scanner…', '');
+  const ok = await ensureZxing();
+  if (!ok) {
+    showBcStatus('Scanner not supported on this browser. Please enter the barcode number manually below.', 'error');
+    return;
+  }
+  try {
+    _bcZxing = new ZXing.BrowserMultiFormatReader();
+    showBcStatus('Point at a barcode — hold steady, fill the box.', '');
+    _bcZxing.decodeFromStream(_bcStream, video, (result, err) => {
+      if (result && !_bcScanHit) onBarcodeScanned(result.getText());
+    });
+  } catch (e) {
+    showBcStatus('Could not start the scanner. Please enter the barcode number manually below.', 'error');
+  }
+}
+
+async function _bcScanLoopNative() {
+  if (!_bcDetector || !_bcVideo || _bcScanHit) return;
+  // Only attempt detection once the video has real frame data
+  if (_bcVideo.readyState >= 2 && _bcVideo.videoWidth > 0) {
+    try {
+      const codes = await _bcDetector.detect(_bcVideo);
+      if (codes && codes.length && codes[0].rawValue) {
+        onBarcodeScanned(codes[0].rawValue);
+        return;
+      }
+    } catch (e) { /* transient — keep scanning */ }
+  }
+  _bcRAF = requestAnimationFrame(_bcScanLoopNative);
+}
+
+function ensureZxing() {
   return new Promise(resolve => {
-    if (typeof Quagga !== 'undefined') { resolve(true); return; }
-    const start = Date.now();
-    const iv = setInterval(() => {
-      if (typeof Quagga !== 'undefined') { clearInterval(iv); resolve(true); }
-      else if (Date.now() - start > timeoutMs) { clearInterval(iv); resolve(false); }
-    }, 200);
+    if (typeof ZXing !== 'undefined') { resolve(true); return; }
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/@zxing/library@0.21.3/umd/index.min.js';
+    s.onload = () => resolve(typeof ZXing !== 'undefined');
+    s.onerror = () => {
+      const s2 = document.createElement('script');
+      s2.src = 'https://unpkg.com/@zxing/library@0.21.3/umd/index.min.js';
+      s2.onload = () => resolve(typeof ZXing !== 'undefined');
+      s2.onerror = () => resolve(false);
+      document.head.appendChild(s2);
+    };
+    document.head.appendChild(s);
   });
 }
 
-let _quaggaRunning = false;
-let _scanHit = false;
-
-
-// Try to enable continuous autofocus on the live camera track.
-// iOS Safari support is limited, so this is best-effort and fails silently.
-function applyContinuousFocus() {
-  try {
-    const video = document.querySelector('#bc-reader video');
-    if (!video || !video.srcObject) return;
-    const track = video.srcObject.getVideoTracks()[0];
-    if (!track || !track.getCapabilities) return;
-    const caps = track.getCapabilities();
-    const constraints = { advanced: [] };
-    if (caps.focusMode && caps.focusMode.includes('continuous')) {
-      constraints.advanced.push({ focusMode: 'continuous' });
-    }
-    if (constraints.advanced.length) track.applyConstraints(constraints).catch(()=>{});
-    // Show a torch button only if the device exposes it
-    if (caps.torch) {
-      const tb = document.getElementById('bc-torch-btn');
-      if (tb) { tb.style.display = 'block'; tb._track = track; }
-    }
-  } catch (e) { /* not supported — fine */ }
+function stopCameraScan() {
+  _bcScanHit = true;  // halt loops
+  if (_bcRAF) { cancelAnimationFrame(_bcRAF); _bcRAF = null; }
+  if (_bcZxing) { try { _bcZxing.reset(); } catch(e){} _bcZxing = null; }
+  _bcDetector = null;
+  if (_bcStream) { try { _bcStream.getTracks().forEach(t => t.stop()); } catch(e){} _bcStream = null; }
+  if (_bcVideo) { try { _bcVideo.srcObject = null; } catch(e){} _bcVideo = null; }
+  const wrap = document.getElementById('bc-camera-wrap');
+  const btn  = document.getElementById('bc-scan-btn');
+  const tb   = document.getElementById('bc-torch-btn');
+  if (wrap) wrap.style.display = 'none';
+  if (btn)  btn.style.display = 'block';
+  if (tb)   tb.style.display = 'none';
 }
 
 let _torchOn = false;
@@ -6999,96 +7107,13 @@ function toggleTorch() {
     .catch(() => {});
 }
 
-async function startCameraScan() {
-  showBcStatus('Starting camera…', '');
-  let ready = await waitForScanner(6000);
-  if (!ready) {
-    // Try the fallback CDN, then wait again
-    if (typeof loadQuaggaFallback === 'function') loadQuaggaFallback();
-    ready = await waitForScanner(5000);
-  }
-  if (!ready) {
-    showBcStatus('Couldn\'t load the scanner (check your connection). You can still enter the barcode number manually below.', 'error');
-    return;
-  }
-  const wrap = document.getElementById('bc-camera-wrap');
-  const btn = document.getElementById('bc-scan-btn');
-  if (wrap) wrap.style.display = 'block';
-  if (btn) btn.style.display = 'none';
-  _scanHit = false;
-
-  Quagga.init({
-    inputStream: {
-      type: 'LiveStream',
-      target: document.getElementById('bc-reader'),
-      constraints: {
-        facingMode: 'environment',
-        width: { min: 640, ideal: 1920 },
-        height: { min: 480, ideal: 1080 },
-        // Ask for continuous autofocus — biggest win for barcode scanning.
-        // Harmlessly ignored on devices/browsers that don't support it.
-        focusMode: 'continuous',
-        advanced: [{ focusMode: 'continuous' }]
-      }
-    },
-    locator: { patchSize: 'medium', halfSample: false },
-    numOfWorkers: (navigator.hardwareConcurrency || 4),
-    frequency: 10,
-    area: { top: '30%', right: '8%', left: '8%', bottom: '30%' },
-    decoder: {
-      // Retail product barcode formats (UK/EU/US food packaging)
-      readers: ['ean_reader', 'ean_8_reader', 'upc_reader', 'upc_e_reader']
-    },
-    locate: true
-  }, (err) => {
-    if (err) {
-      showBcStatus('Could not start camera. Check camera permissions, or enter the barcode manually.', 'error');
-      if (wrap) wrap.style.display = 'none';
-      if (btn) btn.style.display = 'block';
-      return;
-    }
-    Quagga.start();
-    _quaggaRunning = true;
-    applyContinuousFocus();   // nudge the camera into continuous autofocus
-    // Re-add the aiming overlay (Quagga replaces the container's contents)
-    const rdr = document.getElementById('bc-reader');
-    if (rdr && !rdr.querySelector('.bc-target')) {
-      const tgt = document.createElement('div'); tgt.className = 'bc-target'; rdr.appendChild(tgt);
-    }
-    showBcStatus('Hold the barcode flat inside the box — fill the width, about 10–15cm away.', '');
-  });
-
-  // Require two matching reads in a row to avoid misreads
-  let _lastCode = null, _lastCount = 0;
-  Quagga.onDetected((result) => {
-    if (_scanHit) return;
-    const code = result && result.codeResult && result.codeResult.code;
-    if (!code) return;
-    if (code === _lastCode) { _lastCount++; } else { _lastCode = code; _lastCount = 1; }
-    if (_lastCount >= 2) {
-      _scanHit = true;
-      onBarcodeScanned(code);
-    }
-  });
-}
-
-async function stopCameraScan() {
-  const wrap = document.getElementById('bc-camera-wrap');
-  const btn = document.getElementById('bc-scan-btn');
-  if (_quaggaRunning && typeof Quagga !== 'undefined') {
-    try { Quagga.stop(); } catch(e) {}
-    _quaggaRunning = false;
-  }
-  if (wrap) wrap.style.display = 'none';
-  if (btn) btn.style.display = 'block';
-}
-
-async function onBarcodeScanned(code) {
-  // Stop the camera first, then look up the product
-  await stopCameraScan();
+function onBarcodeScanned(code) {
+  if (_bcScanHit) return;
+  _bcScanHit = true;
+  if (navigator.vibrate) { try { navigator.vibrate(60); } catch(e){} }
+  stopCameraScan();
   showBcStatus('Barcode found — looking up product…', '');
-  if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(60);
-  lookupBarcode(code);
+  lookupBarcode(String(code).trim());
 }
 
 function showBcStatus(msg, type) {
@@ -7335,7 +7360,7 @@ if(!S.profile.phase)S.profile.phase='bulk';
 updateSub();
 try{renderDashboard();}catch(e){
   console.error('Dashboard render error:',e);
-  document.getElementById('screen-sub').textContent='Simon · tap profile to set up  ·  v0605.1043';
+  document.getElementById('screen-sub').textContent='Simon · tap profile to set up  ·  v0605.1454';
 }
 renderRecipes();
 // renderIngredients removed
