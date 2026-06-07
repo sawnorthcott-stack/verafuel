@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)file:///C:/Users/sawno/Downloads/sports_nutrition_app_65.html -->
+<!-- saved from url=(0061)file:///C:/Users/sawno/Downloads/sports_nutrition_app_66.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -450,6 +450,35 @@ select option{background:var(--surface);color:var(--text)}
 .share-brand-foot{margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
 .share-brand-foot .sbf-handle{font-size:12px;font-weight:700;color:#C8F24E}
 .share-brand-foot .sbf-tag{font-size:11px;color:rgba(255,255,255,0.7);font-weight:600}
+
+/* Chart range toggle bar */
+.chart-range-bar{display:flex;gap:6px;margin-bottom:10px}
+.chart-range-btn{flex:1;padding:6px 0;background:transparent;border:1px solid var(--border);border-radius:8px;font-size:12px;font-weight:600;color:var(--text2);cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s}
+.chart-range-btn.active{background:var(--green);border-color:var(--green);color:#fff}
+
+/* Progress compare overlay */
+.compare-overlay{position:fixed;inset:0;background:rgba(7,10,8,0.75);backdrop-filter:blur(4px);z-index:1000;display:none;align-items:center;justify-content:center;padding:16px}
+.compare-overlay.open{display:flex}
+.compare-sheet{background:var(--bg);border-radius:20px;max-width:440px;width:100%;max-height:92vh;overflow-y:auto;padding:20px;position:relative}
+.compare-close{position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:50%;border:none;background:var(--gray-light);color:var(--text2);font-size:14px;cursor:pointer;z-index:5}
+.compare-head{margin-bottom:14px}
+.compare-title{font-family:'Sora',sans-serif;font-size:20px;font-weight:800;color:var(--text)}
+.compare-sub{font-size:13px;color:var(--text2);margin-top:2px}
+.compare-stage{position:relative;width:100%;aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#000;user-select:none}
+.cmp-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.cmp-before-wrap{position:absolute;inset:0;width:50%;overflow:hidden}
+.cmp-before-wrap .cmp-img{width:100vw;max-width:440px}
+.cmp-divider{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;box-shadow:0 0 8px rgba(0,0,0,0.4);pointer-events:none}
+.cmp-handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;background:#fff;color:var(--green-deep);display:flex;align-items:center;justify-content:center;font-size:15px;box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.cmp-tag{position:absolute;bottom:10px;font-size:11px;font-weight:700;color:#fff;background:rgba(7,10,8,0.6);padding:3px 9px;border-radius:10px;font-family:'Martian Mono',monospace;letter-spacing:.05em}
+.cmp-tag-before{left:10px}
+.cmp-tag-after{right:10px}
+.cmp-range{width:100%;margin:14px 0 4px;accent-color:var(--green)}
+.compare-stats{display:flex;flex-direction:column;gap:8px;margin:10px 0 16px}
+.compare-stat-row{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:var(--gray-light);border-radius:10px;font-size:13px}
+.compare-stat-row .csr-label{color:var(--text2)}
+.compare-stat-row .csr-val{font-weight:700}
+.compare-share-btn{width:100%;padding:13px;background:var(--green);border:none;border-radius:10px;color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif}
 </style>
 </head>
 <body>
@@ -692,7 +721,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div style="height:1.5px;width:100%;border-radius:1px;background:linear-gradient(90deg,#1B6E4F,#C8F24E 60%,#FF6E2C)"></div>
         </div>
-        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:Inter,sans-serif;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 6 Jun 2026  ·  v0606.0509</p>
+        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:Inter,sans-serif;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 7 Jun 2026  ·  v0607.0511</p>
       </div>
       <h1 id="screen-title" style="display:none">Dashboard</h1>
     </div>
@@ -743,7 +772,7 @@ select option{background:var(--surface);color:var(--text)}
           <div class="briefing-inner">
             <div class="briefing-eyebrow">
               <span class="be-label" id="briefing-label">Morning Briefing</span>
-              <span class="be-day" id="briefing-day">Saturday 6 Jun</span>
+              <span class="be-day" id="briefing-day">Sunday 7 Jun</span>
             </div>
             <div class="briefing-greeting" id="briefing-greeting">Good morning, Simon.</div>
             <div class="briefing-headline" id="briefing-headline">An <strong>easy day</strong>. Steady fuelling — moderate carbs, solid protein to keep adaptation ticking over.</div>
@@ -1322,12 +1351,7 @@ select option{background:var(--surface);color:var(--text)}
           <!-- ELECTROLYTES -->
           <div class="card" style="margin-top:14px">
             <div class="card-title">💧 Hydration &amp; electrolytes</div>
-            <div style="font-size:13px;color:var(--text2);line-height:1.5;margin-bottom:12px">
-              Plant-based diets are naturally low in sodium. Hard or sweaty sessions need deliberate electrolyte replacement.
-            </div>
-            <!-- Electrolyte toggles -->
-            <div id="electrolyte-btns" style="display:flex;flex-direction:column;gap:8px"></div>
-            <div id="electrolyte-tip" style="margin-top:12px;padding:11px 13px;background:var(--green-light);border-radius:var(--radius-sm);font-size:12.5px;color:var(--text2);line-height:1.6;display:none"></div>
+            <div id="electrolyte-summary" style="font-size:13px;color:var(--text2);line-height:1.6"></div>
           </div>
 
           
@@ -1359,7 +1383,9 @@ select option{background:var(--surface);color:var(--text)}
             <div class="stat-box"><div class="stat-val" id="prog-cur">--</div><div class="stat-lbl">Current (kg)</div></div>
             <div class="stat-box"><div class="stat-val" id="prog-chg">--</div><div class="stat-lbl">Total change</div></div>
           </div>
-          <div class="card"><div class="card-title">Weight trend</div><div id="wt-chart-container" style="width:100%;padding:4px 0"></div></div>
+          <div class="card"><div class="card-title">Weight trend</div>
+            <div id="wt-range-toggle" class="chart-range-bar"></div>
+            <div id="wt-chart-container" style="width:100%;padding:4px 0"></div></div>
           <div class="card">
             <div class="card-title">Log weight</div>
             <div class="form-row"><label>Weight today (kg)</label><input type="number" id="wt-input" step="0.1" min="30" max="300" placeholder="e.g. 73.0"></div>
@@ -1378,6 +1404,8 @@ select option{background:var(--surface);color:var(--text)}
               <div class="stat-box"><div class="stat-val" id="bc-latest-lm">--</div><div class="stat-lbl">Lean mass (kg)</div></div>
             </div>
             <div id="bc-recomp-note" style="display:none;font-size:12px;line-height:1.5;background:rgba(200,242,78,0.12);border:1px solid rgba(200,242,78,0.25);border-radius:10px;padding:10px 12px;margin-bottom:12px;color:var(--green-deep)"></div>
+            <div id="lean-protein-insight" style="display:none;background:rgba(27,110,79,0.06);border:1px solid rgba(27,110,79,0.18);border-radius:10px;padding:12px;margin-bottom:12px"></div>
+            <div id="bc-range-toggle" class="chart-range-bar"></div>
             <div id="bc-chart-container" style="width:100%;padding:4px 0;margin-bottom:8px"></div>
           </div>
 
@@ -1443,16 +1471,10 @@ select option{background:var(--surface);color:var(--text)}
             Progress photos are stored privately on your device only — never uploaded anywhere.
           </div>
           <div class="card">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-              <div class="card-title" style="margin:0">Progress photos</div>
-              <label for="photo-input" class="pill pill-green" style="cursor:pointer;padding:5px 10px;font-size:12px"><span style="font-size:13px;vertical-align:-1px;font-style:normal">📷</span> Add photo</label>
-              <input type="file" id="photo-input" accept="image/*" style="display:none" onchange="addPhoto(this)">
-            </div>
-            <div class="photo-grid" id="photo-grid">
-              <div class="photo-thumb photo-add" onclick="document.getElementById(&#39;photo-input&#39;).click()">
-                <span style=";font-style:normal">📷</span><span>Add photo</span>
-              </div>
-            </div>
+            <div class="card-title">Progress photos</div>
+            <input type="file" id="photo-input" accept="image/*" style="display:none" onchange="addPhoto(this)">
+            <div class="photo-grid" id="photo-grid"></div>
+            <div id="photo-meta"></div>
           </div>
           <div style="font-size:12px;color:var(--text3);text-align:center;padding:8px;line-height:1.5">
             Tip: take photos in the same location, same time of day, same lighting for the most accurate comparison.
@@ -1532,7 +1554,7 @@ select option{background:var(--surface);color:var(--text)}
           <div style="position:relative;flex-shrink:0" onclick="changeProfilePhoto()" title="Tap to change photo">
             <div id="profile-photo-wrap" style="width:56px;height:56px;border-radius:50%;background:var(--green-light);overflow:hidden;display:flex;align-items:center;justify-content:center;border:2px solid var(--green)">
               <span style="font-size:26px;color:var(--green);font-style:normal">👤</span>
-              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_65.html">
+              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_66.html">
             </div>
             <div style="position:absolute;bottom:-2px;right:-2px;width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface)">
               <span style="font-size:10px;color:#fff;font-style:normal">📷</span>
@@ -1576,7 +1598,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div id="strava-connected" style="display:none">
             <div class="strava-connected" style="margin-bottom:12px">
-              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_65.html" class="strava-avatar" alt="Strava">
+              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_66.html" class="strava-avatar" alt="Strava">
               <div style="flex:1">
                 <div style="font-size:14px;font-weight:600" id="strava-athlete-name">Connected</div>
                 <div class="strava-badge" style="margin-top:3px">
@@ -1758,9 +1780,32 @@ select option{background:var(--surface);color:var(--text)}
 
 <!-- PHOTO VIEWER -->
 <div class="photo-viewer" id="photo-viewer" onclick="closePhotoViewer()">
-  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_65.html" alt="Progress photo">
+  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_66.html" alt="Progress photo">
   <div class="photo-viewer-meta" id="pv-meta"></div>
   <button style="margin-top:12px;background:var(--coral-light);color:var(--coral-dark);border:none;border-radius:var(--radius-sm);padding:8px 16px;cursor:pointer;font-size:13px" onclick="event.stopPropagation();deletePhoto(window._pvIdx)"><span style=";font-style:normal">🗑️</span> Delete</button>
+</div>
+
+<!-- PROGRESS COMPARE OVERLAY -->
+<div class="compare-overlay" id="compare-overlay">
+  <div class="compare-sheet">
+    <button class="compare-close" onclick="closeCompare()">✕</button>
+    <div class="compare-head">
+      <div class="compare-title">Your progress</div>
+      <div class="compare-sub" id="compare-span"></div>
+    </div>
+    <div class="compare-stage" id="compare-stage">
+      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_66.html" alt="Latest photo">
+      <div id="cmp-before-wrap" class="cmp-before-wrap">
+        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_66.html" alt="First photo">
+      </div>
+      <div id="cmp-divider" class="cmp-divider"><div class="cmp-handle">⟺</div></div>
+      <div class="cmp-tag cmp-tag-before">First</div>
+      <div class="cmp-tag cmp-tag-after">Latest</div>
+    </div>
+    <input type="range" id="cmp-slider" min="0" max="100" value="50" class="cmp-range">
+    <div class="compare-stats" id="compare-stats"></div>
+    <button class="compare-share-btn" id="compare-share-btn" onclick="shareCompare()">📲 Create shareable card</button>
+  </div>
 </div>
 
 <!-- FOOD LOGGER (Scan + Search + Manual) -->
@@ -2475,6 +2520,11 @@ function defaultState(){return{
   weightLog:[], bodyComp: []
 };}
 let S=defaultState();
+let _wtLogExpanded=false;
+let _photosExpanded=false;
+let _wtRange='all';
+let _bcRange='all';
+let _bcLogExpanded=false;
 // loadState and saveState defined above with IndexedDB
 
 // ── HELPERS ────────────────────────────────────────────────────────────────
@@ -2514,7 +2564,7 @@ function updateSub(){
   try{
     const d=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
     const name=S.profile.name||'Set up profile';
-    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0606.0509';
+    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0607.0511';
   }catch(e){}
 }
 
@@ -3506,13 +3556,109 @@ function renderPhotos() {
   const grid = document.getElementById('photo-grid');
   if (!grid) return;
   if (!S.photos) S.photos = [];
-  const photos = [...S.photos].reverse();
-  grid.innerHTML = `<div class="photo-thumb photo-add" onclick="document.getElementById('photo-input').click()"><span style=";font-style:normal">📷</span><span>Add photo</span></div>` +
+  const all = [...S.photos].reverse();
+  const CAP = 9;
+  const photos = _photosExpanded ? all : all.slice(0, CAP);
+  const addTile = `<div class="photo-thumb photo-add" onclick="document.getElementById('photo-input').click()"><span style=";font-style:normal">📷</span><span>Add photo</span></div>`;
+  grid.innerHTML = addTile +
     photos.map((p, i) => `
       <div class="photo-thumb" onclick="viewPhoto(${S.photos.length - 1 - i})">
         <img src="${p.data}" alt="Progress photo">
         <div class="photo-date">${p.date}</div>
       </div>`).join('');
+
+  // Show-all / show-less toggle + count, rendered just below the grid
+  const meta = document.getElementById('photo-meta');
+  if (meta) {
+    const compareBtn = all.length >= 2
+      ? `<button onclick="openCompare()" style="width:100%;margin-top:10px;padding:11px;background:var(--green);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif">✨ See your progress</button>`
+      : '';
+    let m = '';
+    if (all.length > CAP) {
+      m = `<button onclick="_photosExpanded=!_photosExpanded;renderPhotos()" style="width:100%;margin-top:10px;padding:9px;background:transparent;border:1px solid var(--border);border-radius:8px;color:var(--green);font-size:13px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif">${_photosExpanded ? 'Show less' : 'Show all '+all.length+' photos'}</button>`;
+    } else if (all.length) {
+      m = `<div style="text-align:center;margin-top:8px;font-size:11px;color:var(--text3)">${all.length} photo${all.length>1?'s':''} stored privately on this device</div>`;
+    }
+    meta.innerHTML = compareBtn + m;
+  }
+}
+
+
+// ══════════════════════════════════════════════════════════════════════════
+// PROGRESS COMPARE — auto-pairs first vs latest photo, overlays composition data.
+// Professional, consistency-first tone. Sharing is opt-in.
+// ══════════════════════════════════════════════════════════════════════════
+function openCompare() {
+  const photos = [...(S.photos || [])].sort((a,b) => (a.ts||0) - (b.ts||0));
+  if (photos.length < 2) { toast('Add at least two photos to compare'); return; }
+  const first = photos[0], last = photos[photos.length - 1];
+  document.getElementById('cmp-before').src = first.data;
+  document.getElementById('cmp-after').src = last.data;
+
+  // Time span
+  const d1 = new Date(first.date + 'T00:00:00'), d2 = new Date(last.date + 'T00:00:00');
+  const days = Math.max(1, Math.round((d2 - d1) / 86400000));
+  document.getElementById('compare-span').textContent =
+    `${days} day${days>1?'s':''} apart · ${first.date} → ${last.date}`;
+
+  // Composition + weight deltas over that window (consistency-first framing)
+  const stats = [];
+  stats.push(`<div class="compare-stat-row"><span class="csr-label">📅 Showing up</span><span class="csr-val">${days} days of progress</span></div>`);
+  const wl = (S.weightLog || []).slice().sort((a,b)=>a.date.localeCompare(b.date));
+  if (wl.length >= 2) {
+    const wChg = (wl[wl.length-1].weight - wl[0].weight).toFixed(1);
+    stats.push(`<div class="compare-stat-row"><span class="csr-label">⚖️ Weight</span><span class="csr-val">${wChg>0?'+':''}${wChg} kg</span></div>`);
+  }
+  const bf = (S.bodyComp||[]).filter(e=>e.bf!=null);
+  if (bf.length >= 2) {
+    const c = (bf[bf.length-1].bf - bf[0].bf).toFixed(1);
+    stats.push(`<div class="compare-stat-row"><span class="csr-label">📉 Body fat</span><span class="csr-val">${c>0?'+':''}${c}%</span></div>`);
+  }
+  const lm = (S.bodyComp||[]).filter(e=>e.lm!=null);
+  if (lm.length >= 2) {
+    const c = (lm[lm.length-1].lm - lm[0].lm).toFixed(1);
+    stats.push(`<div class="compare-stat-row"><span class="csr-label">💪 Lean mass</span><span class="csr-val">${c>0?'+':''}${c} kg</span></div>`);
+  }
+  document.getElementById('compare-stats').innerHTML = stats.join('');
+
+  // Reset slider to middle and wire it
+  const slider = document.getElementById('cmp-slider');
+  slider.value = 50;
+  setComparePos(50);
+  slider.oninput = (e) => setComparePos(e.target.value);
+
+  document.getElementById('compare-overlay').classList.add('open');
+}
+
+function setComparePos(pct) {
+  const wrap = document.getElementById('cmp-before-wrap');
+  const div = document.getElementById('cmp-divider');
+  if (wrap) wrap.style.width = pct + '%';
+  if (div) div.style.left = pct + '%';
+}
+
+function closeCompare() {
+  document.getElementById('compare-overlay').classList.remove('open');
+}
+
+function shareCompare() {
+  // Reuses the privacy-respecting approach: builds a text summary the user can share.
+  const photos = [...(S.photos || [])].sort((a,b) => (a.ts||0) - (b.ts||0));
+  if (photos.length < 2) return;
+  const first = photos[0], last = photos[photos.length - 1];
+  const d1 = new Date(first.date + 'T00:00:00'), d2 = new Date(last.date + 'T00:00:00');
+  const days = Math.max(1, Math.round((d2 - d1) / 86400000));
+  let txt = `💪 ${days} days of consistent work — fuelled by plants.\n`;
+  const lm = (S.bodyComp||[]).filter(e=>e.lm!=null);
+  const bf = (S.bodyComp||[]).filter(e=>e.bf!=null);
+  if (lm.length>=2) { const c=(lm[lm.length-1].lm-lm[0].lm).toFixed(1); txt += `Lean mass: ${c>0?'+':''}${c}kg\n`; }
+  if (bf.length>=2) { const c=(bf[bf.length-1].bf-bf[0].bf).toFixed(1); txt += `Body fat: ${c>0?'+':''}${c}%\n`; }
+  txt += `\n🌱 Tracked with VeraFuel\n📲 @verafuelperformance · #FuelTheFinish`;
+  if (navigator.share) {
+    navigator.share({ text: txt }).catch(()=>{});
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(txt).then(()=>toast('Copied — paste into your post')).catch(()=>{});
+  }
 }
 
 function viewPhoto(idx) {
@@ -5221,13 +5367,31 @@ function renderProgressEnhanced() {
   renderAdaptiveCard(wl);
 }
 
+function renderChartRangeBar(barId, current, fn) {
+  const bar = document.getElementById(barId);
+  if (!bar) return;
+  const ranges = [['1m','1M'],['3m','3M'],['6m','6M'],['all','All']];
+  bar.innerHTML = ranges.map(([k,lbl]) =>
+    `<button class="chart-range-btn${k===current?' active':''}" onclick="${fn}('${k}')">${lbl}</button>`
+  ).join('');
+}
+function filterByRange(arr, range) {
+  if (range === 'all' || !arr.length) return arr;
+  const days = { '1m':30, '3m':90, '6m':180 }[range] || 99999;
+  const cutoff = new Date(); cutoff.setHours(0,0,0,0); cutoff.setDate(cutoff.getDate() - days);
+  return arr.filter(e => new Date(e.date + 'T00:00:00') >= cutoff);
+}
+function setWtRange(r) { _wtRange = r; drawWtChart(); }
+
 function drawWtChart() {
   // Use SVG instead of Chart.js canvas - works instantly, no timing issues
   const container = document.getElementById('wt-chart-container');
   if (!container) return;
+  renderChartRangeBar('wt-range-toggle', _wtRange, 'setWtRange');
 
-  const wl = S.weightLog || [];
-  if (!wl.length) {
+  const wlAll = S.weightLog || [];
+  const wl = filterByRange(wlAll, _wtRange);
+  if (!wlAll.length) {
     container.innerHTML = '<div style="height:180px;display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:13px">Log a weight to see your trend</div>';
     return;
   }
@@ -5314,13 +5478,15 @@ function drawWtChart() {
 function renderWtLog() {
   const el = document.getElementById('wt-log-list');
   if (!el) return;
-  const wl = [...(S.weightLog || [])].reverse().slice(0, 10);
-  if (!wl.length) {
+  const all = [...(S.weightLog || [])].reverse();
+  if (!all.length) {
     el.innerHTML = '<div class="empty"><p>No weight entries yet. Log your first weigh-in above.</p></div>';
     return;
   }
-  el.innerHTML = wl.map((e, i) => {
-    const prev = wl[i+1];
+  const CAP = 5;
+  const wl = _wtLogExpanded ? all : all.slice(0, CAP);
+  const rows = wl.map((e, i) => {
+    const prev = wl[i+1] || (!_wtLogExpanded && i === wl.length-1 ? all[CAP] : null);
     const chg = prev ? (e.weight - prev.weight).toFixed(1) : null;
     const chgHtml = chg !== null
       ? `<span style="font-size:12px;font-weight:500;padding:2px 8px;border-radius:10px;background:${parseFloat(chg)<=0?'var(--green-light)':'var(--coral-light)'};color:${parseFloat(chg)<=0?'var(--green-dark)':'var(--coral-dark)'}">${parseFloat(chg)>0?'+':''}${chg} kg</span>`
@@ -5331,6 +5497,11 @@ function renderWtLog() {
       ${chgHtml}
     </div>`;
   }).join('');
+  let toggle = '';
+  if (all.length > CAP) {
+    toggle = `<button onclick="_wtLogExpanded=!_wtLogExpanded;renderWtLog()" style="width:100%;margin-top:10px;padding:9px;background:transparent;border:1px solid var(--border);border-radius:8px;color:var(--green);font-size:13px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif">${_wtLogExpanded ? 'Show less' : 'Show all '+all.length+' entries'}</button>`;
+  }
+  el.innerHTML = rows + toggle;
 }
 
 function renderTrendCard(wl) {
@@ -5433,6 +5604,41 @@ function logBodyComp() {
   renderBodyComp();
 }
 
+
+// Lean-mass-based protein: more precise than total-bodyweight, since fat tissue
+// doesn't need feeding. Shown as an optional, educational refinement.
+function renderLeanProteinInsight() {
+  const box = document.getElementById('lean-protein-insight');
+  if (!box) return;
+  const lmEntries = (S.bodyComp || []).filter(e => e.lm != null);
+  if (!lmEntries.length) { box.style.display = 'none'; return; }
+  const lm = lmEntries[lmEntries.length - 1].lm;
+  // 2.4g per kg of lean mass — upper end for athletes building muscle, on a fat-free basis
+  const leanTarget = Math.round(lm * 2.4);
+  const current = (S.profile && S.profile.targetP) || 0;
+  const diff = leanTarget - current;
+  const diffTxt = diff === 0 ? 'the same as' : (diff > 0 ? `${diff}g higher than` : `${Math.abs(diff)}g lower than`);
+  box.style.display = 'block';
+  box.innerHTML = `
+    <div style="font-size:13px;font-weight:700;color:var(--green-deep);margin-bottom:4px">🎯 Protein, refined by lean mass</div>
+    <div style="font-size:12.5px;color:var(--text2);line-height:1.55;margin-bottom:10px">
+      Based on your <strong>${lm}kg lean mass</strong>, a precise protein target is <strong>${leanTarget}g/day</strong> (2.4g per kg of lean tissue — the method that ignores fat mass, which doesn't need feeding). That's ${diffTxt} your current ${current}g target.
+    </div>
+    <button onclick="applyLeanProtein(${leanTarget})" style="width:100%;padding:9px;background:var(--green);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif">Use ${leanTarget}g as my protein target</button>`;
+}
+
+function applyLeanProtein(target) {
+  if (!S.profile) return;
+  S.profile.targetP = target;
+  // Recompute carbs so calories stay consistent: carbs fill the remainder
+  const cal = S.profile.targetCal, fat = S.profile.targetF;
+  S.profile.targetC = Math.max(0, Math.round((cal - target*4 - fat*9) / 4));
+  saveState();
+  toast('\u2713 Protein target updated to ' + target + 'g');
+  renderLeanProteinInsight();
+  if (typeof renderDashboard === 'function') renderDashboard();
+}
+
 function renderBodyComp() {
   const list = S.bodyComp || [];
   const bfEntries = list.filter(e => e.bf != null);
@@ -5467,32 +5673,42 @@ function renderBodyComp() {
 
   drawBodyCompChart();
   renderBodyCompList();
+  renderLeanProteinInsight();
 }
 
 function renderBodyCompList() {
   const el = document.getElementById('bc-log-list');
   if (!el) return;
-  const list = (S.bodyComp || []).slice().reverse();
-  if (!list.length) {
+  const all = (S.bodyComp || []).slice().reverse();
+  if (!all.length) {
     el.innerHTML = '<div style="color:var(--text3);font-size:13px;padding:4px 0">No scans logged yet.</div>';
     return;
   }
-  el.innerHTML = list.map(e => {
+  const CAP = 5;
+  const list = _bcLogExpanded ? all : all.slice(0, CAP);
+  const rows = list.map(e => {
     const d = new Date(e.date + 'T00:00:00').toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
     const parts = [];
     if (e.bf != null) parts.push(`${e.bf}% fat`);
     if (e.lm != null) parts.push(`${e.lm}kg lean`);
     return `<div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:0.5px solid var(--border)">
       <div style="font-size:13px;color:var(--text2)">${d}</div>
-      <div style="font-size:13px;font-weight:600">${parts.join(' · ')}</div>
+      <div style="font-size:13px;font-weight:600">${parts.join(' \u00b7 ')}</div>
     </div>`;
   }).join('');
+  let toggle = '';
+  if (all.length > CAP) {
+    toggle = `<button onclick="_bcLogExpanded=!_bcLogExpanded;renderBodyCompList()" style="width:100%;margin-top:10px;padding:9px;background:transparent;border:1px solid var(--border);border-radius:8px;color:var(--green);font-size:13px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif">${_bcLogExpanded ? 'Show less' : 'Show all '+all.length+' scans'}</button>`;
+  }
+  el.innerHTML = rows + toggle;
 }
 
+function setBcRange(r) { _bcRange = r; drawBodyCompChart(); }
 function drawBodyCompChart() {
   const container = document.getElementById('bc-chart-container');
   if (!container) return;
-  const list = (S.bodyComp || []).slice().sort((a,b)=>a.date.localeCompare(b.date));
+  renderChartRangeBar('bc-range-toggle', _bcRange, 'setBcRange');
+  const list = filterByRange((S.bodyComp || []).slice().sort((a,b)=>a.date.localeCompare(b.date)), _bcRange);
   const bfPts = list.filter(e => e.bf != null).map(e => ({ date: e.date, v: e.bf }));
   const lmPts = list.filter(e => e.lm != null).map(e => ({ date: e.date, v: e.lm }));
 
@@ -5883,8 +6099,8 @@ function calcRecoveryScore() {
   var sleepScore = 0;
   if (sleep && sleep.hours) {
     if      (sleep.hours >= 7 && sleep.hours <= 9) sleepScore = 40;
+    else if (sleep.hours > 9)   sleepScore = 34;   // oversleeping — slightly suboptimal
     else if (sleep.hours >= 6)  sleepScore = 28;
-    else if (sleep.hours > 9)   sleepScore = 34;
     else if (sleep.hours >= 5)  sleepScore = 16;
     else                        sleepScore = 8;
     if (sleep.quality) sleepScore = Math.round(sleepScore * (0.7 + sleep.quality * 0.06));
@@ -6008,6 +6224,8 @@ function renderRecovery() {
 
   // Recovery toolkit (science-backed guidance)
   renderRecoveryToolkit();
+
+  if (typeof renderElectrolytes === 'function') renderElectrolytes();
 }
 
 function renderRecoveryToolkit() {
@@ -6368,59 +6586,53 @@ function deleteSavedMeal(idx) {
 // ══════════════════════════════════════════════════════════════════════════
 // HYDRATION & ELECTROLYTES
 // ══════════════════════════════════════════════════════════════════════════
-const ELECTROLYTES = [
-  {key:'sodium',    label:'Sodium / salt',   icon:'🧂', note:'~300–700mg per hour of hard training'},
-  {key:'potassium', label:'Potassium',       icon:'🍌', note:'Banana, potato, beans, leafy greens'},
-  {key:'magnesium', label:'Magnesium',       icon:'🥜', note:'Pumpkin seeds, dark chocolate, spinach'},
-  {key:'electrolyte_drink', label:'Electrolyte drink', icon:'🥤', note:'During or after a sweaty session'}
-];
+
 
 function renderElectrolytes() {
-  const el = document.getElementById('electrolyte-btns');
+  const el = document.getElementById('electrolyte-summary');
   if (!el) return;
   const key = dateKey(0);
-  if (!S.electrolytes) S.electrolytes = {};
-  if (!S.electrolytes[key]) S.electrolytes[key] = {};
-  const today = S.electrolytes[key];
+  const trainedToday = !!((S.workoutLogs || {})[key]) ||
+    ['hard','race','endurance'].includes((S.trainingWeek || {})[key]);
 
-  el.innerHTML = ELECTROLYTES.map(e => {
-    const on = today[e.key];
-    return `<button onclick="toggleElectrolyte('${e.key}')"
-      style="display:flex;align-items:center;gap:11px;width:100%;text-align:left;padding:11px 13px;border-radius:var(--radius-sm);cursor:pointer;
-             border:1px solid ${on ? 'var(--green)' : 'var(--border)'};
-             background:${on ? 'var(--green-light)' : 'var(--surface)'};font-family:Inter,sans-serif">
-      <span style="font-size:18px;font-style:normal">${e.icon}</span>
-      <span style="flex:1;min-width:0">
-        <span style="display:block;font-size:14px;font-weight:500;color:var(--text)">${e.label}</span>
-        <span style="display:block;font-size:11px;color:var(--text2);margin-top:1px">${e.note}</span>
-      </span>
-      <span style="font-size:16px;color:${on ? 'var(--green)' : 'var(--text3)'}">${on ? '✓' : '+'}</span>
-    </button>`;
-  }).join('');
-
-  // Contextual tip
-  const tip = document.getElementById('electrolyte-tip');
-  const hadWorkout = (S.workoutLogs && (S.workoutLogs[key] || []).length > 0);
-  const count = Object.values(today).filter(Boolean).length;
-  if (hadWorkout && count === 0) {
-    tip.style.display = 'block';
-    tip.innerHTML = '<strong style="color:var(--orange)">You trained today.</strong> Replace electrolytes lost through sweat — especially sodium, which plant-based diets run low on.';
-  } else if (count >= 3) {
-    tip.style.display = 'block';
-    tip.innerHTML = '<strong style="color:var(--green)">Well covered.</strong> Good electrolyte balance supports hydration, muscle function and recovery.';
-  } else {
-    tip.style.display = 'none';
+  // Magnesium comes from logged food (tracked in the micronutrient system)
+  let mgLine = '';
+  if (typeof getMicroTotals === 'function' && typeof MICRO_TARGETS !== 'undefined' && MICRO_TARGETS.magnesium) {
+    const mg = Math.round((getMicroTotals(0).magnesium) || 0);
+    const tgt = MICRO_TARGETS.magnesium.target;
+    const pct = Math.min(100, Math.round(mg / tgt * 100));
+    const col = pct >= 80 ? 'var(--green)' : pct >= 50 ? 'var(--orange)' : 'var(--coral)';
+    mgLine = `<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:0.5px solid var(--border)">
+      <span>🥜 Magnesium <span style="color:var(--text3);font-size:11px">(from food)</span></span>
+      <span style="font-weight:700;color:${col}">${mg} / ${tgt} mg</span>
+    </div>`;
   }
+
+  // Sodium — the one the food log can't see (added salt in cooking)
+  let sodiumLine;
+  if (trainedToday) {
+    sodiumLine = `<div style="margin-top:10px;padding:11px 13px;background:rgba(255,110,44,0.1);border:1px solid rgba(255,110,44,0.25);border-radius:10px">
+      <div style="font-weight:700;color:var(--orange);font-size:13px;margin-bottom:3px">🧂 Sodium reminder</div>
+      <div style="font-size:12.5px;color:var(--text2);line-height:1.55">You trained today — replace sodium lost through sweat (~300–700mg per hour of hard effort). Plant diets run naturally low, so salt your post-session meal or add an electrolyte drink.</div>
+    </div>`;
+  } else {
+    sodiumLine = `<div style="margin-top:10px;padding:11px 13px;background:var(--green-light);border-radius:10px">
+      <div style="font-size:12.5px;color:var(--text2);line-height:1.55">🧂 <strong>Sodium:</strong> no hard session logged today, so normal salting of food is fine. On sweaty training days, add deliberate sodium.</div>
+    </div>`;
+  }
+
+  // Potassium — encourage food sources (not tracked numerically)
+  const potassiumLine = `<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:0.5px solid var(--border)">
+      <span>🍌 Potassium</span>
+      <span style="color:var(--text3);font-size:12px">banana, potato, beans, greens</span>
+    </div>`;
+
+  el.innerHTML =
+    '<div style="margin-bottom:6px;color:var(--text3);font-size:12px">Magnesium and potassium come from the foods you log. Sodium is the one to add deliberately around training.</div>'
+    + potassiumLine + mgLine + sodiumLine;
 }
 
-function toggleElectrolyte(k) {
-  const key = dateKey(0);
-  if (!S.electrolytes) S.electrolytes = {};
-  if (!S.electrolytes[key]) S.electrolytes[key] = {};
-  S.electrolytes[key][k] = !S.electrolytes[key][k];
-  saveState();
-  renderElectrolytes();
-}
+
 
 
 
@@ -6547,13 +6759,10 @@ function renderWeeklyReview() {
     findings.push({type:'gap', icon:'💊', text:`B12 logged only ${b12Days} day${b12Days===1?'':'s'}. It's the one non-negotiable supplement on a plant-based diet.`});
   }
 
-  // 5. Electrolytes on training days
+  // 5. Sodium reminder on training-heavy weeks (food log can't see added salt)
   const trainingDays = days.filter(d => d.workout);
-  const electroOnTraining = trainingDays.filter(d => Object.values(d.electro).filter(Boolean).length > 0).length;
-  if (trainingDays.length >= 2 && electroOnTraining < trainingDays.length * 0.5) {
-    findings.push({type:'gap', icon:'🧂', text:`You trained ${trainingDays.length} days but logged electrolytes on few. Plant diets run low on sodium — replace it after sweaty sessions.`});
-  } else if (trainingDays.length >= 2 && electroOnTraining >= trainingDays.length * 0.7) {
-    findings.push({type:'good', icon:'🧂', text:`Good electrolyte habits around training — supports hydration and performance.`});
+  if (trainingDays.length >= 3) {
+    findings.push({type:'tip', icon:'🧂', text:`You trained ${trainingDays.length} days this week. Plant diets run naturally low in sodium — make sure you're salting food and replacing electrolytes after sweaty sessions.`});
   }
 
   // 6. Logging consistency
@@ -7595,7 +7804,7 @@ if(!S.profile.phase)S.profile.phase='bulk';
 updateSub();
 try{renderDashboard();}catch(e){
   console.error('Dashboard render error:',e);
-  document.getElementById('screen-sub').textContent='Simon · tap profile to set up  ·  v0606.0509';
+  document.getElementById('screen-sub').textContent='Simon · tap profile to set up  ·  v0607.0511';
 }
 renderRecipes();
 // renderIngredients removed
