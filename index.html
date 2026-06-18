@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)file:///C:/Users/sawno/Downloads/sports_nutrition_app_82.html -->
+<!-- saved from url=(0064)file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(5).html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -742,7 +742,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div style="height:1.5px;width:100%;border-radius:1px;background:linear-gradient(90deg,#1B6E4F,#C8F24E 60%,#FF6E2C)"></div>
         </div>
-        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:Inter,sans-serif;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 18 Jun 2026  ·  v0618.1031</p>
+        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:Inter,sans-serif;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 18 Jun 2026  ·  v0618.1234</p>
       </div>
       <h1 id="screen-title" style="display:none">Dashboard</h1>
     </div>
@@ -955,6 +955,8 @@ select option{background:var(--surface);color:var(--text)}
             <div class="ring-inner">
               <div class="ring-kcal" id="ring-val">0</div>
               <div class="ring-sub">of <span id="ring-target">3269</span> kcal</div>
+              <div id="ring-trained-note" style="font-size:10px;color:var(--text3);margin-top:3px;display:none;line-height:1.3">training already included</div>
+              <div id="ring-set-training" onclick="nav(&#39;plan&#39;,document.getElementById(&#39;tab-plan&#39;))" style="font-size: 11px; color: var(--orange,#FF6E2C); margin-top: 5px; display: block; line-height: 1.3; font-weight: 700; cursor: pointer;">⚠ Set today's training to fuel right →</div>
               <div style="margin-top:5px" id="ring-pill"><span class="pill pill-coral">0%</span></div>
             </div>
           </div>
@@ -1021,10 +1023,12 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div id="dash-workouts"></div>
           <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:10px;border-top:0.5px solid var(--border)">
-            <span style="font-size:13px;color:var(--text2)">Net intake <span style="font-size:11px;color:var(--text3)">(after training)</span></span>
-            <span style="font-size:15px;font-weight:700" id="dash-net-cal">—</span>
+            <span style="font-size:13px;color:var(--text2)">Burned today <span style="font-size:11px;color:var(--text3)">(for reference)</span></span>
+            <span style="font-size:15px;font-weight:700;color:var(--coral)" id="dash-net-cal">—</span>
           </div>
-          <div style="font-size:10.5px;color:var(--text3);line-height:1.4;margin-top:6px">For reference — your calorie target already accounts for your activity, so there's no need to eat workout calories back.</div>
+          <div style="font-size:11px;color:var(--text2);line-height:1.45;margin-top:8px;background:var(--green-light,#e8f3ec);border-radius:8px;padding:9px 11px">
+            <b style="color:var(--green-dark,#0A3D2C)">Today's target already includes this training.</b> Just hit the number above — no need to eat your workout back.
+          </div>
         </div>
 
         <div class="card">
@@ -1568,7 +1572,7 @@ select option{background:var(--surface);color:var(--text)}
           <div style="position:relative;flex-shrink:0" onclick="changeProfilePhoto()" title="Tap to change photo">
             <div id="profile-photo-wrap" style="width:56px;height:56px;border-radius:50%;background:var(--green-light);overflow:hidden;display:flex;align-items:center;justify-content:center;border:2px solid var(--green)">
               <span style="font-size:26px;color:var(--green);font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
-              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_82.html">
+              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(5).html">
             </div>
             <div style="position:absolute;bottom:-2px;right:-2px;width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface)">
               <span style="font-size:10px;color:#fff;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"></path><circle cx="12" cy="13" r="3"></circle></svg></span>
@@ -1605,14 +1609,15 @@ select option{background:var(--surface);color:var(--text)}
                 <div style="font-size:12px;color:var(--text2);margin-top:1px">Auto-import workouts &amp; calories burned</div>
               </div>
             </div>
-            <button class="strava-btn" onclick="connectStrava()">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"></path></svg>
-              Connect with Strava
-            </button>
+            <div style="display:flex;align-items:center;justify-content:center;gap:8px;background:var(--gray-light);color:var(--text2);border-radius:var(--radius-sm);padding:11px;font-size:14px;font-weight:600">
+              <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--orange,#FF6E2C)"></span>
+              Strava sync — coming soon
+            </div>
+            <div style="font-size:11px;color:var(--text3);text-align:center;margin-top:8px;line-height:1.4">Auto-import is on the way. For now, log workouts manually — your training type and targets update automatically.</div>
           </div>
           <div id="strava-connected" style="display:none">
             <div class="strava-connected" style="margin-bottom:12px">
-              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_82.html" class="strava-avatar" alt="Strava">
+              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(5).html" class="strava-avatar" alt="Strava">
               <div style="flex:1">
                 <div style="font-size:14px;font-weight:600" id="strava-athlete-name">Connected</div>
                 <div class="strava-badge" style="margin-top:3px">
@@ -1792,7 +1797,7 @@ select option{background:var(--surface);color:var(--text)}
 
 <!-- PHOTO VIEWER -->
 <div class="photo-viewer" id="photo-viewer" onclick="closePhotoViewer()">
-  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_82.html" alt="Progress photo">
+  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(5).html" alt="Progress photo">
   <div class="photo-viewer-meta" id="pv-meta"></div>
   <button style="margin-top:12px;background:var(--coral-light);color:var(--coral-dark);border:none;border-radius:var(--radius-sm);padding:8px 16px;cursor:pointer;font-size:13px" onclick="event.stopPropagation();deletePhoto(window._pvIdx)"><span style=";font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg></span> Delete</button>
 </div>
@@ -1806,9 +1811,9 @@ select option{background:var(--surface);color:var(--text)}
       <div class="compare-sub" id="compare-span"></div>
     </div>
     <div class="compare-stage" id="compare-stage">
-      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_82.html" alt="Latest photo">
+      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(5).html" alt="Latest photo">
       <div id="cmp-before-wrap" class="cmp-before-wrap">
-        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app_82.html" alt="First photo">
+        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(5).html" alt="First photo">
       </div>
       <div id="cmp-divider" class="cmp-divider"><div class="cmp-handle">⟺</div></div>
       <div class="cmp-tag cmp-tag-before">First</div>
@@ -3330,7 +3335,7 @@ function updateSub(){
   try{
     const d=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
     const name=S.profile.name||'Set up profile';
-    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0618.1031';
+    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0618.1234';
   }catch(e){}
 }
 
@@ -3609,6 +3614,16 @@ function renderDashboard(){renderBriefing();updateStreak();renderFavChips();rend
   document.getElementById('ring-cal').style.strokeDashoffset=(circ*(1-pct)).toFixed(1);
   document.getElementById('ring-val').textContent=Math.round(t.cal);
   document.getElementById('ring-target').textContent=AT.cal;
+  {
+    const _tn=document.getElementById('ring-trained-note');
+    const _sp=document.getElementById('ring-set-training');
+    const _isSet = !!(S.trainingWeek && S.trainingWeek[dateKey(0)]);   // has the user chosen today's session?
+    const _tt = _isSet ? S.trainingWeek[dateKey(0)] : null;
+    // Prompt when today's training hasn't been set at all
+    if(_sp) _sp.style.display = _isSet ? 'none' : 'block';
+    // "Training included" only when a real session is set (not rest, not unset)
+    if(_tn) _tn.style.display = (_isSet && _tt && _tt!=='rest') ? 'block' : 'none';
+  }
   const pp=Math.round(pct*100);
   document.getElementById('ring-pill').innerHTML=`<span class="pill ${pct<0.5?'pill-coral':pct<0.9?'pill-amber':'pill-green'}">${pp}%</span>`;
   const setBar=(id,val,tgt)=>{const pct2=tgt?Math.min(100,Math.round(val/tgt*100)):0;const bar=document.getElementById('d-'+id+'-bar');const lbl=document.getElementById('d-'+id+'-lbl');if(bar)bar.style.width=pct2+'%';if(lbl)lbl.textContent=Math.round(val)+'/'+(tgt||'?')+'g';};
@@ -4813,7 +4828,9 @@ async function syncStrava() {
       newCount++;
     });
     S.strava.lastActivities = activities.slice(0,5);
-    saveState();
+// Auto-set today's training type from synced activities (only if unset)
+autoSetTrainingFromWorkouts(dateKey(0));
+saveState();
     if (statusEl) { statusEl.innerHTML = newCount > 0 ? '<svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg> Synced '+newCount+' new activit'+(newCount===1?'y':'ies') : '<svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg> Up to date'; setTimeout(()=>{ if(statusEl) statusEl.textContent=''; },3000); }
     renderStravaActivities(activities.slice(0,5));
     if (curScreen==='home') renderDashboard();
@@ -8545,6 +8562,26 @@ function clearCarbEvent() {
 // any opted-in carb-loading override. Used by the dashboard AND the plan page.
 // Additive training calories (kcal) added on top of lifestyle TDEE for the day's session
 const TRAINING_BURN = { rest:0, light:200, moderate:400, hard:600, race:500 };
+function autoSetTrainingFromWorkouts(dateK) {
+  // Auto-derive today's training TYPE from logged workouts (manual or Strava),
+  // but only if the user hasn't already set it themselves. Never overrides a manual choice.
+  try {
+    if (!dateK) dateK = dateKey(0);
+    if (S.trainingWeek && S.trainingWeek[dateK]) return;          // already set — respect it
+    const wk = (S.workoutLogs && S.workoutLogs[dateK]) || [];
+    if (!wk.length) return;                                        // nothing logged
+    const burn = wk.reduce((a,w) => a + (w.cal || 0), 0);
+    let type;
+    if (burn < 250) type = 'light';
+    else if (burn <= 550) type = 'moderate';
+    else type = 'hard';
+    if (!S.trainingWeek) S.trainingWeek = {};
+    S.trainingWeek[dateK] = type;
+    S.trainingWeek['_auto_' + dateK] = true;                      // remember it was auto-set
+    saveState();
+  } catch(e) { console.error('autoSetTrainingFromWorkouts failed:', e); }
+}
+
 function getAdjustedTargets() {
   const p = S.profile;
   const todayType = (S.trainingWeek && S.trainingWeek[dateKey(0)]) || 'rest';
@@ -8887,7 +8924,7 @@ function saveWorkout(){
     notes:document.getElementById('w-notes').value.trim(),
     mins,cal
   });
-  S.lastWorkoutTime=Date.now();saveState();closeModal('workout-modal');
+  S.lastWorkoutTime=Date.now();autoSetTrainingFromWorkouts(key);saveState();closeModal('workout-modal');
   document.getElementById('w-notes').value='';
   document.getElementById('w-mins').value='';
   document.getElementById('w-cal').value='';
@@ -8904,7 +8941,7 @@ function renderWorkouts(){
   card.style.display='block';
   const totalBurned=wk.reduce((a,w)=>a+w.cal,0);
   const mealTotal=getTotals(0).cal;
-  const net=Math.round(mealTotal-totalBurned);
+  const net=Math.round(totalBurned);
   const WICONS={'Weights / Strength':'ti-barbell','Running':'ti-run','Cycling':'ti-bike','HIIT':'ti-heart-rate-monitor','Swimming':'ti-ripple','Football / Sport':'ti-ball-football','Yoga / Pilates':'ti-yin-yang','Other cardio':'ti-activity'};
   document.getElementById('dash-workouts').innerHTML=wk.map(w=>`
     <div class="meal-row">
@@ -8915,8 +8952,7 @@ function renderWorkouts(){
       </div>
     </div>`).join('');
   const netEl=document.getElementById('dash-net-cal');
-  netEl.textContent=net+' kcal';
-  netEl.style.color=net<=getAdjustedTargets().cal?'var(--green)':'var(--coral)';
+  netEl.textContent='−'+net+' kcal';
 }
 
 // ── INIT ───────────────────────────────────────────────────────────────────
@@ -8975,7 +9011,7 @@ if(!S.profile.phase)S.profile.phase='bulk';
 updateSub();
 try{renderDashboard();}catch(e){
   console.error('Dashboard render error:',e);
-  document.getElementById('screen-sub').textContent='Simon · tap profile to set up  ·  v0618.1031';
+  document.getElementById('screen-sub').textContent='Simon · tap profile to set up  ·  v0618.1234';
 }
 renderRecipes();
 // renderIngredients removed
