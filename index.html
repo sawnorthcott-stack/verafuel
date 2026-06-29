@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0065)file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(15).html -->
+<!-- saved from url=(0065)file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(16).html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -58,7 +58,9 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
 .tabbar{background:var(--surface);border-top:0.5px solid var(--border);display:flex;flex-shrink:0;padding-bottom:env(safe-area-inset-bottom,0px)}
 .tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:8px 0;font-size:10px;color:var(--text3);cursor:pointer;border:none;background:none;min-height:var(--tab)}
 .tab i{font-size:24px}
-.tab.active{color:#C8F24E}
+.tab.active { color:#1B6E4F; font-weight:700; position:relative }
+    .tab.active svg, .tab.active .ic { stroke-width:2.5 }
+    .tab.active::before { content:''; position:absolute; top:-1px; left:50%; transform:translateX(-50%); width:26px; height:3px; border-radius:0 0 4px 4px; background:#1B6E4F }
 .card{background:var(--surface);border-radius:var(--radius);border:0.5px solid var(--border);padding:14px 16px;margin-bottom:10px}
 .card-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:10px;letter-spacing:-0.01em;font-family:Inter,sans-serif}
 .metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
@@ -742,7 +744,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div style="height:1.5px;width:100%;border-radius:1px;background:linear-gradient(90deg,#1B6E4F,#C8F24E 60%,#FF6E2C)"></div>
         </div>
-        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:Inter,sans-serif;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 29 Jun 2026  ·  v0629.0503</p>
+        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:Inter,sans-serif;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 29 Jun 2026  ·  v0629.1916</p>
       </div>
       <h1 id="screen-title" style="display:none">Dashboard</h1>
     </div>
@@ -792,15 +794,15 @@ select option{background:var(--surface);color:var(--text)}
           <div class="briefing-grid"></div>
           <div class="briefing-inner">
             <div class="briefing-eyebrow">
-              <span class="be-label" id="briefing-label">Morning Briefing</span>
+              <span class="be-label" id="briefing-label">Evening Briefing</span>
               <span class="be-day" id="briefing-day">Monday 29 Jun</span>
             </div>
-            <div class="briefing-greeting" id="briefing-greeting">Good morning, Simon.</div>
+            <div class="briefing-greeting" id="briefing-greeting">Good evening, Simon.</div>
             <div class="briefing-headline" id="briefing-headline">A <strong>rest day</strong> — recovery is the work today. Carbs dial back, but keep protein high to repair and rebuild.</div>
             <div class="briefing-chips" id="briefing-chips"><div class="briefing-chip"><span class="bc-emoji"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></span><div class="bc-text"><div class="bc-label">Today</div><div class="bc-val">Rest</div></div></div><div class="briefing-chip"><span class="bc-emoji"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M5 12h14a7 7 0 0 1-14 0Z"></path><path d="M7 12a5 5 0 0 1 10 0"></path></svg></span><div class="bc-text"><div class="bc-label">Carbs</div><div class="bc-val lime">452g</div></div></div><div class="briefing-chip"><span class="bc-emoji"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M4 14s1.5-2 4-2 4 2 4 2"></path><path d="M12 14c0-2 1-5 4-5s4 2.5 4 5.5c0 4-3 6.5-6 6.5"></path><path d="M4 14c0 3 1.5 6 4 6"></path></svg></span><div class="bc-text"><div class="bc-label">Protein</div><div class="bc-val">161g</div></div></div></div>
             <div class="briefing-priority" id="briefing-priority" style="display: flex;">
               <span class="bp-icon"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span>
-              <span class="bp-text" id="briefing-priority-text">Log <strong>last night's sleep</strong> first — it sets your true readiness score for the day.</span>
+              <span class="bp-text" id="briefing-priority-text">Hit your <strong>161g protein</strong> even though it's a rest day — muscle repair happens now, not during the session.</span>
             </div>
             <div class="briefing-progress" id="briefing-progress" style="display:none">
               <div class="bp-row">
@@ -817,11 +819,19 @@ select option{background:var(--surface);color:var(--text)}
         <div id="race-coach-msg" style="display:none;margin-bottom:12px"></div>
         <div id="fuelling-strategy" style="display:none;margin-bottom:12px"></div>
         <div id="dash-nudges">
-    <div style="background:var(--gray-light);border-radius:var(--radius);padding:13px 15px;margin-bottom:10px;display:flex;gap:11px;align-items:flex-start">
-      <span style="font-size:20px;flex-shrink:0;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></span>
+    <div style="background:var(--green-light);border-radius:var(--radius);padding:13px 15px;margin-bottom:10px;display:flex;gap:11px;align-items:flex-start">
+      <span style="font-size:20px;flex-shrink:0;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M4 14s1.5-2 4-2 4 2 4 2"></path><path d="M12 14c0-2 1-5 4-5s4 2.5 4 5.5c0 4-3 6.5-6 6.5"></path><path d="M4 14c0 3 1.5 6 4 6"></path></svg></span>
       <div style="flex:1">
-        <div style="font-size:13px;font-weight:700;color:var(--text2);margin-bottom:2px">Log last night’s sleep</div>
-        <div style="font-size:12px;color:var(--text);line-height:1.5;opacity:.85">Sleep is the biggest recovery driver. Log it in Insights <svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Recovery to see your readiness score for today.</div>
+        <div style="font-size:13px;font-weight:700;color:var(--green-dark);margin-bottom:2px">Protein check</div>
+        <div style="font-size:12px;color:var(--text);line-height:1.5;opacity:.85">You're 161g short of your 161g target. Spread it across your remaining meals — aim for ~30–40g per sitting for best muscle protein synthesis.</div>
+      </div>
+    </div>
+  
+    <div style="background:var(--amber-light);border-radius:var(--radius);padding:13px 15px;margin-bottom:10px;display:flex;gap:11px;align-items:flex-start">
+      <span style="font-size:20px;flex-shrink:0;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></span>
+      <div style="flex:1">
+        <div style="font-size:13px;font-weight:700;color:var(--amber-dark);margin-bottom:2px">Under your energy target</div>
+        <div style="font-size:12px;color:var(--text);line-height:1.5;opacity:.85">You're 3269 kcal under target. For muscle gain, consistently hitting your calories matters as much as protein. A calorie-dense snack (nuts, nut butter, granola) helps.</div>
       </div>
     </div>
   </div>
@@ -1592,7 +1602,7 @@ select option{background:var(--surface);color:var(--text)}
           <div style="position:relative;flex-shrink:0" onclick="changeProfilePhoto()" title="Tap to change photo">
             <div id="profile-photo-wrap" style="width:56px;height:56px;border-radius:50%;background:var(--green-light);overflow:hidden;display:flex;align-items:center;justify-content:center;border:2px solid var(--green)">
               <span style="font-size:26px;color:var(--green);font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
-              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(15).html">
+              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(16).html">
             </div>
             <div style="position:absolute;bottom:-2px;right:-2px;width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface)">
               <span style="font-size:10px;color:#fff;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"></path><circle cx="12" cy="13" r="3"></circle></svg></span>
@@ -1637,7 +1647,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div id="strava-connected" style="display:none">
             <div class="strava-connected" style="margin-bottom:12px">
-              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(15).html" class="strava-avatar" alt="Strava">
+              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(16).html" class="strava-avatar" alt="Strava">
               <div style="flex:1">
                 <div style="font-size:14px;font-weight:600" id="strava-athlete-name">Connected</div>
                 <div class="strava-badge" style="margin-top:3px">
@@ -1817,7 +1827,7 @@ select option{background:var(--surface);color:var(--text)}
 
 <!-- PHOTO VIEWER -->
 <div class="photo-viewer" id="photo-viewer" onclick="closePhotoViewer()">
-  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(15).html" alt="Progress photo">
+  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(16).html" alt="Progress photo">
   <div class="photo-viewer-meta" id="pv-meta"></div>
   <button style="margin-top:12px;background:var(--coral-light);color:var(--coral-dark);border:none;border-radius:var(--radius-sm);padding:8px 16px;cursor:pointer;font-size:13px" onclick="event.stopPropagation();deletePhoto(window._pvIdx)"><span style=";font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg></span> Delete</button>
 </div>
@@ -1831,9 +1841,9 @@ select option{background:var(--surface);color:var(--text)}
       <div class="compare-sub" id="compare-span"></div>
     </div>
     <div class="compare-stage" id="compare-stage">
-      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(15).html" alt="Latest photo">
+      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(16).html" alt="Latest photo">
       <div id="cmp-before-wrap" class="cmp-before-wrap">
-        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(15).html" alt="First photo">
+        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(16).html" alt="First photo">
       </div>
       <div id="cmp-divider" class="cmp-divider"><div class="cmp-handle">⟺</div></div>
       <div class="cmp-tag cmp-tag-before">First</div>
@@ -3409,7 +3419,7 @@ function updateSub(){
   try{
     const d=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
     const name=S.profile.name||'Set up profile';
-    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0629.0503';
+    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0629.1916';
   }catch(e){}
 }
 
@@ -8097,10 +8107,7 @@ function renderWeeklyReview() {
   const _slpDisp = (_avgSleep===null) ? '—' : _avgSleep.toFixed(1);
 
   const headerHTML = `
-    ${_coachLine ? `<div style="background:linear-gradient(135deg,var(--green-light),var(--gray-light));border:1px solid var(--green);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:13px">
-      <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;color:var(--green);font-weight:700;margin-bottom:6px">YOUR WEEK, COACHED</div>
-      <div style="font-size:14px;line-height:1.45;color:var(--text);font-weight:600">${_coachLine}</div>
-    </div>` : ''}
+    
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">
       ${_stat(_protHitN+'/'+n, 'Protein target hit')}
       ${_stat(_protHitPct+'%', 'Consistency')}
