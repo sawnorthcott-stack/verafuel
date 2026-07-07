@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0065)file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(30).html -->
+<!-- saved from url=(0065)file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(31).html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -177,11 +177,11 @@ select option{background:var(--surface);color:var(--text)}
 .science-badge{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:500;color:var(--green);background:var(--green-light);padding:2px 8px;border-radius:12px;text-transform:none;letter-spacing:0;font-family:'Inter',sans-serif}
 
 /* BARCODE SCANNER */
-.scanner-overlay{position:fixed;inset:0;background:#000;z-index:600;display:none;flex-direction:column}.scanner-overlay.open{display:flex}
+.scanner-overlay{position:fixed;inset:0;background:var(--bg);z-index:600;display:none;flex-direction:column}.scanner-overlay.open{display:flex}
 .scanner-overlay.open{display:flex}
-.scanner-header{display:flex;align-items:center;justify-content:space-between;padding:env(safe-area-inset-top,16px) 16px 12px;padding-top:calc(env(safe-area-inset-top,0px) + 16px);background:rgba(0,0,0,0.8);flex-shrink:0}
-.scanner-title{color:#fff;font-size:16px;font-weight:600}
-.scanner-close{background:rgba(255,255,255,0.15);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px}
+.scanner-header{display:flex;align-items:center;justify-content:space-between;padding:env(safe-area-inset-top,16px) 16px 12px;padding-top:calc(env(safe-area-inset-top,0px) + 16px);background:var(--surface);border-bottom:0.5px solid var(--border);flex-shrink:0}
+.scanner-title{color:var(--text);font-size:16px;font-weight:600}
+.scanner-close{background:var(--gray-light);border:none;color:var(--text);width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px}
 .scanner-viewport{flex:1;position:relative;overflow:hidden}
 .scanner-viewport video{width:100%;height:100%;object-fit:cover}
 .scanner-frame{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
@@ -746,7 +746,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div style="height:1.5px;width:100%;border-radius:1px;background:linear-gradient(90deg,#1B6E4F,#C8F24E 60%,#FF6E2C)"></div>
         </div>
-        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:Inter,sans-serif;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 7 Jul 2026  ·  v0707.1234</p>
+        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:Inter,sans-serif;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 7 Jul 2026  ·  v0707.1524</p>
       </div>
       <h1 id="screen-title" style="display:none">Dashboard</h1>
     </div>
@@ -820,7 +820,15 @@ select option{background:var(--surface);color:var(--text)}
         <div id="carbload-flash" style="display:none;margin-bottom:12px"></div>
         <div id="race-coach-msg" style="display:none;margin-bottom:12px"></div>
         <div id="fuelling-strategy" style="display:none;margin-bottom:12px"></div>
-        <div id="dash-nudges"></div>
+        <div id="dash-nudges">
+    <div style="background:var(--blue-light);border-radius:var(--radius);padding:13px 15px;margin-bottom:10px;display:flex;gap:11px;align-items:flex-start">
+      <span style="font-size:20px;flex-shrink:0;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg></span>
+      <div style="flex:1">
+        <div style="font-size:13px;font-weight:700;color:var(--blue-dark);margin-bottom:2px">Hydration low</div>
+        <div style="font-size:12px;color:var(--text);line-height:1.5;opacity:.85">Only 0 of 8 glasses so far. Dehydration impairs performance and nutrient transport — top up through the afternoon.</div>
+      </div>
+    </div>
+  </div>
 
         
         <div id="streak-card" class="streak-badge" style="display:none">
@@ -1604,7 +1612,7 @@ select option{background:var(--surface);color:var(--text)}
           <div style="position:relative;flex-shrink:0" onclick="changeProfilePhoto()" title="Tap to change photo">
             <div id="profile-photo-wrap" style="width:56px;height:56px;border-radius:50%;background:var(--green-light);overflow:hidden;display:flex;align-items:center;justify-content:center;border:2px solid var(--green)">
               <span style="font-size:26px;color:var(--green);font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
-              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(30).html">
+              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(31).html">
             </div>
             <div style="position:absolute;bottom:-2px;right:-2px;width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface)">
               <span style="font-size:10px;color:#fff;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"></path><circle cx="12" cy="13" r="3"></circle></svg></span>
@@ -1681,7 +1689,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div id="strava-connected" style="display:none">
             <div class="strava-connected" style="margin-bottom:12px">
-              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(30).html" class="strava-avatar" alt="Strava">
+              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(31).html" class="strava-avatar" alt="Strava">
               <div style="flex:1">
                 <div style="font-size:14px;font-weight:600" id="strava-athlete-name">Connected</div>
                 <div class="strava-badge" style="margin-top:3px">
@@ -1870,7 +1878,7 @@ select option{background:var(--surface);color:var(--text)}
 
 <!-- PHOTO VIEWER -->
 <div class="photo-viewer" id="photo-viewer" onclick="closePhotoViewer()">
-  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(30).html" alt="Progress photo">
+  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(31).html" alt="Progress photo">
   <div class="photo-viewer-meta" id="pv-meta"></div>
   <button style="margin-top:12px;background:var(--coral-light);color:var(--coral-dark);border:none;border-radius:var(--radius-sm);padding:8px 16px;cursor:pointer;font-size:13px" onclick="event.stopPropagation();deletePhoto(window._pvIdx)"><span style=";font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg></span> Delete</button>
 </div>
@@ -1884,9 +1892,9 @@ select option{background:var(--surface);color:var(--text)}
       <div class="compare-sub" id="compare-span"></div>
     </div>
     <div class="compare-stage" id="compare-stage">
-      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(30).html" alt="Latest photo">
+      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(31).html" alt="Latest photo">
       <div id="cmp-before-wrap" class="cmp-before-wrap">
-        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(30).html" alt="First photo">
+        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(31).html" alt="First photo">
       </div>
       <div id="cmp-divider" class="cmp-divider"><div class="cmp-handle">⟺</div></div>
       <div class="cmp-tag cmp-tag-before">First</div>
@@ -1951,7 +1959,7 @@ select option{background:var(--surface);color:var(--text)}
   <div class="scanner-header">
     <div class="scanner-title" id="food-log-title" style="display:flex;align-items:center;gap:8px"><svg width="20" height="24" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Leaf outline -->
-  <path d="M100 16 C152 56 154 112 100 184 C46 112 48 56 100 16 Z" stroke="#C8F24E" stroke-width="2.4"></path>
+  <path d="M100 16 C152 56 154 112 100 184 C46 112 48 56 100 16 Z" stroke="#1B6E4F" stroke-width="2.4"></path>
   <!-- Central midrib -->
   <path d="M100 180 L100 22" stroke="#EAFFD0" stroke-width="2"></path>
   <!-- Veins -->
@@ -1981,17 +1989,17 @@ select option{background:var(--surface);color:var(--text)}
   </div>
 
   <!-- Tab switcher -->
-  <div style="display:flex;background:#111;flex-shrink:0">
+  <div style="display:flex;background:var(--surface);border-bottom:0.5px solid var(--border);flex-shrink:0">
     <button id="fl-tab-search" onclick="setFoodLogTab(&#39;search&#39;)" style="flex:1;padding:14px 2px;border:none;font-size:13px;font-weight:600;cursor:pointer;background:#1B6E4F;color:#fff;border-bottom:2px solid #C8F24E">
       <svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> Search
     </button>
-    <button id="fl-tab-manual" onclick="setFoodLogTab(&#39;manual&#39;)" style="flex:1;padding:14px 2px;border:none;font-size:13px;font-weight:600;cursor:pointer;background:transparent;color:rgba(255,255,255,0.5);border-bottom:2px solid transparent">
+    <button id="fl-tab-manual" onclick="setFoodLogTab(&#39;manual&#39;)" style="flex:1;padding:14px 2px;border:none;font-size:13px;font-weight:600;cursor:pointer;background:transparent;color:var(--text2);border-bottom:2px solid transparent">
       <svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg> Add new
     </button>
-    <button id="fl-tab-barcode" onclick="setFoodLogTab(&#39;barcode&#39;)" style="flex:1;padding:14px 2px;border:none;font-size:13px;font-weight:600;cursor:pointer;background:transparent;color:rgba(255,255,255,0.5);border-bottom:2px solid transparent">
+    <button id="fl-tab-barcode" onclick="setFoodLogTab(&#39;barcode&#39;)" style="flex:1;padding:14px 2px;border:none;font-size:13px;font-weight:600;cursor:pointer;background:transparent;color:var(--text2);border-bottom:2px solid transparent">
       # Barcode
     </button>
-    <button id="fl-tab-meals" onclick="setFoodLogTab(&#39;meals&#39;)" style="flex:1;padding:14px 2px;border:none;font-size:13px;font-weight:600;cursor:pointer;background:transparent;color:rgba(255,255,255,0.5);border-bottom:2px solid transparent">
+    <button id="fl-tab-meals" onclick="setFoodLogTab(&#39;meals&#39;)" style="flex:1;padding:14px 2px;border:none;font-size:13px;font-weight:600;cursor:pointer;background:transparent;color:var(--text2);border-bottom:2px solid transparent">
       <svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M3 2v7c0 1.1.9 2 2 2h0a2 2 0 0 0 2-2V2"></path><path d="M5 2v20"></path><path d="M19 2v20"></path><path d="M19 2a3 3 0 0 0-3 3v6c0 1.1.9 2 3 2"></path></svg> Meals
     </button>
   </div>
@@ -3425,7 +3433,7 @@ select option{background:var(--surface);color:var(--text)}
     </div>
     <!-- Camera scanner -->
     <button class="btn" id="bc-scan-btn" onclick="startCameraScan()" style="margin-bottom:12px"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"></path><circle cx="12" cy="13" r="3"></circle></svg> Scan with camera</button>
-      <div onclick="try{stopCameraScan()}catch(e){};startCameraScan()" style="text-align:center;font-size:12px;color:rgba(255,255,255,0.55);margin-top:8px;text-decoration:underline;cursor:pointer">Scanner stuck? Tap to restart</div>
+      <div onclick="try{stopCameraScan()}catch(e){};startCameraScan()" style="text-align:center;font-size:12px;color:var(--text3);margin-top:8px;text-decoration:underline;cursor:pointer">Scanner stuck? Tap to restart</div>
     <div id="bc-camera-wrap" style="display:none;margin-bottom:12px">
       <div id="bc-reader"><div class="bc-target"></div></div>
       <div style="display:flex;gap:8px;margin-top:8px">
@@ -4181,7 +4189,7 @@ function updateSub(){
   try{
     const d=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
     const name=S.profile.name||'Set up profile';
-    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0707.1234';
+    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0707.1524';
   }catch(e){}
 }
 
@@ -7385,7 +7393,7 @@ function setFoodLogTab(tab) {
     if (panel) panel.style.display = t === tab ? 'flex' : 'none';
     if (btn) {
       btn.style.background = t === tab ? '#1B6E4F' : 'transparent';
-      btn.style.color = t === tab ? '#fff' : 'rgba(255,255,255,0.5)';
+      btn.style.color = t === tab ? '#fff' : 'var(--text2)';
       btn.style.borderBottom = t === tab ? '2px solid #C8F24E' : '2px solid transparent';
     }
   });
@@ -11246,7 +11254,7 @@ if(!S.profile.phase)S.profile.phase='bulk';
 updateSub();
 try{renderDashboard();}catch(e){
   console.error('Dashboard render error:',e);
-  document.getElementById('screen-sub').textContent='Simon · tap profile to set up  ·  v0707.1234';
+  document.getElementById('screen-sub').textContent='Simon · tap profile to set up  ·  v0707.1524';
 }
 renderRecipes();
 // renderIngredients removed
