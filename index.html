@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0065)file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(33).html -->
+<!-- saved from url=(0065)file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(35).html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -31,7 +31,7 @@
   --orange:#FF6E2C;--orange-s:#FF8A4D;
   --amber:#EF9F27;--amber-light:#FAEEDA;--amber-dark:#633806;
   --blue:#378ADD;--blue-light:#E6F1FB;--blue-dark:#0C447C;
-  --coral:#FF6E2C;--coral-light:rgba(255,110,44,0.1);--coral-dark:#8B3A10;
+  --coral:#FF6E2C;--over:#E0492B;--coral-light:rgba(255,110,44,0.1);--coral-dark:#8B3A10;
   --bg:#F1EFE6;--surface:#FFFFFF;--border:rgba(10,61,44,0.12);
   --text:#070A08;--text2:#4A5E52;--text3:#6F7E74;--gray-light:#E8E6DD;
   --ink:#070A08;--ink-2:#0B110D;--panel:#0E150F;
@@ -63,17 +63,22 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
     .tab.active::before { content:''; position:absolute; top:-1px; left:50%; transform:translateX(-50%); width:26px; height:3px; border-radius:0 0 4px 4px; background:#1B6E4F }
 .card{background:var(--surface);border-radius:var(--radius);border:0.5px solid var(--border);padding:14px 16px;margin-bottom:10px}
 .card-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:10px;letter-spacing:-0.01em;font-family:Inter,sans-serif}
+.sheet-title{font-size:17px;font-weight:700;color:var(--text);letter-spacing:-0.02em;font-family:'Sora',sans-serif;line-height:1.25}
 .metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
 .metric{background:var(--gray-light);border-radius:var(--radius-sm);padding:12px}
 .metric .lbl{font-size:11px;color:var(--text2);margin-bottom:4px}
 .metric .val{font-size:22px;font-weight:600;letter-spacing:-0.5px}
-.ring-wrap{position:relative;display:flex;justify-content:center;margin-bottom:12px}
+.ring-wrap{position:relative;display:flex;justify-content:center;margin:6px 0 14px}
 .ring-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.ring-kcal{font-size:26px;font-weight:700;letter-spacing:-1px}
+.ring-remaining-num{font-size:52px;font-weight:800;letter-spacing:-2.5px;line-height:1;color:var(--text);font-variant-numeric:tabular-nums}
+.ring-remaining-lbl{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text2);margin-top:5px}
+.ring-eaten{font-size:12px;color:var(--text3);margin-top:9px;font-variant-numeric:tabular-nums}
 .ring-sub{font-size:11px;color:var(--text2);margin-top:2px}
-.mbar{margin-bottom:10px}
-.mbar-head{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px}
-.mbar-track{height:7px;background:var(--gray-light);border-radius:4px;overflow:hidden}
+.mbar{margin-bottom:14px}
+.mbar-head{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;margin-bottom:6px}
+.mbar-head .mlbl{font-variant-numeric:tabular-nums;color:var(--text2);font-weight:600}
+.mbar-head .mleft{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.04em;color:var(--text3);margin-left:6px}
+.mbar-track{height:9px;background:var(--gray-light);border-radius:5px;overflow:hidden}
 .mbar-fill{height:100%;border-radius:4px;transition:width .4s cubic-bezier(.4,0,.2,1)}
 .pill{display:inline-block;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:500}
 .pill-green{background:var(--green-light);color:var(--green-dark)}
@@ -148,8 +153,8 @@ input:focus,select:focus{border-color:var(--green);background:var(--surface)}
 select option{background:var(--surface);color:var(--text)}
 
 /* PERFORMANCE FEATURES */
-.leucine-bar{height:6px;background:var(--gray-light);border-radius:3px;overflow:hidden;margin-top:4px}
-.leucine-fill{height:100%;border-radius:3px;transition:width .3s}
+.leucine-bar{height:9px;background:var(--gray-light);border-radius:5px;overflow:hidden;margin-top:6px}
+.leucine-fill{height:100%;border-radius:5px;transition:width .4s cubic-bezier(.4,0,.2,1)}
 .leucine-met{background:var(--green)}
 .leucine-low{background:var(--amber)}
 .leucine-miss{background:var(--coral)}
@@ -240,7 +245,7 @@ select option{background:var(--surface);color:var(--text)}
 .photo-viewer img{max-width:100%;max-height:75vh;border-radius:var(--radius);object-fit:contain}
 .photo-viewer-meta{color:#fff;text-align:center;margin-top:12px;font-size:13px;opacity:.8}
 
-.micro-card{background:var(--surface);border-radius:var(--radius);border:0.5px solid var(--border);padding:16px;margin-bottom:14px}
+.micro-card{background:var(--surface);border-radius:var(--radius);border:0.5px solid var(--border);padding:14px 16px;margin-bottom:10px}
 .micro-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:0.5px solid var(--border)}
 .micro-row:last-child{border-bottom:none}
 .traffic-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
@@ -259,7 +264,7 @@ select option{background:var(--surface);color:var(--text)}
 .sug-green{background:var(--green-light);color:var(--green-dark)}
 .perf-score-ring{display:flex;justify-content:center;margin:8px 0 16px}
 .perf-score-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.perf-score-num{font-size:34px;font-weight:800;letter-spacing:-1px}
+.perf-score-num{font-size:34px;font-weight:800;letter-spacing:-1px;font-variant-numeric:tabular-nums}
 .perf-score-lbl{font-size:11px;color:var(--text2);margin-top:2px}
 .score-grade{font-size:13px;font-weight:600;padding:4px 12px;border-radius:20px;margin-top:4px}
 .micro-legend{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;font-size:12px;color:var(--text2);margin-bottom:18px;padding:0 8px}
@@ -746,7 +751,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div style="height:1.5px;width:100%;border-radius:1px;background:linear-gradient(90deg,#1B6E4F,#C8F24E 60%,#FF6E2C)"></div>
         </div>
-        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:Inter,sans-serif;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 8 Jul 2026  ·  v0708.1050</p>
+        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:Inter,sans-serif;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 9 Jul 2026  ·  v0709.0954</p>
       </div>
       <h1 id="screen-title" style="display:none">Dashboard</h1>
     </div>
@@ -796,15 +801,15 @@ select option{background:var(--surface);color:var(--text)}
           <div class="briefing-grid"></div>
           <div class="briefing-inner">
             <div class="briefing-eyebrow">
-              <span class="be-label" id="briefing-label">Afternoon Briefing</span>
-              <span class="be-day" id="briefing-day">Wednesday 8 Jul</span>
+              <span class="be-label" id="briefing-label">Morning Briefing</span>
+              <span class="be-day" id="briefing-day">Thursday 9 Jul</span>
             </div>
-            <div class="briefing-greeting" id="briefing-greeting">Good afternoon, Simon.</div>
+            <div class="briefing-greeting" id="briefing-greeting">Good morning, Simon.</div>
             <div class="briefing-headline" id="briefing-headline">A <strong>rest day</strong> — recovery is the work today. Carbs dial back, but keep protein high to repair and rebuild.</div>
             <div class="briefing-chips" id="briefing-chips"><div class="briefing-chip"><span class="bc-emoji"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></span><div class="bc-text"><div class="bc-label">Today</div><div class="bc-val">Rest</div></div></div><div class="briefing-chip"><span class="bc-emoji"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M5 12h14a7 7 0 0 1-14 0Z"></path><path d="M7 12a5 5 0 0 1 10 0"></path></svg></span><div class="bc-text"><div class="bc-label">Carbs</div><div class="bc-val lime">452g</div></div></div><div class="briefing-chip"><span class="bc-emoji"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M4 14s1.5-2 4-2 4 2 4 2"></path><path d="M12 14c0-2 1-5 4-5s4 2.5 4 5.5c0 4-3 6.5-6 6.5"></path><path d="M4 14c0 3 1.5 6 4 6"></path></svg></span><div class="bc-text"><div class="bc-label">Protein</div><div class="bc-val">161g</div></div></div></div>
             <div class="briefing-priority" id="briefing-priority" style="display: flex;">
               <span class="bp-icon"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span>
-              <span class="bp-text" id="briefing-priority-text">Hit your <strong>161g protein</strong> even though it's a rest day — muscle repair happens now, not during the session.</span>
+              <span class="bp-text" id="briefing-priority-text">Log <strong>last night's sleep</strong> first — it sets your true readiness score for the day.</span>
             </div>
             <div class="briefing-progress" id="briefing-progress" style="display:none">
               <div class="bp-row">
@@ -820,7 +825,15 @@ select option{background:var(--surface);color:var(--text)}
         <div id="carbload-flash" style="display:none;margin-bottom:12px"></div>
         <div id="race-coach-msg" style="display:none;margin-bottom:12px"></div>
         <div id="fuelling-strategy" style="display:none;margin-bottom:12px"></div>
-        <div id="dash-nudges"></div>
+        <div id="dash-nudges">
+    <div style="background:var(--gray-light);border-radius:var(--radius);padding:13px 15px;margin-bottom:10px;display:flex;gap:11px;align-items:flex-start">
+      <span style="font-size:20px;flex-shrink:0;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></span>
+      <div style="flex:1">
+        <div style="font-size:13px;font-weight:700;color:var(--text2);margin-bottom:2px">Log last night’s sleep</div>
+        <div style="font-size:12px;color:var(--text);line-height:1.5;opacity:.85">Sleep is the biggest recovery driver. Log it in Insights <svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Recovery to see your readiness score for today.</div>
+      </div>
+    </div>
+  </div>
 
         
         <div id="streak-card" class="streak-badge" style="display:none">
@@ -954,29 +967,29 @@ select option{background:var(--surface);color:var(--text)}
         <div class="card">
           <div class="card-title">Today's calories</div>
           <div class="ring-wrap">
-            <svg width="160" height="160" viewBox="0 0 160 160" style="transform:rotate(-90deg)">
-              <circle cx="80" cy="80" r="66" fill="none" stroke="var(--gray-light)" stroke-width="16"></circle>
-              <circle id="ring-cal" cx="80" cy="80" r="66" fill="none" stroke="var(--green)" stroke-width="16" stroke-linecap="round" stroke-dasharray="414.7" stroke-dashoffset="414.7" style="stroke-dashoffset: 414.7;"></circle>
+            <svg width="200" height="200" viewBox="0 0 200 200" style="transform:rotate(-90deg)" class="cal-ring-svg">
+              <circle cx="100" cy="100" r="86" fill="none" stroke="var(--gray-light)" stroke-width="11"></circle>
+              <circle id="ring-cal" cx="100" cy="100" r="86" fill="none" stroke="var(--green)" stroke-width="11" stroke-linecap="round" stroke-dasharray="540.4" stroke-dashoffset="540.4" style="transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.3s; stroke-dashoffset: 540.4;"></circle>
             </svg>
             <div class="ring-inner">
-              <div class="ring-kcal" id="ring-val" style="color: var(--text);">0</div>
-              <div class="ring-sub">of <span id="ring-target">3269</span> kcal</div>
-              <div id="ring-remaining" style="font-size: 13px; font-weight: 800; margin-top: 4px; letter-spacing: -0.3px; color: var(--green);">3269 left</div>
-              <div id="ring-trained-note" style="font-size:10px;color:var(--text3);margin-top:3px;display:none;line-height:1.3">training already included</div>
-              <div id="ring-set-training" onclick="nav(&#39;plan&#39;,document.getElementById(&#39;tab-plan&#39;))" style="font-size: 11px; color: var(--orange,#FF6E2C); margin-top: 5px; display: block; line-height: 1.3; font-weight: 700; cursor: pointer;">⚠ Set today's training to fuel right →</div>
-              <div style="margin-top:5px" id="ring-pill"><span class="pill pill-coral">0%</span></div>
+              <div class="ring-remaining-num" id="ring-remaining" style="color: var(--text);">3269</div>
+              <div class="ring-remaining-lbl" id="ring-remaining-lbl">kcal left</div>
+              <div class="ring-eaten"><span id="ring-val">0</span> of <span id="ring-target">3269</span> eaten</div>
             </div>
           </div>
+          <div id="ring-trained-note" style="text-align:center;font-size:11px;color:var(--text3);margin:-4px 0 10px;display:none;line-height:1.3">✓ today's training is fuelled in</div>
+          <div id="ring-set-training" onclick="nav(&#39;plan&#39;,document.getElementById(&#39;tab-plan&#39;))" style="text-align: center; font-size: 12px; color: var(--orange,#FF6E2C); margin: -2px 0px 12px; display: block; line-height: 1.4; font-weight: 700; cursor: pointer;">⚠ Set today's training to fuel right →</div>
+          <div id="ring-pill" style="display:none"><span class="pill pill-coral">0%</span></div>
           <div class="mbar">
-            <div class="mbar-head"><span style="font-weight:500">Protein</span><span id="d-p-lbl" style="color:var(--text2)">0/161g</span></div>
+            <div class="mbar-head"><span style="font-weight:500">Protein</span><span id="d-p-lbl" style="color:var(--text2)"><span class="mlbl">0 / 161g</span><span class="mleft">161 LEFT</span></span></div>
             <div class="mbar-track"><div id="d-p-bar" class="mbar-fill" style="background:var(--green);width:0%"></div></div>
           </div>
           <div class="mbar">
-            <div class="mbar-head"><span style="font-weight:500">Carbs</span><span id="d-c-lbl" style="color:var(--text2)">0/452g</span></div>
+            <div class="mbar-head"><span style="font-weight:500">Carbs</span><span id="d-c-lbl" style="color:var(--text2)"><span class="mlbl">0 / 452g</span><span class="mleft">452 LEFT</span></span></div>
             <div class="mbar-track"><div id="d-c-bar" class="mbar-fill" style="background:var(--amber);width:0%"></div></div>
           </div>
           <div class="mbar" style="margin-bottom:0">
-            <div class="mbar-head"><span style="font-weight:500">Fat</span><span id="d-f-lbl" style="color:var(--text2)">0/91g</span></div>
+            <div class="mbar-head"><span style="font-weight:500">Fat</span><span id="d-f-lbl" style="color:var(--text2)"><span class="mlbl">0 / 91g</span><span class="mleft">91 LEFT</span></span></div>
             <div class="mbar-track"><div id="d-f-bar" class="mbar-fill" style="background:var(--blue);width:0%"></div></div>
           </div>
         </div>
@@ -1052,7 +1065,7 @@ select option{background:var(--surface);color:var(--text)}
         <div class="card" id="dash-wt-card" style="display:none">
           <div class="card-title">Latest weight</div>
           <div style="display:flex;align-items:baseline;gap:8px">
-            <div style="font-size:32px;font-weight:700;letter-spacing:-1px" id="dash-wt">—</div>
+            <div style="font-size:32px;font-weight:700;letter-spacing:-1px;font-variant-numeric:tabular-nums" id="dash-wt">—</div>
             <div style="color:var(--text2)">kg</div>
             <div id="dash-wt-chg"></div>
           </div>
@@ -1228,6 +1241,7 @@ select option{background:var(--surface);color:var(--text)}
           <div class="scroll-fade"><span class="chev">›</span></div>
         </div>
         <div id="insight-nutrients">
+        <div id="micro-coach-note" style="display:none;background:rgba(27,110,79,0.06);border:1px solid rgba(27,110,79,0.18);border-radius:12px;padding:14px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text2)"></div>
           <div class="micro-card">
             <div class="card-title">Plant-Based Performance Score</div>
             <div class="perf-score-ring">
@@ -1439,6 +1453,7 @@ select option{background:var(--surface);color:var(--text)}
     <div id="compo-toggles" style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px"></div>
     <div id="compo-range-toggle" class="chart-range-bar"></div>
     <div id="compo-chart-container" style="width:100%;padding:4px 0"></div>
+    <div id="compo-coach-note" style="display:none;background:rgba(27,110,79,0.06);border:1px solid rgba(27,110,79,0.18);border-radius:10px;padding:12px;margin-top:10px;font-size:13px;line-height:1.6;color:var(--text2)"></div>
     <div style="font-size:10.5px;color:var(--text3);margin-top:8px;line-height:1.45">Fat &amp; lean mass are derived from weight × body-fat readings. Smart-scale numbers are rough in absolute terms — trust the direction of the lines, not any single day.</div>
   </div>
   <div class="card" id="wt-trend-card"><div class="card-title">Weight trend</div>
@@ -1612,7 +1627,7 @@ select option{background:var(--surface);color:var(--text)}
           <div style="position:relative;flex-shrink:0" onclick="changeProfilePhoto()" title="Tap to change photo">
             <div id="profile-photo-wrap" style="width:56px;height:56px;border-radius:50%;background:var(--green-light);overflow:hidden;display:flex;align-items:center;justify-content:center;border:2px solid var(--green)">
               <span style="font-size:26px;color:var(--green);font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
-              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(33).html">
+              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(35).html">
             </div>
             <div style="position:absolute;bottom:-2px;right:-2px;width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface)">
               <span style="font-size:10px;color:#fff;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"></path><circle cx="12" cy="13" r="3"></circle></svg></span>
@@ -1689,7 +1704,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div id="strava-connected" style="display:none">
             <div class="strava-connected" style="margin-bottom:12px">
-              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(33).html" class="strava-avatar" alt="Strava">
+              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(35).html" class="strava-avatar" alt="Strava">
               <div style="flex:1">
                 <div style="font-size:14px;font-weight:600" id="strava-athlete-name">Connected</div>
                 <div class="strava-badge" style="margin-top:3px">
@@ -1878,7 +1893,7 @@ select option{background:var(--surface);color:var(--text)}
 
 <!-- PHOTO VIEWER -->
 <div class="photo-viewer" id="photo-viewer" onclick="closePhotoViewer()">
-  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(33).html" alt="Progress photo">
+  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(35).html" alt="Progress photo">
   <div class="photo-viewer-meta" id="pv-meta"></div>
   <button style="margin-top:12px;background:var(--coral-light);color:var(--coral-dark);border:none;border-radius:var(--radius-sm);padding:8px 16px;cursor:pointer;font-size:13px" onclick="event.stopPropagation();deletePhoto(window._pvIdx)"><span style=";font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg></span> Delete</button>
 </div>
@@ -1892,9 +1907,9 @@ select option{background:var(--surface);color:var(--text)}
       <div class="compare-sub" id="compare-span"></div>
     </div>
     <div class="compare-stage" id="compare-stage">
-      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(33).html" alt="Latest photo">
+      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(35).html" alt="Latest photo">
       <div id="cmp-before-wrap" class="cmp-before-wrap">
-        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(33).html" alt="First photo">
+        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(35).html" alt="First photo">
       </div>
       <div id="cmp-divider" class="cmp-divider"><div class="cmp-handle">⟺</div></div>
       <div class="cmp-tag cmp-tag-before">First</div>
@@ -2149,7 +2164,7 @@ select option{background:var(--surface);color:var(--text)}
       </div>
     </div><div class="food-result-row" data-food="Avocado – Fruit" data-idx="9" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
-        <div style="font-size:14px;font-weight:500">Avocado – Fruit <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
+        <div style="font-size:14px;font-weight:500">Avocado – Fruit <span style="font-size:10px;color:var(--orange);font-weight:700">◐ Community</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 160 kcal · P:2g C:9g F:15g per 100g</div>
       </div>
       <div style="text-align:right;flex-shrink:0">
@@ -2813,7 +2828,16 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.13g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Nutritional Yeast" data-idx="83" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Mushrooms (raw) – Vegetable" data-idx="83" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+      <div style="flex:1;min-width:0">
+        <div style="font-size:14px;font-weight:500">Mushrooms (raw) – Vegetable <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
+        <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 22 kcal · P:3.1g C:3.3g F:0.3g per 100g</div>
+      </div>
+      <div style="text-align:right;flex-shrink:0">
+        <div style="font-size:10px;color:var(--text3)">Leu —</div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </div>
+    </div><div class="food-result-row" data-food="Nutritional Yeast" data-idx="84" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Nutritional Yeast</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Protein · 325 kcal · P:50g C:38g F:5g per 100g</div>
@@ -2822,7 +2846,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--green)">Leu 3.1g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Oat cappuccino" data-idx="84" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Oat cappuccino" data-idx="85" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Oat cappuccino <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Community · 150 kcal · P:0g C:0g F:0g per 100g</div>
@@ -2831,7 +2855,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Oat Milk (unsweetened)" data-idx="85" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Oat Milk (unsweetened)" data-idx="86" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Oat Milk (unsweetened)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Dairy Alt · 38 kcal · P:1g C:6.6g F:1.4g per 100g</div>
@@ -2840,7 +2864,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.07g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Oat Milk (unsweetened) – Dairy Alt" data-idx="86" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Oat Milk (unsweetened) – Dairy Alt" data-idx="87" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Oat Milk (unsweetened) – Dairy Alt <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 38 kcal · P:1g C:6.6g F:1.4g per 100g</div>
@@ -2849,7 +2873,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Oat Milk (unsweetened) – Dairy Alt – My Foods" data-idx="87" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Oat Milk (unsweetened) – Dairy Alt – My Foods" data-idx="88" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Oat Milk (unsweetened) – Dairy Alt – My Foods <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 38 kcal · P:1g C:6.6g F:1.4g per 100g</div>
@@ -2858,7 +2882,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Oats (rolled, dry)" data-idx="88" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Oats (rolled, dry)" data-idx="89" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Oats (rolled, dry)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Grain · 389 kcal · P:17g C:66g F:7g per 100g</div>
@@ -2867,7 +2891,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 1.28g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Oats (rolled, dry) – Grain" data-idx="89" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Oats (rolled, dry) – Grain" data-idx="90" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Oats (rolled, dry) – Grain <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 389 kcal · P:17g C:66g F:7g per 100g</div>
@@ -2876,7 +2900,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Olive Oil – Solesta" data-idx="90" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Olive Oil – Solesta" data-idx="91" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Olive Oil – Solesta <span style="font-size:10px;color:var(--green);font-weight:700"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Verified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 807 kcal · P:0g C:0g F:91.2g per 100g</div>
@@ -2885,7 +2909,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Onion (raw)" data-idx="91" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Onion (raw)" data-idx="92" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Onion (raw)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Vegetable · 40 kcal · P:1.1g C:9.3g F:0.1g per 100g</div>
@@ -2894,7 +2918,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.04g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Onion Gravy Granules – Aldi, Quixo" data-idx="92" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Onion Gravy Granules – Aldi, Quixo" data-idx="93" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Onion Gravy Granules – Aldi, Quixo <span style="font-size:10px;color:var(--green);font-weight:700"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Verified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 32 kcal · P:0.5g C:3g F:2.1g per 100g</div>
@@ -2903,7 +2927,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Orange" data-idx="93" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Orange" data-idx="94" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Orange</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Fruit · 47 kcal · P:0.9g C:12g F:0.1g per 100g</div>
@@ -2912,7 +2936,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.02g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Pea Protein Powder" data-idx="94" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Pea Protein Powder" data-idx="95" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Pea Protein Powder</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Protein · 389 kcal · P:80g C:8g F:7g per 100g</div>
@@ -2921,7 +2945,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--green)">Leu 6g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Peanut Butter" data-idx="95" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Peanut Butter" data-idx="96" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Peanut Butter</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Nuts &amp; Seeds · 588 kcal · P:25g C:20g F:50g per 100g</div>
@@ -2930,7 +2954,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--amber)">Leu 1.67g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Peanut Butter – Nuts &amp; Seeds" data-idx="96" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Peanut Butter – Nuts &amp; Seeds" data-idx="97" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Peanut Butter – Nuts &amp; Seeds <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 588 kcal · P:25g C:20g F:50g per 100g</div>
@@ -2939,7 +2963,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Peas (frozen)" data-idx="97" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Peas (frozen)" data-idx="98" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Peas (frozen)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Vegetable · 69 kcal · P:5.4g C:9.6g F:0.4g per 100g</div>
@@ -2948,7 +2972,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.31g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="PILAU RICE – TESCO" data-idx="98" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="PILAU RICE – TESCO" data-idx="99" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">PILAU RICE – TESCO <span style="font-size:10px;color:var(--green);font-weight:700"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Verified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 153 kcal · P:3.4g C:30.4g F:1.5g per 100g</div>
@@ -2957,7 +2981,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Pineapple" data-idx="99" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Pineapple" data-idx="100" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Pineapple</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Fruit · 50 kcal · P:0.5g C:13g F:0.1g per 100g</div>
@@ -2966,7 +2990,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.02g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Pinto Beans (canned)" data-idx="100" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Pinto Beans (canned)" data-idx="101" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Pinto Beans (canned)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Legumes · 140 kcal · P:9g C:26g F:0.6g per 100g</div>
@@ -2975,7 +2999,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.72g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Plant Protein Yoghurt tropical flavour – alpro" data-idx="101" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Plant Protein Yoghurt tropical flavour – alpro" data-idx="102" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Plant Protein Yoghurt tropical flavour – alpro <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 82 kcal · P:7.5g C:7.2g F:2.2g per 100g</div>
@@ -2984,7 +3008,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Plant Protein Yoghurt tropical flavour – alpro – My Foods" data-idx="102" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Plant Protein Yoghurt tropical flavour – alpro – My Foods" data-idx="103" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Plant Protein Yoghurt tropical flavour – alpro – My Foods <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 82 kcal · P:7.5g C:7.2g F:2.2g per 100g</div>
@@ -2993,7 +3017,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Potato" data-idx="103" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Potato" data-idx="104" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Potato <span style="font-size:10px;color:var(--green);font-weight:700"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Verified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Community · 81 kcal · P:1.8g C:17.5g F:0.1g per 100g</div>
@@ -3002,7 +3026,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Potato – Community" data-idx="104" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Potato – Community" data-idx="105" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Potato – Community <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 81 kcal · P:1.8g C:17.5g F:0.1g per 100g</div>
@@ -3011,7 +3035,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Potato – My Foods" data-idx="105" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Potato – My Foods" data-idx="106" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Potato – My Foods <span style="font-size:10px;color:var(--orange);font-weight:700">◐ Community</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 81 kcal · P:1.8g C:17.5g F:0.1g per 100g</div>
@@ -3020,7 +3044,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Powdered peanut butter" data-idx="106" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Powdered peanut butter" data-idx="107" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Powdered peanut butter <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Community · 398 kcal · P:48g C:26g F:9g per 100g</div>
@@ -3029,7 +3053,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Pret - Avo, Olive &amp; Toms Baguette" data-idx="107" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Pret - Avo, Olive &amp; Toms Baguette" data-idx="108" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Pret - Avo, Olive &amp; Toms Baguette <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Community · 237 kcal · P:5.5g C:24.2g F:12.4g per 100g</div>
@@ -3038,7 +3062,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Protein Bagels – Warburtons" data-idx="108" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Protein Bagels – Warburtons" data-idx="109" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Protein Bagels – Warburtons <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 251 kcal · P:15g C:38.7g F:3.2g per 100g</div>
@@ -3047,7 +3071,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Pumpkin Seeds" data-idx="109" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Pumpkin Seeds" data-idx="110" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Pumpkin Seeds</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Nuts &amp; Seeds · 574 kcal · P:30g C:15g F:49g per 100g</div>
@@ -3056,7 +3080,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--amber)">Leu 2.42g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Quinoa (cooked)" data-idx="110" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Quinoa (cooked)" data-idx="111" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Quinoa (cooked)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Grain · 120 kcal · P:4.4g C:22g F:1.9g per 100g</div>
@@ -3065,7 +3089,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.33g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Raisins secs – Tesco" data-idx="111" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Raisins secs – Tesco" data-idx="112" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Raisins secs – Tesco <span style="font-size:10px;color:var(--green);font-weight:700"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Verified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 330 kcal · P:3.6g C:74.5g F:1.1g per 100g</div>
@@ -3074,7 +3098,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Red Lentils (dry)" data-idx="112" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Red Lentils (dry)" data-idx="113" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Red Lentils (dry)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Legumes · 352 kcal · P:24g C:63g F:1.1g per 100g</div>
@@ -3083,7 +3107,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--amber)">Leu 1.74g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Red Lentils (dry) – Legumes" data-idx="113" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Red Lentils (dry) – Legumes" data-idx="114" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Red Lentils (dry) – Legumes <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 352 kcal · P:24g C:63g F:1.1g per 100g</div>
@@ -3092,7 +3116,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Red Pepper (raw)" data-idx="114" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Red Pepper (raw)" data-idx="115" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Red Pepper (raw)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Vegetable · 31 kcal · P:1g C:6g F:0.3g per 100g</div>
@@ -3101,7 +3125,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.04g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Roasted &amp; Salted Edamame beans" data-idx="115" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Roasted &amp; Salted Edamame beans" data-idx="116" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Roasted &amp; Salted Edamame beans <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Community · 412 kcal · P:43g C:23g F:13.5g per 100g</div>
@@ -3110,7 +3134,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="SALT AND VINEGAR FLAVOUR PUFFED RICE AND CORN CAKE – Aldi" data-idx="116" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="SALT AND VINEGAR FLAVOUR PUFFED RICE AND CORN CAKE – Aldi" data-idx="117" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">SALT AND VINEGAR FLAVOUR PUFFED RICE AND CORN CAKE – Aldi <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 416 kcal · P:7.3g C:75g F:9.2g per 100g</div>
@@ -3119,7 +3143,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="SALT AND VINEGAR FLAVOUR PUFFED RICE AND CORN CAKE – Aldi – My Foods" data-idx="117" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="SALT AND VINEGAR FLAVOUR PUFFED RICE AND CORN CAKE – Aldi – My Foods" data-idx="118" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">SALT AND VINEGAR FLAVOUR PUFFED RICE AND CORN CAKE – Aldi – My Foods <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 416 kcal · P:7.3g C:75g F:9.2g per 100g</div>
@@ -3128,7 +3152,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Seitan" data-idx="118" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Seitan" data-idx="119" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Seitan</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Protein · 370 kcal · P:75g C:14g F:1.9g per 100g</div>
@@ -3137,7 +3161,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--amber)">Leu 2.1g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Seitan – Protein" data-idx="119" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Seitan – Protein" data-idx="120" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Seitan – Protein <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 370 kcal · P:75g C:14g F:1.9g per 100g</div>
@@ -3146,7 +3170,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Snack A Jacks Rice &amp; Corn Cakes – Snackajack" data-idx="120" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Snack A Jacks Rice &amp; Corn Cakes – Snackajack" data-idx="121" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Snack A Jacks Rice &amp; Corn Cakes – Snackajack <span style="font-size:10px;color:var(--green);font-weight:700"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Verified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 385 kcal · P:6.2g C:84.6g F:1.5g per 100g</div>
@@ -3155,7 +3179,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Snack A Jacks Rice &amp; Corn Cakes – Snackajack – My Foods" data-idx="121" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Snack A Jacks Rice &amp; Corn Cakes – Snackajack – My Foods" data-idx="122" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Snack A Jacks Rice &amp; Corn Cakes – Snackajack – My Foods <span style="font-size:10px;color:var(--green);font-weight:700"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Verified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 385 kcal · P:6.2g C:84.6g F:1.5g per 100g</div>
@@ -3164,7 +3188,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="So Malty Malt Loaf – Village Bakery" data-idx="122" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="So Malty Malt Loaf – Village Bakery" data-idx="123" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">So Malty Malt Loaf – Village Bakery <span style="font-size:10px;color:var(--green);font-weight:700"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Verified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 293 kcal · P:7.1g C:61.8g F:1g per 100g</div>
@@ -3173,7 +3197,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Soy Milk (unsweetened)" data-idx="123" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Soy Milk (unsweetened)" data-idx="124" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Soy Milk (unsweetened)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Dairy Alt · 33 kcal · P:3.3g C:1.8g F:1.8g per 100g</div>
@@ -3182,7 +3206,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.25g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Soy Protein Isolate 90 (Protein Works)" data-idx="124" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Soy Protein Isolate 90 (Protein Works)" data-idx="125" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Soy Protein Isolate 90 (Protein Works)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Protein · 373 kcal · P:90g C:1g F:1.5g per 100g</div>
@@ -3191,7 +3215,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--green)">Leu 7g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Soy Protein Isolate 90 (Protein Works) – Protein" data-idx="125" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Soy Protein Isolate 90 (Protein Works) – Protein" data-idx="126" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Soy Protein Isolate 90 (Protein Works) – Protein <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 373 kcal · P:90g C:1g F:1.5g per 100g</div>
@@ -3200,7 +3224,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Soy Protein Powder" data-idx="126" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Soy Protein Powder" data-idx="127" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Soy Protein Powder</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Protein · 338 kcal · P:78g C:5g F:3.5g per 100g</div>
@@ -3209,7 +3233,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--green)">Leu 5.8g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Soy sauce" data-idx="127" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Soy sauce" data-idx="128" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Soy sauce <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Community · 77 kcal · P:10g C:3.2g F:0g per 100g</div>
@@ -3218,7 +3242,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Soy Yogurt" data-idx="128" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Soy Yogurt" data-idx="129" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Soy Yogurt</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Dairy Alt · 68 kcal · P:3.8g C:7.1g F:2.4g per 100g</div>
@@ -3227,7 +3251,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.28g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Soy Yogurt – Dairy Alt" data-idx="129" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Soy Yogurt – Dairy Alt" data-idx="130" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Soy Yogurt – Dairy Alt <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 68 kcal · P:3.8g C:7.1g F:2.4g per 100g</div>
@@ -3236,7 +3260,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Soy Yogurt – Dairy Alt – My Foods" data-idx="130" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Soy Yogurt – Dairy Alt – My Foods" data-idx="131" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Soy Yogurt – Dairy Alt – My Foods <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 68 kcal · P:3.8g C:7.1g F:2.4g per 100g</div>
@@ -3245,7 +3269,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Soya mince" data-idx="131" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Soya mince" data-idx="132" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Soya mince <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Community · 314 kcal · P:52g C:23g F:1.5g per 100g</div>
@@ -3254,7 +3278,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Spinach (raw)" data-idx="132" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Spinach (raw)" data-idx="133" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Spinach (raw)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Vegetable · 23 kcal · P:2.9g C:3.6g F:0.4g per 100g</div>
@@ -3263,7 +3287,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.22g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Spinach (raw) – Vegetable" data-idx="133" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Spinach (raw) – Vegetable" data-idx="134" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Spinach (raw) – Vegetable <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 23 kcal · P:2.9g C:3.6g F:0.4g per 100g</div>
@@ -3272,7 +3296,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Strawberries" data-idx="134" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Strawberries" data-idx="135" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Strawberries</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Fruit · 32 kcal · P:0.7g C:7.7g F:0.3g per 100g</div>
@@ -3281,7 +3305,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.02g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Sunflower Seeds" data-idx="135" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Sunflower Seeds" data-idx="136" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Sunflower Seeds</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Nuts &amp; Seeds · 584 kcal · P:21g C:20g F:51g per 100g</div>
@@ -3290,7 +3314,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 1.34g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Sweet Potato (cooked)" data-idx="136" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Sweet Potato (cooked)" data-idx="137" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Sweet Potato (cooked)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Vegetable · 86 kcal · P:1.6g C:20g F:0.1g per 100g</div>
@@ -3299,7 +3323,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.07g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Sweet Potato (cooked) – Vegetable" data-idx="137" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Sweet Potato (cooked) – Vegetable" data-idx="138" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Sweet Potato (cooked) – Vegetable <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 86 kcal · P:1.6g C:20g F:0.1g per 100g</div>
@@ -3308,7 +3332,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Sweetcorn (cooked)" data-idx="138" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Sweetcorn (cooked)" data-idx="139" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Sweetcorn (cooked)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Vegetable · 96 kcal · P:3.4g C:21g F:1.5g per 100g</div>
@@ -3317,7 +3341,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.27g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Tahini" data-idx="139" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Tahini" data-idx="140" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Tahini</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Nuts &amp; Seeds · 595 kcal · P:17g C:21g F:54g per 100g</div>
@@ -3326,7 +3350,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 1.2g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Tempeh" data-idx="140" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Tempeh" data-idx="141" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Tempeh</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Protein · 193 kcal · P:19g C:9.4g F:10.8g per 100g</div>
@@ -3335,7 +3359,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 1.28g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="The wholemeal Rustic Bloomer – Village Bakery" data-idx="141" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="The wholemeal Rustic Bloomer – Village Bakery" data-idx="142" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">The wholemeal Rustic Bloomer – Village Bakery <span style="font-size:10px;color:var(--green);font-weight:700"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Verified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 224 kcal · P:10.8g C:38.6g F:1.4g per 100g</div>
@@ -3344,7 +3368,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Tofu (firm)" data-idx="142" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Tofu (firm)" data-idx="143" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Tofu (firm)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Protein · 96 kcal · P:10.5g C:1.5g F:5.8g per 100g</div>
@@ -3353,7 +3377,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.83g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Tomato (raw)" data-idx="143" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Tomato (raw)" data-idx="144" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Tomato (raw)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Vegetable · 18 kcal · P:0.9g C:3.9g F:0.2g per 100g</div>
@@ -3362,7 +3386,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.03g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Tomato (raw) – Vegetable" data-idx="144" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Tomato (raw) – Vegetable" data-idx="145" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Tomato (raw) – Vegetable <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 18 kcal · P:0.9g C:3.9g F:0.2g per 100g</div>
@@ -3371,7 +3395,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Truffled mushroom linguine with garlic bread" data-idx="145" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Truffled mushroom linguine with garlic bread" data-idx="146" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Truffled mushroom linguine with garlic bread <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Community · 621 kcal · P:21g C:93g F:17g per 100g</div>
@@ -3380,7 +3404,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Vegan caramel peanut protein bar – Barebells" data-idx="146" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Vegan caramel peanut protein bar – Barebells" data-idx="147" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Vegan caramel peanut protein bar – Barebells <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 373 kcal · P:21.8g C:38.2g F:17.8g per 100g</div>
@@ -3389,7 +3413,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="VeraFuel Test Oat Milk 1780813132126" data-idx="147" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="VeraFuel Test Oat Milk 1780813132126" data-idx="148" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">VeraFuel Test Oat Milk 1780813132126 <span style="font-size:10px;color:var(--green);font-weight:700"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg> Verified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Community · 50 kcal · P:1.5g C:6g F:1.8g per 100g</div>
@@ -3398,7 +3422,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.11g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Walnuts" data-idx="148" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Walnuts" data-idx="149" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Walnuts</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Nuts &amp; Seeds · 654 kcal · P:15g C:14g F:65g per 100g</div>
@@ -3407,7 +3431,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 1.17g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Walnuts – Nuts &amp; Seeds" data-idx="149" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Walnuts – Nuts &amp; Seeds" data-idx="150" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Walnuts – Nuts &amp; Seeds <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 654 kcal · P:15g C:14g F:65g per 100g</div>
@@ -3416,7 +3440,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Water" data-idx="150" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Water" data-idx="151" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Water <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Community · 0 kcal · P:0g C:0g F:0g per 100g</div>
@@ -3425,7 +3449,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="White Bread" data-idx="151" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="White Bread" data-idx="152" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">White Bread</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Grain · 266 kcal · P:8.4g C:49g F:3.3g per 100g</div>
@@ -3434,7 +3458,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.57g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="White Bread – Grain" data-idx="152" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="White Bread – Grain" data-idx="153" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">White Bread – Grain <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 266 kcal · P:8.4g C:49g F:3.3g per 100g</div>
@@ -3443,7 +3467,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="White Pasta (cooked)" data-idx="153" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="White Pasta (cooked)" data-idx="154" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">White Pasta (cooked)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Grain · 131 kcal · P:4.9g C:25g F:1.1g per 100g</div>
@@ -3452,7 +3476,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.38g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="White Pasta (cooked) – Grain" data-idx="154" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="White Pasta (cooked) – Grain" data-idx="155" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">White Pasta (cooked) – Grain <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 131 kcal · P:4.9g C:25g F:1.1g per 100g</div>
@@ -3461,7 +3485,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="White Rice (cooked)" data-idx="155" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="White Rice (cooked)" data-idx="156" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">White Rice (cooked)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Grain · 130 kcal · P:2.7g C:28g F:0.3g per 100g</div>
@@ -3470,7 +3494,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu 0.19g</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="White Rice (cooked) – Grain" data-idx="156" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="White Rice (cooked) – Grain" data-idx="157" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">White Rice (cooked) – Grain <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">My Foods · 130 kcal · P:2.7g C:28g F:0.3g per 100g</div>
@@ -3479,7 +3503,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Whole milk homemade kefir" data-idx="157" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Whole milk homemade kefir" data-idx="158" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Whole milk homemade kefir <span style="font-size:10px;color:var(--text3);font-weight:600">○ Unverified</span></div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Community · 70 kcal · P:4g C:3g F:4g per 100g</div>
@@ -3488,7 +3512,7 @@ select option{background:var(--surface);color:var(--text)}
         <div style="font-size:10px;color:var(--text3)">Leu —</div>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="var(--text3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </div>
-    </div><div class="food-result-row" data-food="Wholegrain Pasta (dry)" data-idx="158" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
+    </div><div class="food-result-row" data-food="Wholegrain Pasta (dry)" data-idx="159" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid var(--border);cursor:pointer;active:background:var(--gray-light)">
       <div style="flex:1;min-width:0">
         <div style="font-size:14px;font-weight:500">Wholegrain Pasta (dry)</div>
         <div style="font-size:11px;color:var(--text2);margin-top:2px">Grain · 348 kcal · P:13g C:65g F:2.5g per 100g</div>
@@ -3618,7 +3642,7 @@ select option{background:var(--surface);color:var(--text)}
       <div style="width:36px;height:4px;border-radius:2px;background:var(--gray-light);margin:0 auto 16px"></div>
       <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
         <span style="font-size:22px">🔥</span>
-        <div style="font-size:17px;font-weight:800">Fuel this session right</div>
+        <div class="sheet-title">Fuel this session right</div>
       </div>
       <div style="font-size:12.5px;color:var(--text2);margin-bottom:14px">Based on what you just logged — here's what'll help you recover and adapt.</div>
       <div id="fuel-nudge-list"></div>
@@ -3684,7 +3708,7 @@ select option{background:var(--surface);color:var(--text)}
   <div id="meal-builder" style="position:fixed;inset:0;z-index:120;background:var(--bg);display:none;flex-direction:column">
     <!-- Builder header -->
     <div style="background:#0A3D2C;padding:16px;padding-top:calc(env(safe-area-inset-top,0px) + 16px);display:flex;align-items:center;justify-content:space-between;flex-shrink:0">
-      <div style="font-size:16px;font-weight:600;color:#fff;font-family:Inter,sans-serif">Build a meal</div>
+      <div class="sheet-title">Build a meal</div>
       <button onclick="closeMealBuilder()" style="width:32px;height:32px;border-radius:50%;background:#1B6E4F;border:none;color:#fff;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
 
@@ -4333,7 +4357,7 @@ function updateSub(){
   try{
     const d=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
     const name=S.profile.name||'Set up profile';
-    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0708.1050';
+    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0709.0954';
   }catch(e){}
 }
 
@@ -4603,6 +4627,16 @@ function renderBriefing() {
   }
 }
 
+function emptyState(icon, title, body, action){
+  // Consistent, on-brand empty state: teaches + invites the first action.
+  return `<div style="text-align:center;padding:30px 22px">
+    <div style="font-size:34px;margin-bottom:10px;line-height:1">${icon}</div>
+    <div style="font-family:'Sora',sans-serif;font-size:16px;font-weight:700;color:var(--text);letter-spacing:-0.01em;margin-bottom:7px">${title}</div>
+    <div style="font-size:13px;color:var(--text2);line-height:1.55;max-width:280px;margin:0 auto${action?';margin-bottom:16px':''}">${body}</div>
+    ${action?`<button onclick="${action.onclick}" style="background:var(--green);color:#fff;border:none;border-radius:100px;padding:10px 20px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Sora',sans-serif">${action.label}</button>`:''}
+  </div>`;
+}
+
 function renderDashboard(){renderBriefing();updateStreak();renderFavChips();renderWater();renderCarbLoadFlash(); renderRaceCoachMsg(); renderFuellingStrategy();renderDailyTargets();renderSuppButtons();renderProfilePhoto();renderNudges();
   // Update key metrics strip
   try{
@@ -4623,25 +4657,26 @@ function renderDashboard(){renderBriefing();updateStreak();renderFavChips();rend
   }catch(e){}
   const t=getTotals(0),p=S.profile;
   const AT=getAdjustedTargets();
-  const circ=2*Math.PI*66,pct=AT.cal?Math.min(t.cal/AT.cal,1):0;
+  const circ=2*Math.PI*86,pct=AT.cal?Math.min(t.cal/AT.cal,1):0;
   document.getElementById('ring-cal').style.strokeDashoffset=(circ*(1-pct)).toFixed(1);
   document.getElementById('ring-val').textContent=Math.round(t.cal);
   document.getElementById('ring-target').textContent=AT.cal;
         (function(){
-          var ringEl=document.getElementById('ring-cal'), valEl=document.getElementById('ring-val');
-          var remEl=document.getElementById('ring-remaining');
+          var ringEl=document.getElementById('ring-cal');
+          var remEl=document.getElementById('ring-remaining'), remLbl=document.getElementById('ring-remaining-lbl');
           var over = AT.cal ? (t.cal - AT.cal) : 0;
-          var ringColour='var(--green)', valColour='var(--text)';
+          // ring colour: green on track, amber near target, coral over
+          var ringColour='var(--green)', numColour='var(--text)';
           if(AT.cal){
-            if(over > 0){ ringColour='#E0492B'; valColour='#E0492B'; }
+            if(over > 0){ ringColour='var(--over)'; numColour='var(--over)'; }
             else if(t.cal >= AT.cal*0.92){ ringColour='#EF9F27'; }
           }
           if(ringEl) ringEl.setAttribute('stroke', ringColour);
-          if(valEl) valEl.style.color = valColour;
-          if(remEl){
-            if(!AT.cal){ remEl.textContent=''; }
-            else if(over > 0){ remEl.textContent = Math.round(over)+' over'; remEl.style.color='#E0492B'; }
-            else { remEl.textContent = Math.round(AT.cal - t.cal)+' left'; remEl.style.color='var(--green)'; }
+          // hero number = what the athlete actually asks: how much have I got left?
+          if(remEl && remLbl){
+            if(!AT.cal){ remEl.textContent='—'; remLbl.textContent='set a target'; remEl.style.color='var(--text3)'; }
+            else if(over > 0){ remEl.textContent = Math.round(over); remLbl.textContent='kcal over'; remEl.style.color='var(--over)'; }
+            else { remEl.textContent = Math.round(AT.cal - t.cal); remLbl.textContent='kcal left'; remEl.style.color=numColour; }
           }
         })();
   {
@@ -4656,7 +4691,7 @@ function renderDashboard(){renderBriefing();updateStreak();renderFavChips();rend
   }
   const pp=Math.round(pct*100);
   document.getElementById('ring-pill').innerHTML=`<span class="pill ${pct<0.5?'pill-coral':pct<0.9?'pill-amber':'pill-green'}">${pp}%</span>`;
-  const setBar=(id,val,tgt)=>{const pct2=tgt?Math.min(100,Math.round(val/tgt*100)):0;const bar=document.getElementById('d-'+id+'-bar');const lbl=document.getElementById('d-'+id+'-lbl');if(bar)bar.style.width=pct2+'%';if(lbl)lbl.textContent=Math.round(val)+'/'+(tgt||'?')+'g';};
+  const setBar=(id,val,tgt)=>{const pct2=tgt?Math.min(100,Math.round(val/tgt*100)):0;const bar=document.getElementById('d-'+id+'-bar');const lbl=document.getElementById('d-'+id+'-lbl');if(bar)bar.style.width=pct2+'%';if(lbl){const left=tgt?Math.max(0,Math.round(tgt-val)):0;lbl.innerHTML='<span class="mlbl">'+Math.round(val)+' / '+(tgt||'?')+'g</span>'+(tgt&&left>0?'<span class="mleft">'+left+' LEFT</span>':(tgt&&val>=tgt?'<span class="mleft" style="color:var(--green)">DONE</span>':''));}};
   setBar('p',t.prot,AT.prot);setBar('c',t.carbs,AT.carbs);setBar('f',t.fat,AT.fat);
   const meals=S.mealLogs[dateKey(0)]||[];
   const el=document.getElementById('dash-meals');
@@ -5300,8 +5335,76 @@ function renderMicroRow(key, val) {
   </div>`;
 }
 
+function microTrend(days){
+  days = days || 14;
+  const keys = Object.keys(MICRO_TARGETS);
+  const sums = {}; keys.forEach(k=>sums[k]=0);
+  let daysWithFood = 0;
+  for (let off = 0; off > -days; off--) {
+    const log = S.mealLogs[dateKey(off)] || [];
+    if (!log.length && !((S.suppLog||{})[dateKey(off)])) continue;
+    daysWithFood++;
+    const t = getMicroTotals(off);
+    keys.forEach(k => sums[k] += (t[k] || 0));
+  }
+  if (!daysWithFood) return null;
+  const avgPct = {};
+  keys.forEach(k => { const tgt = MICRO_TARGETS[k].target; avgPct[k] = tgt>0 ? Math.round((sums[k]/daysWithFood)/tgt*100) : 100; });
+  return { avgPct, daysWithFood, days };
+}
+
+function microCoachNote(){
+  const tr = microTrend(14);
+  if (!tr) return null;
+  if (tr.daysWithFood < 4) return { tone:'info', txt:'A few more logged days and I can start tracking your micronutrient trends — the ones that quietly make or break plant-based performance, like iron and B12. Keep logging.' };
+  const T = MICRO_TARGETS;
+  const low = [], watch = [];
+  Object.keys(tr.avgPct).forEach(k => {
+    const pct = tr.avgPct[k];
+    const entry = { k, name:T[k].name, pct, critical:!!T[k].critical, supp:!!T[k].supplement };
+    if (pct < 70) low.push(entry); else if (pct < 85) watch.push(entry);
+  });
+  const rank = e => (e.critical?0:1) + e.pct/1000;
+  low.sort((a,b)=>rank(a)-rank(b)); watch.sort((a,b)=>rank(a)-rank(b));
+  const win = tr.daysWithFood;
+  const foodFix = {
+    iron:'lentils, tofu, pumpkin seeds and dark greens — and a squeeze of citrus with them lifts absorption',
+    calcium:'fortified plant milk, calcium-set tofu, tahini and greens',
+    zinc:'pumpkin seeds, cashews, chickpeas and wholegrains',
+    b12:'this one you can\'t reliably get from food on a plant-based diet — a B12 supplement is the honest fix',
+    omega3:'ground flax, chia and walnuts daily; an algae oil covers EPA/DHA directly',
+    iodine:'a small amount of iodised salt or a measured sea-vegetable source — easy to miss entirely',
+    magnesium:'wholegrains, nuts, seeds and dark chocolate',
+    vitD:'hard to get from food — sunlight or a D3 supplement, especially in winter',
+    selenium:'a couple of Brazil nuts covers a day',
+    folate:'lentils, greens and beans'
+  };
+  if (!low.length && !watch.length) return { tone:'good', txt:'Your micronutrients are holding up well across the last '+win+' logged days — the plant-based danger nutrients (iron, B12, omega-3, zinc, iodine) are all tracking at target. This is the unglamorous stuff that keeps training quality high. Keep it up.' };
+  if (low.length) {
+    const lead = low[0]; const others = low.slice(1).map(e=>e.name);
+    let txt = 'Over your last '+win+' logged days, '+lead.name.toLowerCase()+' has averaged just '+lead.pct+'% of target';
+    if (others.length) txt += (others.length===1 ? ', and '+others[0].toLowerCase()+' is low too' : ', and '+others.slice(0,2).join(', ').toLowerCase()+' are also running low');
+    txt += '. ' + (lead.critical?'That one matters for performance — ':'');
+    txt += (lead.name==='Vitamin B12'||lead.name==='Iodine'||lead.name==='Vitamin D' ? 'to fix it, ' : 'to lift it, reach for ') + (foodFix[lead.k]||'a richer food source') + '.';
+    if (lead.k==='iron') txt += ' Low iron is the classic reason endurance suddenly feels harder than it should.';
+    return { tone:'warn', txt };
+  }
+  const w = watch[0];
+  return { tone:'info', txt:'Most things look solid, but '+w.name.toLowerCase()+' is drifting a little under target (~'+w.pct+'% across '+win+' days). Not a problem yet — nudge it up with '+(foodFix[w.k]||'a richer source')+' and it\'ll look after itself.' };
+}
+
 function renderMicro() {
   renderLeucineAnalysis();
+  try {
+    const _mn = microCoachNote();
+    const _el = document.getElementById('micro-coach-note');
+    if (_el) {
+      if (_mn) { const _ic = _mn.tone==='good'?'✓':_mn.tone==='warn'?'⚠':'ℹ';
+        _el.style.display='block';
+        _el.innerHTML = '<span style="font-weight:700;color:var(--green-dark)">'+_ic+' Coach\'s read:</span> '+_mn.txt;
+      } else { _el.style.display='none'; }
+    }
+  } catch(e){}
   const totals = getMicroTotals(0);
   const score = calcPerfScore(totals);
 
@@ -6241,7 +6344,7 @@ function setInsightTab(tab, btn) {
 // ── STRAVA INTEGRATION ───────────────────────────────────────────────────────
 const SUPABASE_URL = 'https://uxsyyuraablxeptpeyxf.supabase.co';
 const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV4c3l5dXJhYWJseGVwdHBleXhmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4MDkzODMsImV4cCI6MjA5NTM4NTM4M30._yp2JNWdwB140h9jqPuac26-x_XdMiPorKxBQEGWEZ0';
-const STRAVA_EDGE = SUPABASE_URL + '/functions/v1/strava-oauth';  // TODO: replace with your actual client secret
+const STRAVA_EDGE = SUPABASE_URL + '/functions/v1/strava-oauth';  // Strava client secret is set server-side in the edge function (never shipped to the client)
 
 const STRAVA_TYPE_ICONS = {
   Run:'<svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><circle cx="13" cy="4" r="2"/><path d="m9 11 3-3 3 4 3 1"/><path d="m6 21 4-7 4 1 1 6"/></svg>', Ride:'<svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></svg>', Swim:'<svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><circle cx="13" cy="6" r="2"/><path d="m4 14 3-2 3 2 3-2 3 2 3-2"/><path d="m4 18 3-2 3 2 3-2 3 2 3-2"/></svg>', Walk:'<svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><circle cx="13" cy="4" r="2"/><path d="m9 20 3-6 1-2"/><path d="m6 8 4-1 2 3 3 1"/><path d="M14 12l2 8"/></svg>', Hike:'<svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M4 18v-4l3-6h4l1 4h3l5 4v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/></svg>',
@@ -6526,16 +6629,16 @@ function renderLeucineGapCard() {
       </div>
       <div style="display:flex;align-items:flex-start;gap:8px;margin:10px 0">
         <div style="flex:1;min-width:0">
-          <div style="display:flex;align-items:baseline;gap:2px"><span style="font-size:28px;font-weight:800;color:var(--text);line-height:1">${totalProtein}</span><span style="font-size:15px;font-weight:700;color:var(--text2)">g</span></div>
+          <div style="display:flex;align-items:baseline;gap:2px"><span style="font-size:28px;font-weight:800;color:var(--text);line-height:1;font-variant-numeric:tabular-nums">${totalProtein}</span><span style="font-size:15px;font-weight:700;color:var(--text2)">g</span></div>
           <div style="font-size:10.5px;color:var(--text2);margin-top:4px;line-height:1.25;min-height:26px">Eaten</div>
         </div>
         <div style="font-size:18px;color:var(--text3);align-self:flex-start;flex-shrink:0;padding-top:6px"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
         <div style="flex:1;min-width:0">
-          <div style="display:flex;align-items:baseline;gap:2px"><span style="font-size:28px;font-weight:800;color:var(--green);line-height:1">${effectiveProtein}</span><span style="font-size:15px;font-weight:700;color:var(--green)">g</span></div>
+          <div style="display:flex;align-items:baseline;gap:2px"><span style="font-size:28px;font-weight:800;color:var(--green);line-height:1;font-variant-numeric:tabular-nums">${effectiveProtein}</span><span style="font-size:15px;font-weight:700;color:var(--green)">g</span></div>
           <div style="font-size:10.5px;color:var(--text2);margin-top:4px;line-height:1.25;min-height:26px">Used</div>
         </div>
         ${gap > 0 ? `<div style="flex:1;min-width:0;text-align:right">
-          <div style="display:flex;align-items:baseline;gap:2px;justify-content:flex-end"><span style="font-size:28px;font-weight:800;color:var(--coral);line-height:1">${gap}</span><span style="font-size:15px;font-weight:700;color:var(--coral)">g</span></div>
+          <div style="display:flex;align-items:baseline;gap:2px;justify-content:flex-end"><span style="font-size:28px;font-weight:800;color:var(--coral);line-height:1;font-variant-numeric:tabular-nums">${gap}</span><span style="font-size:15px;font-weight:700;color:var(--coral)">g</span></div>
           <div style="font-size:10.5px;color:var(--text2);margin-top:4px;line-height:1.25;min-height:26px">Left on the table</div>
         </div>` : ''}</div>
       <div style="height:10px;background:var(--gray-light);border-radius:5px;overflow:hidden;margin:10px 0 8px">
@@ -6787,7 +6890,7 @@ const adjCal=_at.cal, adjProt=_at.prot;
   const _sum=_dayTally.reduce((a,m)=>({cal:a.cal+m.cal,prot:a.prot+m.prot,carbs:a.carbs+m.carbs,fat:a.fat+m.fat}),{cal:0,prot:0,carbs:0,fat:0});
   const _yc=_dayTally.filter(m=>m.userMeal).length;
   const _cp=adjCal>0?Math.round(_sum.cal/adjCal*100):0, _pp=adjProt>0?Math.round(_sum.prot/adjProt*100):0;
-  const _band=p=>p>108?'var(--coral)':p<92?'#E0A030':'var(--green)';
+  const _band=p=>p>108?'var(--coral)':p<92?'var(--amber)':'var(--green)';
   const _cc=_band(_cp), _pc=_band(_pp);
   const _cd=_sum.cal-adjCal, _pd=_sum.prot-adjProt;
   const _dt=(d,u)=>d===0?'bang on':(d>0?'+'+d+u+' over':d+u+' under');
@@ -6813,7 +6916,7 @@ const adjCal=_at.cal, adjProt=_at.prot;
           : _cd<-adjCal*0.08 ? 'A little under maintenance — add a snack or a bigger portion to sit level.'
           : 'Close — tweak a portion or swap a meal to dial it in.';
   }
-  const _summary=`<div class="card" style="margin-bottom:10px;border:1px solid rgba(27,110,79,0.18)"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px"><div class="card-title" style="margin:0">Your day, planned</div>${_yc?`<span style="font-family:'Space Mono',monospace;font-size:10px;font-weight:700;color:var(--green-dark)">${_yc} of your meals</span>`:''}</div><div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span style="color:var(--text2)">Calories</span><span style="font-weight:700;color:${_cc}">${_sum.cal} / ${adjCal} kcal <span style="font-weight:400;color:var(--text3)">· ${_dt(_cd,'')}</span></span></div><div style="height:8px;background:var(--gray-light);border-radius:4px;overflow:hidden"><div style="height:100%;width:${Math.min(100,_cp)}%;background:${_cc};border-radius:4px;transition:width .4s"></div></div></div><div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span style="color:var(--text2)">Protein</span><span style="font-weight:700;color:${_pc}">${_sum.prot} / ${adjProt} g <span style="font-weight:400;color:var(--text3)">· ${_dt(_pd,'g')}</span></span></div><div style="height:8px;background:var(--gray-light);border-radius:4px;overflow:hidden"><div style="height:100%;width:${Math.min(100,_pp)}%;background:${_pc};border-radius:4px;transition:width .4s"></div></div></div><div style="font-size:11px;color:var(--text2);margin-top:10px;line-height:1.5">${_note}</div></div>`;
+  const _summary=`<div class="card" style="margin-bottom:10px;border:1px solid rgba(27,110,79,0.18)"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px"><div class="card-title" style="margin:0">Your day, planned</div>${_yc?`<span style="font-family:'Space Mono',monospace;font-size:10px;font-weight:700;color:var(--green-dark)">${_yc} of your meals</span>`:''}</div><div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span style="color:var(--text2)">Calories</span><span style="font-weight:700;color:${_cc}">${_sum.cal} / ${adjCal} kcal <span style="font-weight:400;color:var(--text3)">· ${_dt(_cd,'')}</span></span></div><div style="height:9px;background:var(--gray-light);border-radius:5px;overflow:hidden"><div style="height:100%;width:${Math.min(100,_cp)}%;background:${_cc};border-radius:5px;transition:width .4s"></div></div></div><div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px"><span style="color:var(--text2)">Protein</span><span style="font-weight:700;color:${_pc}">${_sum.prot} / ${adjProt} g <span style="font-weight:400;color:var(--text3)">· ${_dt(_pd,'g')}</span></span></div><div style="height:9px;background:var(--gray-light);border-radius:5px;overflow:hidden"><div style="height:100%;width:${Math.min(100,_pp)}%;background:${_pc};border-radius:5px;transition:width .4s"></div></div></div><div style="font-size:11px;color:var(--text2);margin-top:10px;line-height:1.5">${_note}</div></div>`;
   // insert the summary right after the "Today — … day" header card
   const _parts=container.innerHTML.split('</div></div></div>');
   if(_parts.length>1){ container.innerHTML=_parts[0]+'</div></div></div>'+_summary+_parts.slice(1).join('</div></div></div>'); }
@@ -8366,6 +8469,51 @@ function _compoSeries(){
   return {w:wPts,f:fPts,l:lPts};
 }
 
+// Coach's read on the composition trends — phase-aware, noise-honest.
+function compoCoachNote(){
+  const s=_compoSeries();
+  const phase=(S.profile&&S.profile.phase)||'maintain';
+  // need at least 2 paired readings spanning 14+ days to say anything responsibly
+  const usable=(arr)=>arr.length>=2 && (new Date(arr[arr.length-1].date)-new Date(arr[0].date))/86400000>=14;
+  if(!usable(s.f)||!usable(s.l)){
+    if(usable(s.w)) return {tone:'info', txt:'I can see your weight trend, but I need a couple of body-fat readings a few weeks apart before I can tell you what kind of weight it is. Log a scan when you can.'};
+    return null;
+  }
+  // trends over the recent window (last 6 weeks of data, or all if shorter)
+  const windowed=(arr)=>{ const end=new Date(arr[arr.length-1].date); return arr.filter(p=>(end-new Date(p.date))/86400000<=42); };
+  const trend=(arr)=>{ const a=windowed(arr); if(a.length<2) return {d:0,wk:0,weeks:0};
+    const days=Math.max(1,(new Date(a[a.length-1].date)-new Date(a[0].date))/86400000);
+    const d=a[a.length-1].v-a[0].v; return {d:Math.round(d*10)/10, wk:Math.round(d/days*7*100)/100, weeks:Math.round(days/7*10)/10}; };
+  const tw=trend(s.w), tf=trend(s.f), tl=trend(s.l);
+  const NOISE=0.4;   // kg — below this we call it "held" (smart-scale honesty)
+  const fFell=tf.d<=-NOISE, fRose=tf.d>=NOISE, fHeld=!fFell&&!fRose;
+  const lFell=tl.d<=-NOISE, lRose=tl.d>=NOISE, lHeld=!lFell&&!lRose;
+  const wNow=s.w[s.w.length-1].v;
+  const lossPctWk=wNow>0?(-tw.wk/wNow*100):0;
+  const F=Math.abs(tf.d).toFixed(1), L=Math.abs(tl.d).toFixed(1);
+
+  // safety first: losing too fast on any phase risks muscle
+  if(lossPctWk>1.05) return {tone:'warn', txt:'You\'re losing over 1% of bodyweight a week — faster than muscle can usually be protected, even with protein high. Ease the deficit slightly; slower here keeps more of your lean mass.'};
+
+  if(phase==='cut'){
+    if(fFell&&(lHeld||lRose)) return {tone:'good', txt:'This is a textbook cut: '+F+'kg of fat down over ~'+tf.weeks+' weeks while lean mass held. The weight you\'re losing is the weight you wanted to lose. Keep protein where it is and carry on.'};
+    if(fFell&&lFell) return {tone:'warn', txt:'Fat is coming down ('+F+'kg) but lean mass has slipped '+L+'kg with it. Two things to check: are you actually hitting your protein target most days, and is your strength work still progressive? If both are solid, the deficit may be a touch aggressive.'};
+    if(fHeld&&lFell) return {tone:'warn', txt:'The scale may be moving, but it\'s lean mass going, not fat. Prioritise protein at every meal and keep lifting — and if this holds another two weeks, ease the deficit.'};
+    return {tone:'info', txt:'Fat mass hasn\'t moved meaningfully over ~'+tf.weeks+' weeks. Before changing targets, tighten the basics for a fortnight: weigh portions, log everything (oils and snacks count). If it\'s still flat, we recalibrate the target.'};
+  }
+  if(phase==='bulk'){
+    if(lRose&&(fHeld||(fRose&&tf.d<tl.d*0.8))) return {tone:'good', txt:'The bulk is doing its job: +'+L+'kg lean over ~'+tl.weeks+' weeks with fat kept in check. That ratio is what a productive surplus looks like — keep the training progressive and stay the course.'};
+    if(fRose&&!lRose) return {tone:'warn', txt:'The surplus is going on as fat (+'+F+'kg) rather than lean. Muscle needs a reason to grow — check the training stimulus is progressive, and consider trimming the surplus slightly; more food doesn\'t build more muscle past a point.'};
+    if(lHeld&&fHeld&&Math.abs(tw.d)<NOISE) return {tone:'info', txt:'Weight, fat and lean are all flat — you\'re maintaining, not building. On a bulk that usually means the surplus isn\'t actually being eaten. Check your logged days against the target; the plan only works if the food goes in.'};
+    return {tone:'info', txt:'Mixed signals over ~'+tl.weeks+' weeks — some lean gain, some fat. Normal for a bulk; watch the ratio over the next few weeks and keep the lifting progressive.'};
+  }
+  // maintain
+  if(fFell&&lRose) return {tone:'good', txt:'Quiet recomposition: fat down '+F+'kg, lean up '+L+'kg at roughly the same weight. That\'s the best-case outcome of maintenance — whatever you\'re doing, keep doing it.'};
+  if(lFell) return {tone:'warn', txt:'Lean mass has drifted down '+L+'kg while maintaining. Check protein is still hitting target and training hasn\'t quietly deloaded — maintenance calories only maintain muscle if the stimulus stays.'};
+  if(lHeld&&fHeld) return {tone:'good', txt:'Steady as intended — weight, fat and lean all holding over ~'+tw.weeks+' weeks. If your next goal is building muscle, that usually needs a modest surplus plus progressive training; say the word and switch the phase when ready.'};
+  return {tone:'info', txt:'Composition is drifting slightly while maintaining. Nothing alarming — keep an eye on the fat line and make sure protein and training stay consistent.'};
+}
+
 function renderCompoChart(){
   const card=document.getElementById('compo-card');
   const container=document.getElementById('compo-chart-container');
@@ -8421,6 +8569,13 @@ function renderCompoChart(){
   const fmt=d=>{ const dt=new Date(d+'T00:00:00'); return dt.getDate()+'/'+(dt.getMonth()+1); };
   const xl=`<text x="${padL}" y="${H-6}" font-size="9" fill="var(--text3)">${fmt(dmin)}</text><text x="${W-padR}" y="${H-6}" font-size="9" fill="var(--text3)" text-anchor="end">${fmt(dmax)}</text>`;
   container.innerHTML=`<svg width="${W}" height="${H}" style="display:block;overflow:visible">${grid}${svg}${xl}</svg>`;
+  // coach's read
+  const noteEl=document.getElementById('compo-coach-note');
+  if(noteEl){ const n=compoCoachNote();
+    if(n){ const icon=n.tone==='good'?'✓':n.tone==='warn'?'⚠':'ℹ';
+      noteEl.style.display='block';
+      noteEl.innerHTML='<span style="font-weight:700;color:var(--green-dark)">'+icon+' Coach\'s read:</span> '+n.txt;
+    } else { noteEl.style.display='none'; } }
 }
 
 function initCompoChart(){
@@ -8447,7 +8602,7 @@ function drawWtChart() {
   const wlAll = S.weightLog || [];
   const wl = filterByRange(wlAll, _wtRange);
   if (!wlAll.length) {
-    container.innerHTML = '<div style="height:180px;display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:13px">Log a weight to see your trend</div>';
+    container.innerHTML = emptyState('⚖️', 'See your weight trend', 'Log your weight regularly and VeraFuel plots the trend — smoothing out the daily noise so you can see where you\'re actually heading.', {label:'Log your weight', onclick:"document.getElementById('wt-input')&&document.getElementById('wt-input').focus()"});
     return;
   }
 
@@ -8594,7 +8749,7 @@ function renderTrendCard(wl) {
       <span class="science-badge"><span style="font-size:10px;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span> 7-day EMA</span>
     </div>
     <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:6px">
-      <span style="font-size:28px;font-weight:700">${trendW}</span>
+      <span style="font-size:28px;font-weight:700;font-variant-numeric:tabular-nums">${trendW}</span>
       <span style="color:var(--text2)">kg</span>
       <span style="font-size:13px;font-weight:600;color:${dirCol}">${dirLabel}</span>
     </div>
@@ -8774,7 +8929,7 @@ function renderBodyCompList() {
   if (!el) return;
   const all = (S.bodyComp || []).slice().reverse();
   if (!all.length) {
-    el.innerHTML = '<div style="color:var(--text3);font-size:13px;padding:4px 0">No scans logged yet.</div>';
+    el.innerHTML = emptyState('⚖️', 'Track what you\'re really made of', 'Log a body-fat scan with your weight, and VeraFuel shows fat mass and lean mass over time — the true picture a bathroom scale can\'t give you.', {label:'Log your first scan', onclick:"_bcLogExpanded=true;renderBodyComp();setTimeout(()=>document.getElementById('bc-bf-input')&&document.getElementById('bc-bf-input').focus(),50)"});
     return;
   }
   const CAP = 5;
@@ -10151,33 +10306,33 @@ function renderWeeklyReview() {
   const _sleepDays = days.filter(d => d.sleep);
   const _avgSleep = _sleepDays.length ? (_sleepDays.reduce((a,d)=>a+(d.sleep.hours||0),0)/_sleepDays.length) : null;
   const _trainN = days.filter(d => d.workout).length;
+  const _avgCal = n ? Math.round(logged.reduce((a,d)=>a+d.cal,0)/n) : 0;
+  const _avgP = n ? Math.round(logged.reduce((a,d)=>a+d.prot,0)/n) : 0;
   const _wtChange = (typeof calcWeeklyWeightChange === 'function') ? calcWeeklyWeightChange() : null;
   // Coach note (reuse the real generator if present)
   let _coachLine = '';
   try {
     if (typeof buildWeeklyCoachNote === 'function') {
-      const _avgCal = Math.round(logged.reduce((a,d)=>a+d.cal,0)/n);
-      const _avgP = Math.round(logged.reduce((a,d)=>a+d.prot,0)/n);
       const _calHitN = logged.filter(d => d.cal >= (p.targetCal||3000)*0.9).length;
       const note = buildWeeklyCoachNote({logged:n, avgCal:_avgCal, avgP:_avgP, calHit:_calHitN, protHit:_protHitN, targetCal:p.targetCal, targetP:p.targetP, avgSleep:_avgSleep, trainDays:_trainN});
       _coachLine = (note && note.headline) ? note.headline : '';
     }
   } catch(e){}
 
-  const _stat = (num, lbl) => `<div style="background:var(--gray-light);border-radius:var(--radius-sm);padding:13px 15px">
-      <div style="font-size:26px;font-weight:800;color:var(--green);line-height:1">${num}</div>
-      <div style="font-size:11px;color:var(--text2);margin-top:5px;font-weight:600">${lbl}</div></div>`;
+  const _stat = (num, lbl, colour, sub) => `<div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:15px 16px">
+      <div style="font-size:30px;font-weight:800;color:${colour||'var(--text)'};line-height:1;letter-spacing:-1px;font-variant-numeric:tabular-nums">${num}</div>
+      <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text3);margin-top:7px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase">${lbl}</div>
+      ${sub?`<div style="font-size:11px;color:var(--text2);margin-top:3px">${sub}</div>`:''}</div>`;
 
   const _wtDisp = (_wtChange===null) ? '—' : (_wtChange>0?'+':'') + _wtChange + '<span style="font-size:14px">kg</span>';
   const _slpDisp = (_avgSleep===null) ? '—' : _avgSleep.toFixed(1);
 
   const headerHTML = `
-    
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">
-      ${_stat(_protHitN+'/'+n, 'Protein target hit')}
-      ${_stat(_protHitPct+'%', 'Consistency')}
-      ${_stat(_wtDisp, 'Weight trend')}
-      ${_stat(_slpDisp, 'Avg sleep (hrs)')}
+      ${_stat(_avgCal.toLocaleString(), 'Avg daily kcal', 'var(--text)', _avgP+'g protein')}
+      ${_stat(_protHitPct+'%', 'Protein consistency', _protHitPct>=80?'var(--green)':_protHitPct>=60?'var(--amber)':'var(--coral)', _protHitN+' of '+n+' days')}
+      ${_stat(_wtDisp, 'Weight trend', 'var(--text)')}
+      ${_stat(_trainN, 'Sessions logged', 'var(--text)', _slpDisp!=='—'?_slpDisp+'h avg sleep':'this week')}
     </div>
   `;
 
@@ -10531,7 +10686,7 @@ function renderFuellingStrategy() {
       </div>` : ''}
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
         <div>
-          <div style="font-size:17px;font-weight:800;color:var(--text)">Race fuelling strategy</div>
+          <div class="sheet-title">Race fuelling strategy</div>
           <div style="font-size:12px;color:var(--text2);margin-top:2px">${s.event || 'Your event'} · tailored to your race</div>
         </div>
         <div style="font-family:'Space Mono',monospace;font-size:10px;font-weight:700;color:#0A3D2C;background:#C8F24E;padding:5px 11px;border-radius:100px">${durLabel}</div>
@@ -10886,7 +11041,7 @@ function renderRaceModeHero() {
           <div style="font-size:12px;color:#7FD9A6">${distLabel}</div>
         </div>
         <div style="text-align:right;flex-shrink:0;margin-left:12px">
-          <div style="font-family:'Inter',sans-serif;font-size:42px;font-weight:700;color:#FF6E2C;line-height:0.9">${tMinus}</div>
+          <div style="font-family:'Inter',sans-serif;font-size:42px;font-weight:700;color:#FF6E2C;line-height:0.9;font-variant-numeric:tabular-nums">${tMinus}</div>
           ${daysOut>0?'<div style="font-family:Inter,sans-serif;font-size:9px;letter-spacing:.2em;color:#7FD9A6;text-transform:uppercase">days</div>':''}
         </div>
       </div>
@@ -11573,7 +11728,7 @@ if(!S.profile.phase)S.profile.phase='bulk';
 updateSub();
 try{renderDashboard();}catch(e){
   console.error('Dashboard render error:',e);
-  document.getElementById('screen-sub').textContent='Simon · tap profile to set up  ·  v0708.1050';
+  document.getElementById('screen-sub').textContent='Simon · tap profile to set up  ·  v0709.0954';
 }
 renderRecipes();
 // renderIngredients removed
