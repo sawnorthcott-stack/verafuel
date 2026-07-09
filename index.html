@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0065)file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(37).html -->
+<!-- saved from url=(0065)file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(38).html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -757,7 +757,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div style="height:1.5px;width:100%;border-radius:1px;background:linear-gradient(90deg,#1B6E4F,#C8F24E 60%,#FF6E2C)"></div>
         </div>
-        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:Inter,sans-serif;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 9 Jul 2026  ·  v0709.1111</p>
+        <p id="screen-sub" style="font-size:9px;color:#6F7E74;font-family:Inter,sans-serif;letter-spacing:.06em;margin-top:3px;padding-left:2px">Simon · 9 Jul 2026  ·  v0709.1445</p>
       </div>
       <h1 id="screen-title" style="display:none">Dashboard</h1>
     </div>
@@ -831,7 +831,15 @@ select option{background:var(--surface);color:var(--text)}
         <div id="carbload-flash" style="display:none;margin-bottom:12px"></div>
         <div id="race-coach-msg" style="display:none;margin-bottom:12px"></div>
         <div id="fuelling-strategy" style="display:none;margin-bottom:12px"></div>
-        <div id="dash-nudges"></div>
+        <div id="dash-nudges">
+    <div style="background:var(--blue-light);border-radius:var(--radius);padding:13px 15px;margin-bottom:10px;display:flex;gap:11px;align-items:flex-start">
+      <span style="font-size:20px;flex-shrink:0;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg></span>
+      <div style="flex:1">
+        <div style="font-size:13px;font-weight:700;color:var(--blue-dark);margin-bottom:2px">Hydration low</div>
+        <div style="font-size:12px;color:var(--text);line-height:1.5;opacity:.85">Only 0 of 8 glasses so far. Dehydration impairs performance and nutrient transport — top up through the afternoon.</div>
+      </div>
+    </div>
+  </div>
 
         
         <div id="streak-card" class="streak-badge" style="display:none">
@@ -1445,28 +1453,24 @@ select option{background:var(--surface);color:var(--text)}
             <div class="stat-box"><div class="stat-val" id="prog-cur">--</div><div class="stat-lbl">Current (kg)</div></div>
             <div class="stat-box"><div class="stat-val" id="prog-chg">--</div><div class="stat-lbl">Total change</div></div>
           </div>
-          <div class="card" id="compo-card" style="display:none">
-    <div class="card-title">Body composition — the true picture</div>
+          <div class="section-label">Weight</div>
+<div class="card" id="wt-trend-card"><div class="card-title">Weight trend</div>
+            <div id="wt-range-toggle" class="chart-range-bar"></div>
+            <div id="wt-chart-container" style="width:100%;padding:4px 0"></div></div><div class="card">
+            <div class="card-title">Log weight</div>
+            <div class="form-row"><label>Weight today (kg)</label><input type="number" id="wt-input" step="0.1" min="30" max="300" placeholder="e.g. 73.0"></div>
+            <button class="btn" onclick="logWeight()"><span style=";font-style:normal">＋</span> Save weight</button>
+          </div><div class="card"><div class="card-title">Weight history</div><div id="wt-log-list"></div></div><div class="section-label">Body composition</div>
+<div class="card" id="compo-card" style="display:none">
+    <div class="card-title">The true picture</div>
     <div style="font-size:11.5px;color:var(--text2);margin:-2px 0 10px;line-height:1.5">Weight alone hides what's changing. Fat mass and lean mass show what you're actually losing or building. Tap to show or hide each line.</div>
     <div id="compo-toggles" style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px"></div>
     <div id="compo-range-toggle" class="chart-range-bar"></div>
     <div id="compo-chart-container" style="width:100%;padding:4px 0"></div>
     <div id="compo-coach-note" style="display:none;background:rgba(27,110,79,0.06);border:1px solid rgba(27,110,79,0.18);border-radius:10px;padding:12px;margin-top:10px;font-size:13px;line-height:1.6;color:var(--text2)"></div>
     <div style="font-size:10.5px;color:var(--text3);margin-top:8px;line-height:1.45">Fat &amp; lean mass are derived from weight × body-fat readings. Smart-scale numbers are rough in absolute terms — trust the direction of the lines, not any single day.</div>
-  </div>
-  <div class="card" id="wt-trend-card"><div class="card-title">Weight trend</div>
-            <div id="wt-range-toggle" class="chart-range-bar"></div>
-            <div id="wt-chart-container" style="width:100%;padding:4px 0"></div></div>
-          <div class="card">
-            <div class="card-title">Log weight</div>
-            <div class="form-row"><label>Weight today (kg)</label><input type="number" id="wt-input" step="0.1" min="30" max="300" placeholder="e.g. 73.0"></div>
-            <button class="btn" onclick="logWeight()"><span style=";font-style:normal">＋</span> Save weight</button>
-          </div>
-          <div class="card"><div class="card-title">Weight history</div><div id="wt-log-list"></div></div>
-
-          <!-- ── BODY COMPOSITION ── -->
-          <div class="card">
-            <div class="card-title">Body composition</div>
+  </div><div class="card">
+            <div class="card-title">Latest reading</div>
             <div style="font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:12px">
               Got a gym scan, DEXA or smart-scale reading? Log it here — even every few weeks — to watch fat and muscle change over time.
             </div>
@@ -1478,9 +1482,7 @@ select option{background:var(--surface);color:var(--text)}
             <div id="lean-protein-insight" style="display:none;background:rgba(27,110,79,0.06);border:1px solid rgba(27,110,79,0.18);border-radius:10px;padding:12px;margin-bottom:12px"></div>
             <div id="bc-range-toggle" class="chart-range-bar"></div>
             <div id="bc-chart-container" style="width:100%;padding:4px 0;margin-bottom:8px"></div>
-          </div>
-
-          <div class="card">
+          </div><div class="card">
             <div class="card-title">Log a body scan</div>
             <div style="display:flex;gap:8px">
               <div class="form-row" style="flex:1;margin-bottom:8px"><label>Body fat %</label><input type="number" id="bc-bf-input" step="0.1" min="2" max="60" placeholder="e.g. 14.5"></div>
@@ -1488,8 +1490,7 @@ select option{background:var(--surface);color:var(--text)}
             </div>
             <div style="font-size:11px;color:var(--text3);line-height:1.45;margin-bottom:10px">Log whichever your device gives you — you don't need both.</div>
             <button class="btn" onclick="logBodyComp()"><span style="font-style:normal">＋</span> Save scan</button>
-          </div>
-          <div class="card"><div class="card-title">Scan history</div><div id="bc-log-list"></div></div>
+          </div><div class="card"><div class="card-title">Scan history</div><div id="bc-log-list"></div></div>
         </div>
         <div id="insight-weekly" style="display:none">
           <div id="week-streak-banner" class="streak-badge" style="margin-bottom:10px;display:none">
@@ -1625,7 +1626,7 @@ select option{background:var(--surface);color:var(--text)}
           <div style="position:relative;flex-shrink:0" onclick="changeProfilePhoto()" title="Tap to change photo">
             <div id="profile-photo-wrap" style="width:56px;height:56px;border-radius:50%;background:var(--green-light);overflow:hidden;display:flex;align-items:center;justify-content:center;border:2px solid var(--green)">
               <span style="font-size:26px;color:var(--green);font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
-              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(37).html">
+              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(38).html">
             </div>
             <div style="position:absolute;bottom:-2px;right:-2px;width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface)">
               <span style="font-size:10px;color:#fff;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"></path><circle cx="12" cy="13" r="3"></circle></svg></span>
@@ -1702,7 +1703,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div id="strava-connected" style="display:none">
             <div class="strava-connected" style="margin-bottom:12px">
-              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(37).html" class="strava-avatar" alt="Strava">
+              <img id="strava-avatar" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(38).html" class="strava-avatar" alt="Strava">
               <div style="flex:1">
                 <div style="font-size:14px;font-weight:600" id="strava-athlete-name">Connected</div>
                 <div class="strava-badge" style="margin-top:3px">
@@ -1891,7 +1892,7 @@ select option{background:var(--surface);color:var(--text)}
 
 <!-- PHOTO VIEWER -->
 <div class="photo-viewer" id="photo-viewer" onclick="closePhotoViewer()">
-  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(37).html" alt="Progress photo">
+  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(38).html" alt="Progress photo">
   <div class="photo-viewer-meta" id="pv-meta"></div>
   <button style="margin-top:12px;background:var(--coral-light);color:var(--coral-dark);border:none;border-radius:var(--radius-sm);padding:8px 16px;cursor:pointer;font-size:13px" onclick="event.stopPropagation();deletePhoto(window._pvIdx)"><span style=";font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg></span> Delete</button>
 </div>
@@ -1905,9 +1906,9 @@ select option{background:var(--surface);color:var(--text)}
       <div class="compare-sub" id="compare-span"></div>
     </div>
     <div class="compare-stage" id="compare-stage">
-      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(37).html" alt="Latest photo">
+      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(38).html" alt="Latest photo">
       <div id="cmp-before-wrap" class="cmp-before-wrap">
-        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(37).html" alt="First photo">
+        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20(38).html" alt="First photo">
       </div>
       <div id="cmp-divider" class="cmp-divider"><div class="cmp-handle">⟺</div></div>
       <div class="cmp-tag cmp-tag-before">First</div>
@@ -4355,7 +4356,7 @@ function updateSub(){
   try{
     const d=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
     const name=S.profile.name||'Set up profile';
-    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0709.1111';
+    document.getElementById('screen-sub').textContent=name+' · '+d+'  ·  v0709.1445';
   }catch(e){}
 }
 
@@ -5183,12 +5184,22 @@ function renderWeekly(){
 
   // day rows
   document.getElementById('week-day-rows').innerHTML=[...days].reverse().map(d=>`
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:0.5px solid var(--border)">
-      <div style="font-size:13px;font-weight:500;width:72px">${d.label}</div>
+    <div style="display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:0.5px solid var(--border)">
+      <div style="display:flex;align-items:center;gap:8px;width:64px;flex-shrink:0">
+        <span style="width:7px;height:7px;border-radius:50%;background:${d.logged?pctCol(d.cal,p.targetCal):'var(--border)'};flex-shrink:0"></span>
+        <span style="font-size:13px;font-weight:600;color:var(--text)">${d.label.slice(0,3)}</span>
+      </div>
       ${d.logged?`
-        <div style="flex:1;font-size:12px;color:var(--text2)">P${d.prot}g C${d.carbs}g F${d.fat}g</div>
-        <div style="font-size:13px;font-weight:600;color:${pctCol(d.cal,p.targetCal)}">${Math.round(d.cal)}</div>
-      `:'<div style="font-size:12px;color:var(--text3);flex:1">Not logged</div><div style="font-size:12px">—</div>'}
+        <div style="flex:1;display:flex;gap:10px;font-size:11px;color:var(--text2);font-variant-numeric:tabular-nums">
+          <span><span style="color:var(--text3)">P</span> ${d.prot}</span>
+          <span><span style="color:var(--text3)">C</span> ${d.carbs}</span>
+          <span><span style="color:var(--text3)">F</span> ${d.fat}</span>
+        </div>
+        <div style="font-size:14px;font-weight:700;color:${pctCol(d.cal,p.targetCal)};font-variant-numeric:tabular-nums;flex-shrink:0">${Math.round(d.cal).toLocaleString()}<span style="font-size:10px;font-weight:500;color:var(--text3);margin-left:2px">kcal</span></div>
+      `:`
+        <div style="flex:1;font-size:12px;color:var(--text3)">Not logged</div>
+        <div style="font-size:13px;color:var(--text3);flex-shrink:0">—</div>
+      `}
     </div>`).join('');
 
   // coach note — compute extra stats for the coaching headline
@@ -11732,7 +11743,7 @@ if(!S.profile.phase)S.profile.phase='bulk';
 updateSub();
 try{renderDashboard();}catch(e){
   console.error('Dashboard render error:',e);
-  document.getElementById('screen-sub').textContent='Simon · tap profile to set up  ·  v0709.1111';
+  document.getElementById('screen-sub').textContent='Simon · tap profile to set up  ·  v0709.1445';
 }
 renderRecipes();
 // renderIngredients removed
