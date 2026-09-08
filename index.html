@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0086)file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T065300.548.html -->
+<!-- saved from url=(0086)file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T113534.381.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -600,7 +600,7 @@ select option{background:var(--surface);color:var(--text)}
 
 <div class="app">
 <!-- ONBOARDING OVERLAY -->
-<div class="onboard-overlay" id="onboard-overlay" style="display:none">
+<div class="onboard-overlay" id="onboard-overlay" style="display: flex;">
 
   <!-- Step 1: Welcome -->
   <div class="onboard-step active" id="ob-step-1">
@@ -861,19 +861,19 @@ select option{background:var(--surface);color:var(--text)}
       <div class="target-check missed">·</div>
       <div class="target-info">
         <div class="target-label missed"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg> Calories</div>
-        <div class="target-val">0 / 2287 kcal</div>
+        <div class="target-val">0 / 0 kcal</div>
       </div>
     </div><div class="target-item missed">
       <div class="target-check missed">·</div>
       <div class="target-info">
         <div class="target-label missed"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M4 14s1.5-2 4-2 4 2 4 2"></path><path d="M12 14c0-2 1-5 4-5s4 2.5 4 5.5c0 4-3 6.5-6 6.5"></path><path d="M4 14c0 3 1.5 6 4 6"></path></svg> Protein</div>
-        <div class="target-val">0 / 131g</div>
+        <div class="target-val">0 / 0g</div>
       </div>
     </div><div class="target-item missed">
       <div class="target-check missed">·</div>
       <div class="target-info">
         <div class="target-label missed"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M12 22V8"></path><path d="M12 8c-2 0-3-1-3-3 2 0 3 1 3 3Z"></path><path d="M12 8c2 0 3-1 3-3-2 0-3 1-3 3Z"></path><path d="M12 14c-2 0-3-1-3-3 2 0 3 1 3 3Z"></path><path d="M12 14c2 0 3-1 3-3-2 0-3 1-3 3Z"></path></svg> Carbs</div>
-        <div class="target-val">0 / 310g</div>
+        <div class="target-val">0 / 0g</div>
       </div>
     </div><div class="target-item missed">
       <div class="target-check missed">·</div>
@@ -945,25 +945,25 @@ select option{background:var(--surface);color:var(--text)}
               <circle id="ring-cal" cx="100" cy="100" r="86" fill="none" stroke="var(--green)" stroke-width="11" stroke-linecap="round" stroke-dasharray="540.4" stroke-dashoffset="540.4" style="transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.3s; stroke-dashoffset: 540.4;"></circle>
             </svg>
             <div class="ring-inner" onclick="toggleCalMode()" style="cursor:pointer" title="Tap to switch between calories left and eaten">
-              <div class="ring-remaining-num" id="ring-remaining" style="color: var(--text);">2287</div>
-              <div class="ring-remaining-lbl" id="ring-remaining-lbl">kcal left</div>
-              <div class="ring-eaten"><span id="ring-val">0</span> of <span id="ring-target">2287</span> eaten</div>
+              <div class="ring-remaining-num" id="ring-remaining" style="color: var(--text3);">—</div>
+              <div class="ring-remaining-lbl" id="ring-remaining-lbl">set a target</div>
+              <div class="ring-eaten"><span id="ring-val">0</span> of <span id="ring-target">0</span> eaten</div>
             </div>
           </div>
-          <div id="ring-trained-note" style="text-align: center; font-size: 11px; color: var(--text3); margin: -4px 0px 10px; display: block; line-height: 1.3;">✓ today's training is fuelled in</div>
-          <div id="ring-set-training" onclick="nav(&#39;plan&#39;,document.getElementById(&#39;tab-plan&#39;))" style="text-align:center;font-size:12px;color:var(--orange,#FF6E2C);margin:-2px 0 12px;display:none;line-height:1.4;font-weight:700;cursor:pointer">⚠ Set today's training to fuel right →</div>
+          <div id="ring-trained-note" style="text-align:center;font-size:11px;color:var(--text3);margin:-4px 0 10px;display:none;line-height:1.3">✓ today's training is fuelled in</div>
+          <div id="ring-set-training" onclick="nav(&#39;plan&#39;,document.getElementById(&#39;tab-plan&#39;))" style="text-align: center; font-size: 12px; color: var(--orange,#FF6E2C); margin: -2px 0px 12px; display: block; line-height: 1.4; font-weight: 700; cursor: pointer;">⚠ Set today's training to fuel right →</div>
           <div id="ring-pill" style="display:none"><span class="pill pill-coral">0%</span></div>
           <div id="fuel-coach-note" style="display:none;background:rgba(27,110,79,0.06);border:1px solid rgba(27,110,79,0.18);border-radius:10px;padding:11px 13px;margin:0 0 12px;font-size:12.5px;line-height:1.55;color:var(--text2)"></div>
           <div class="mbar">
-            <div class="mbar-head"><span style="font-weight:500">Protein</span><span id="d-p-lbl" style="color:var(--text2)"><span class="mlbl">0 / 131g</span><span class="mleft">131 LEFT</span></span></div>
+            <div class="mbar-head"><span style="font-weight:500">Protein</span><span id="d-p-lbl" style="color:var(--text2)"><span class="mlbl">0 / ?g</span></span></div>
             <div class="mbar-track"><div id="d-p-bar" class="mbar-fill" style="background:var(--green);width:0%"></div></div>
           </div>
           <div class="mbar">
-            <div class="mbar-head"><span style="font-weight:500">Carbs</span><span id="d-c-lbl" style="color:var(--text2)"><span class="mlbl">0 / 310g</span><span class="mleft">310 LEFT</span></span></div>
+            <div class="mbar-head"><span style="font-weight:500">Carbs</span><span id="d-c-lbl" style="color:var(--text2)"><span class="mlbl">0 / ?g</span></span></div>
             <div class="mbar-track"><div id="d-c-bar" class="mbar-fill" style="background:var(--amber);width:0%"></div></div>
           </div>
           <div class="mbar" style="margin-bottom:0">
-            <div class="mbar-head"><span style="font-weight:500">Fat</span><span id="d-f-lbl" style="color:var(--text2)"><span class="mlbl">0 / 58g</span><span class="mleft">58 LEFT</span></span></div>
+            <div class="mbar-head"><span style="font-weight:500">Fat</span><span id="d-f-lbl" style="color:var(--text2)"><span class="mlbl">0 / ?g</span></span></div>
             <div class="mbar-track"><div id="d-f-bar" class="mbar-fill" style="background:var(--blue);width:0%"></div></div>
           </div>
         </div>
@@ -1119,15 +1119,15 @@ select option{background:var(--surface);color:var(--text)}
         <div class="card" id="phase-card">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
             <div class="card-title" style="margin:0">Training phase</div>
-            <span id="phase-kcal-badge" class="pill pill-blue" style="font-size:11px">2087 kcal</span>
+            <span id="phase-kcal-badge" class="pill pill-green" style="font-size:11px">0 kcal</span>
           </div>
           <div class="phase-toggle">
-            <button class="phase-btn" id="pb-bulk" onclick="setPhase(&#39;bulk&#39;,this)"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg> Bulk</button>
+            <button class="phase-btn active-bulk" id="pb-bulk" onclick="setPhase(&#39;bulk&#39;,this)"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg> Bulk</button>
             <button class="phase-btn" id="pb-cut" onclick="setPhase(&#39;cut&#39;,this)"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline><polyline points="16 17 22 17 22 11"></polyline></svg> Cut</button>
-            <button class="phase-btn active-maintain" id="pb-maintain" onclick="setPhase(&#39;maintain&#39;,this)"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><line x1="5" y1="12" x2="19" y2="12"></line><line x1="5" y1="7" x2="19" y2="7"></line><line x1="5" y1="17" x2="19" y2="17"></line></svg> Maintain</button>
+            <button class="phase-btn" id="pb-maintain" onclick="setPhase(&#39;maintain&#39;,this)"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><line x1="5" y1="12" x2="19" y2="12"></line><line x1="5" y1="7" x2="19" y2="7"></line><line x1="5" y1="17" x2="19" y2="17"></line></svg> Maintain</button>
             <button class="phase-btn" id="pb-endurance" onclick="setPhase(&#39;endurance&#39;,this)"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> Endure</button>
           </div>
-          <div id="phase-desc" style="font-size:12px;color:var(--text2);line-height:1.5">Eating at TDEE. Good for deload weeks, transitions between phases or general health maintenance.</div>
+          <div id="phase-desc" style="font-size:12px;color:var(--text2);line-height:1.5">Calorie surplus of +500 kcal to support muscle growth. High protein, high carbs for fuel and recovery.</div>
         </div>
         <div class="card">
             <div class="card-title">This week</div>
@@ -1269,6 +1269,7 @@ select option{background:var(--surface);color:var(--text)}
           <div class="micro-card" style="padding:8px 16px" id="micro-performance"></div>
 
           <!-- CREATINE INTELLIGENCE -->
+          <div class="card" id="shopping-list-card" style="display:none;margin-bottom:12px"></div>
           <div class="section-label" style="display:flex;align-items:center;gap:6px">Creatine intelligence  Plant-specific</div>
           <div class="creatine-card" id="creatine-card">
             <div class="creatine-title">Creatine status</div>
@@ -1664,7 +1665,7 @@ select option{background:var(--surface);color:var(--text)}
           <div style="position:relative;flex-shrink:0" onclick="changeProfilePhoto()" title="Tap to change photo">
             <div id="profile-photo-wrap" style="width:56px;height:56px;border-radius:50%;background:var(--green-light);overflow:hidden;display:flex;align-items:center;justify-content:center;border:2px solid var(--green)">
               <span style="font-size:26px;color:var(--green);font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
-              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T065300.548.html">
+              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T113534.381.html">
             </div>
             <div style="position:absolute;bottom:-2px;right:-2px;width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface)">
               <span style="font-size:10px;color:#fff;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"></path><circle cx="12" cy="13" r="3"></circle></svg></span>
@@ -1673,7 +1674,7 @@ select option{background:var(--surface);color:var(--text)}
           </div>
           <div style="flex:1;margin-left:4px">
             <div style="font-size:15px;font-weight:600" id="tools-profile-name">Your profile</div>
-            <div style="font-size:12px;color:var(--text2);margin-top:2px" id="tools-profile-sub">Maintain · 2087 kcal target</div>
+            <div style="font-size:12px;color:var(--text2);margin-top:2px" id="tools-profile-sub">Maintain · 3269 kcal target</div>
           </div>
           <span style="color:var(--text3);font-size:20px;font-style:normal">›</span>
         </div>
@@ -1681,7 +1682,7 @@ select option{background:var(--surface);color:var(--text)}
         <!-- STRAVA -->
         <!-- COACHING SECTION (dormant with COACH_ENABLED; gives the coach tools a proper home) -->
         <div class="section-label" id="coaching-label" style="display: block;">Coaching</div>
-        <div id="coach-status" style="display: block; font-size: 12px; color: var(--green-dark); background: var(--green-light); border-radius: var(--radius-sm); padding: 9px 12px; margin-bottom: 9px; font-weight: 600;">✓ Sharing with your coach — revoke any time below</div>
+        <div id="coach-status" style="display:none;font-size:12px;color:var(--green-dark);background:var(--green-light);border-radius:var(--radius-sm);padding:9px 12px;margin-bottom:9px;font-weight:600"></div>
         <!-- COACH SHARING (feature-flagged, dormant until COACH_ENABLED=true) -->
         <div id="coach-share-card" class="card" style="display: block;">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px">
@@ -1691,10 +1692,10 @@ select option{background:var(--surface);color:var(--text)}
               <div style="font-size:12px;color:var(--text2);margin-top:2px">Give your coach read-only access to your log</div>
             </div>
           </div>
-          <div id="coach-code-row" style="display: block; background: var(--gray-light); border-radius: var(--radius-sm); padding: 10px 12px; margin: 8px 0px; font-family: monospace; font-size: 16px; font-weight: 700; letter-spacing: 1px; text-align: center;" onclick="copyCoachCode()">VF-5SZC-EGP5</div>
+          <div id="coach-code-row" style="display:none;background:var(--gray-light);border-radius:var(--radius-sm);padding:10px 12px;margin:8px 0;font-family:monospace;font-size:16px;font-weight:700;letter-spacing:1px;text-align:center" onclick="copyCoachCode()"></div>
           <div style="display:flex;gap:8px;margin-top:8px">
-            <button class="btn" id="coach-gen-btn" onclick="generateCoachCode()" style="flex: 1 1 0%; display: none;">Create share code</button>
-            <button class="btn" id="coach-revoke-btn" onclick="revokeCoachCode()" style="flex: 1 1 0%; display: block; background: var(--coral-light); color: var(--coral-dark);">Revoke access</button>
+            <button class="btn" id="coach-gen-btn" onclick="generateCoachCode()" style="flex:1">Create share code</button>
+            <button class="btn" id="coach-revoke-btn" onclick="revokeCoachCode()" style="flex:1;display:none;background:var(--coral-light);color:var(--coral-dark)">Revoke access</button>
           </div>
           <div style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.5">Your coach sees your food, workouts and weight — nothing else. Revoke any time and access stops immediately.</div>
         </div>
@@ -1756,7 +1757,7 @@ select option{background:var(--surface);color:var(--text)}
     <path fill="#0A3D2C" d="M 1011.57 273.39 L 828.03 273.39 A 100.00 100.00 0 0 0 747.26 314.43 L 591.55 527.73 Q 586.24 535.00 595.24 535.00 L 694.37 535.00 Q 703.37 535.00 708.67 527.73 L 811.80 386.46 A 45.00 45.00 0 0 1 848.15 367.99 L 887.35 367.99 A 80.00 80.00 0 0 0 945.35 343.09 Z"></path>
     <circle cx="886.5" cy="488.4" r="46.6" fill="#FF8A00"></circle>
   </svg>
-</svg><div style="font-size:13px;color:var(--text2);line-height:1.6">Performance nutrition built for plant-based athletes — not a generic tracker with a vegan filter. It watches the nutrients plant-based training makes hardest (B12, iron, omega-3, calcium), fuels your training days without the guilt, and coaches you in plain, honest language. Data you can act on, never hype.</div></div><div id="backup-indicator" style="margin-top:12px;font-size:11.5px;color:var(--text3);text-align:left;min-height:14px"></div><div style="margin-top:6px;font-size:10.5px;color:var(--text3);text-align:left">VeraFuel  ·  v0908.0523</div><div style="margin-top:10px;padding-top:12px;border-top:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center"><span style="font-size:12px;color:var(--text3)">Version 1.0</span><button onclick="confirmReset()" style="background:none;border:none;font-size:12px;color:var(--text3);cursor:pointer">Reset all data</button></div></div>
+</svg><div style="font-size:13px;color:var(--text2);line-height:1.6">Performance nutrition built for plant-based athletes — not a generic tracker with a vegan filter. It watches the nutrients plant-based training makes hardest (B12, iron, omega-3, calcium), fuels your training days without the guilt, and coaches you in plain, honest language. Data you can act on, never hype.</div></div><div id="backup-indicator" style="margin-top:12px;font-size:11.5px;color:var(--text3);text-align:left;min-height:14px"></div><div style="margin-top:6px;font-size:10.5px;color:var(--text3);text-align:left">VeraFuel  ·  v0908.1033</div><div style="margin-top:10px;padding-top:12px;border-top:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center"><span style="font-size:12px;color:var(--text3)">Version 1.0</span><button onclick="confirmReset()" style="background:none;border:none;font-size:12px;color:var(--text3);cursor:pointer">Reset all data</button></div></div>
     
 
       </div>
@@ -1908,7 +1909,7 @@ select option{background:var(--surface);color:var(--text)}
     </div>
   </div>
   <div class="photo-viewer" id="photo-viewer" onclick="closePhotoViewer()">
-  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T065300.548.html" alt="Progress photo">
+  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T113534.381.html" alt="Progress photo">
   <div class="photo-viewer-meta" id="pv-meta"></div>
   <button style="margin-top:12px;background:var(--coral-light);color:var(--coral-dark);border:none;border-radius:var(--radius-sm);padding:8px 16px;cursor:pointer;font-size:13px" onclick="event.stopPropagation();deletePhoto(window._pvIdx)"><span style=";font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg></span> Delete</button>
 </div>
@@ -1922,9 +1923,9 @@ select option{background:var(--surface);color:var(--text)}
       <div class="compare-sub" id="compare-span"></div>
     </div>
     <div class="compare-stage" id="compare-stage">
-      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T065300.548.html" alt="Latest photo">
+      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T113534.381.html" alt="Latest photo">
       <div id="cmp-before-wrap" class="cmp-before-wrap">
-        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T065300.548.html" alt="First photo">
+        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T113534.381.html" alt="First photo">
       </div>
       <div id="cmp-divider" class="cmp-divider"><div class="cmp-handle">⟺</div></div>
       <div class="cmp-tag cmp-tag-before">First</div>
@@ -6522,7 +6523,45 @@ function applyTargetsCollapse(){
   if(chev) chev.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
 }
 
-function renderDashboard(){renderBriefing();updateStreak();renderFavChips();renderWater();renderCarbLoadFlash(); renderRaceCoachMsg(); renderFuellingStrategy();renderDailyTargets();renderSuppButtons();renderProfilePhoto();renderNudges();
+function renderShoppingList(){
+  const host = document.getElementById('shopping-list-card');
+  if(!host) return;
+  const r = shoppingList();
+  if(!r || !r.ok){ host.style.display='none'; return; }
+  if(!r.gaps.length){
+    // Everything covered — reassuring, on-ethos
+    host.style.display='block';
+    host.innerHTML =
+      '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><span style="font-size:18px">\u2713</span><div style="font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--green)">Your basket\u2019s covered</div></div>'
+      +'<div style="font-size:12.5px;line-height:1.5;color:var(--text2)">Over your last '+r.daysWithData+' logged day'+(r.daysWithData>1?'s':'')+', every tracked nutrient is on track. Keep eating the way you are.</div>';
+    return;
+  }
+  host.style.display='block';
+  const rows = r.gaps.map((g,gi)=>{
+    const top = g.foods[0];
+    const moreFoods = g.foods.slice(1).map(f=>
+      '<div style="padding:8px 0;border-top:0.5px solid var(--border)"><div style="font-size:12.5px;font-weight:600;color:var(--text)">'+f.food+'</div><div style="font-size:11.5px;color:var(--text2);line-height:1.5;margin-top:2px">'+f.why+'</div></div>'
+    ).join('');
+    return '<div style="padding:12px 0;border-bottom:0.5px solid var(--border)">'
+      +'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">'
+        +'<div style="font-size:13px;font-weight:700;color:var(--text)">'+g.label+'</div>'
+        +'<div style="font-size:10.5px;font-weight:700;letter-spacing:.03em;color:var(--coral-dark);background:var(--coral-light);padding:2px 8px;border-radius:20px">'+g.pct+'% of target</div>'
+      +'</div>'
+      +'<div style="display:flex;gap:8px;align-items:flex-start">'
+        +'<div style="font-size:14px;flex-shrink:0">\u2192</div>'
+        +'<div><div style="font-size:13px;font-weight:600;color:var(--green-dark)">'+top.food+'</div>'
+        +'<div style="font-size:11.5px;color:var(--text2);line-height:1.5;margin-top:2px">'+top.why+'</div></div>'
+      +'</div>'
+      +(moreFoods ? '<button type="button" onclick="var s=this.nextElementSibling;var op=s.style.display!==\'none\';s.style.display=op?\'none\':\'block\';this.querySelector(\'span\').textContent=op?\'More options\':\'Hide\';this.querySelector(\'i\').style.transform=op?\'rotate(0deg)\':\'rotate(90deg)\';" style="background:none;border:none;padding:8px 0 0;font-size:11.5px;font-weight:600;color:var(--green);cursor:pointer;display:inline-flex;align-items:center;gap:4px"><i style="font-style:normal;display:inline-block;transition:transform .2s">\u25b8</i> <span>More options</span></button><div style="display:none;margin-top:2px">'+moreFoods+'</div>' : '')
+      +'</div>';
+  }).join('');
+  host.innerHTML =
+    '<div style="font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--text);margin-bottom:2px">Your shopping list</div>'
+    +'<div style="font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:8px">Based on your last '+r.daysWithData+' logged day'+(r.daysWithData>1?'s':'')+', a few nutrients are running low. Here\u2019s what to grab \u2014 and why.</div>'
+    +rows;
+}
+
+function renderDashboard(){renderBriefing();updateStreak();renderFavChips();renderWater();renderCarbLoadFlash(); renderRaceCoachMsg(); renderFuellingStrategy(); if(typeof renderShoppingList==="function") renderShoppingList();renderDailyTargets();renderSuppButtons();renderProfilePhoto();renderNudges();
   // Update key metrics strip
   try{
     const streak=S.streak?S.streak.count:0;
@@ -7350,6 +7389,88 @@ const MICRO_SUGGESTIONS = {
               amber:'Folate is slightly low. Add spinach or lentils to your next meal.' },
 };
 
+// Curated plant-based food sources for each tracked micronutrient, with a memorable "why".
+// Sources chosen for being genuinely rich, plant-based, and athlete-friendly.
+const MICRO_FOODS = {
+  iron: { label:'Iron', foods:[
+    { food:'Lentils & beans', why:'A cup of cooked lentils gives ~6.6mg. Pair with vitamin C (peppers, citrus) to boost absorption several-fold.' },
+    { food:'Tofu & tempeh', why:'Half a block of tofu ~3mg, plus protein. Iron from soy absorbs better than most plants.' },
+    { food:'Pumpkin seeds', why:'A handful ~2.5mg. Sprinkle on porridge or salads.' },
+    { food:'Dark leafy greens', why:'Spinach, kale, chard. Cook them down and add lemon to unlock the iron.' } ] },
+  calcium: { label:'Calcium', foods:[
+    { food:'Fortified plant milk', why:'A glass of fortified soy/oat milk ~120mg — matches dairy. Check the label says "fortified".' },
+    { food:'Tofu (calcium-set)', why:'Tofu set with calcium sulphate can hit 350mg per half-block. Look for "calcium sulphate" in the ingredients.' },
+    { food:'Tahini & almonds', why:'Sesame and almonds are quietly calcium-rich — a tahini dressing or handful of almonds adds up.' },
+    { food:'Kale & pak choi', why:'Low-oxalate greens — their calcium is well absorbed, unlike spinach.' } ] },
+  zinc: { label:'Zinc', foods:[
+    { food:'Pumpkin seeds', why:'One of the richest plant sources — ~2mg per handful. The easiest zinc fix.' },
+    { food:'Chickpeas & lentils', why:'Reliable everyday zinc. Soaking or sprouting improves absorption.' },
+    { food:'Cashews & hemp seeds', why:'A handful of cashews or a spoon of hemp on your bowl tops zinc up nicely.' },
+    { food:'Wholegrains & oats', why:'Oats and wholewheat contribute steady zinc across the day.' } ] },
+  b12: { label:'Vitamin B12', foods:[
+    { food:'A B12 supplement', why:'The honest answer: B12 is essentially absent from unfortified plants. A daily supplement is non-negotiable for plant-based athletes — this is the one to be certain about.' },
+    { food:'Fortified nutritional yeast', why:'"Nooch" fortified with B12 — a tablespoon on pasta or popcorn. Check the label says added B12.' },
+    { food:'Fortified plant milks & cereals', why:'Many are B12-fortified. Helpful, but a supplement is still the reliable backbone.' } ] },
+  omega3: { label:'Omega-3 (ALA)', foods:[
+    { food:'Ground flaxseed', why:'A tablespoon covers your ALA for the day. Grind it (whole seeds pass through) and add to oats or smoothies.' },
+    { food:'Chia seeds', why:'A spoon in a smoothie or overnight oats — ALA plus fibre.' },
+    { food:'Walnuts', why:'A small handful is a tasty omega-3 top-up.' },
+    { food:'Algae oil (EPA/DHA)', why:'For the "active" omega-3s that flax can\'t fully provide, an algae oil supplement is the plant-based route — worth it for recovery.' } ] },
+  iodine: { label:'Iodine', foods:[
+    { food:'Nori / seaweed', why:'A sheet or two of nori covers iodine — but kelp can be excessive, so nori is the safer everyday choice.' },
+    { food:'Iodised salt', why:'A pinch of iodised (not sea/rock) salt is a simple, reliable source.' },
+    { food:'Fortified plant milk', why:'Some plant milks add iodine — check the label.' } ] },
+  magnesium: { label:'Magnesium', foods:[
+    { food:'Pumpkin & chia seeds', why:'Among the richest plant sources — a handful goes a long way.' },
+    { food:'Dark chocolate (85%+)', why:'A genuinely good source — a couple of squares counts (enjoy it).' },
+    { food:'Black beans & lentils', why:'Everyday legumes quietly cover a lot of your magnesium.' },
+    { food:'Wholegrains & spinach', why:'Brown rice, oats and cooked greens add steady magnesium.' } ] },
+  vitD: { label:'Vitamin D', foods:[
+    { food:'A vitamin D supplement', why:'Hard to get from plants or (in winter) sunlight. A daily D3 (lichen-derived is vegan) is the practical answer for most athletes.' },
+    { food:'Fortified plant milks & cereals', why:'Some are D-fortified — a helpful top-up alongside a supplement.' },
+    { food:'UV-exposed mushrooms', why:'Mushrooms grown in UV light provide vitamin D2 — a genuine plant source.' } ] },
+  selenium: { label:'Selenium', foods:[
+    { food:'Brazil nuts', why:'The classic: just 1–2 Brazil nuts a day covers your selenium. Don\'t overdo it — more isn\'t better here.' },
+    { food:'Wholegrains & oats', why:'Steady background selenium across the day.' },
+    { food:'Sunflower seeds', why:'A handful adds a useful top-up.' } ] },
+  folate: { label:'Folate', foods:[
+    { food:'Lentils & chickpeas', why:'Legumes are folate powerhouses — a cup of lentils covers a big chunk.' },
+    { food:'Leafy greens & asparagus', why:'"Folate" comes from "foliage" — spinach, rocket and asparagus deliver.' },
+    { food:'Avocado & oranges', why:'Easy, tasty folate — half an avocado or an orange helps.' } ] }
+};
+
+function shoppingList(){
+  // Read recent micro coverage; suggest foods for the nutrients genuinely running low.
+  // Uses a short recent window so it reflects current eating, not one-off days.
+  const days = 5;
+  const keys = Object.keys(MICRO_TARGETS);
+  const totals = {}; keys.forEach(k=>totals[k]=0);
+  let daysWithData = 0;
+  for(let i=0;i<days;i++){
+    const t = (typeof getMicroTotals==='function') ? getMicroTotals(i) : null;
+    if(!t) continue;
+    // only count days that have some logging
+    const any = keys.some(k=>t[k]>0);
+    if(!any) continue;
+    daysWithData++;
+    keys.forEach(k=>{ totals[k]+=(t[k]||0); });
+  }
+  if(daysWithData===0) return { ok:false, reason:'no-data' };
+  // average per day vs target; flag the ones below ~70%
+  const gaps = [];
+  keys.forEach(k=>{
+    if(!MICRO_FOODS[k]) return;
+    const avg = totals[k]/daysWithData;
+    const target = (typeof getMicroTarget==='function') ? getMicroTarget(k) : (MICRO_TARGETS[k].target||0);
+    if(target<=0) return;
+    const pct = avg/target;
+    if(pct < 0.70){ gaps.push({ key:k, label:MICRO_FOODS[k].label, pct:Math.round(pct*100), foods:MICRO_FOODS[k].foods }); }
+  });
+  // sort by biggest gap first
+  gaps.sort((a,b)=>a.pct-b.pct);
+  return { ok:true, daysWithData, gaps };
+}
+
 function getMicroTotals(offset=0) {
   const meals = S.mealLogs[dateKey(offset)] || [];
   const totals = {};
@@ -8002,10 +8123,15 @@ function _downloadBlob(blob, filename, done){
 }
 
 
-async function _buildPhotoCanvas(onReady){
-  const chron=[...(S.photos||[])];
+async function _buildPhotoCanvas(onReady, beforeIdx, afterIdx){
+  const chron=[...(S.photos||[])].sort((a,b)=>(a.ts||0)-(b.ts||0));
   if(chron.length<2){ toast('Add at least two photos'); return; }
-  const first=chron[0], last=chron[chron.length-1];
+  // Default to first vs last (chronological). Honour a chosen pair from the compare slider.
+  let _bi = (beforeIdx!=null && beforeIdx>=0 && beforeIdx<chron.length) ? beforeIdx : 0;
+  let _ai = (afterIdx!=null && afterIdx>=0 && afterIdx<chron.length) ? afterIdx : chron.length-1;
+  if(_bi===_ai){ _bi=0; _ai=chron.length-1; }
+  if(_bi>_ai){ const t=_bi; _bi=_ai; _ai=t; }
+  const first=chron[_bi], last=chron[_ai];
   const w0=_photoWeightFor(first.date), w1=_photoWeightFor(last.date);
   let spanTxt=''; try{ const d0=new Date(first.date+'T00:00:00'),d1=new Date(last.date+'T00:00:00'); const days=Math.round((d1-d0)/86400000); spanTxt = days>=14? Math.round(days/7)+' weeks':days+' days'; }catch(e){}
   let deltaTxt=''; if(w0!=null&&w1!=null){ const dw=+(w1-w0).toFixed(1); deltaTxt=(dw>0?'+':'')+dw+'kg'; }
@@ -8657,216 +8783,13 @@ function closeCompare() {
 }
 
 function shareCompare() {
+  // Uses the gold-standard photo card (_buildPhotoCanvas), honouring the pair chosen
+  // in the compare slider. One share card everywhere — no more drift.
   const photos = [...(S.photos || [])].sort((a,b) => (a.ts||0) - (b.ts||0));
   if (photos.length < 2) { toast('Add at least two photos first'); return; }
-  let bi = (_cmpBeforeIdx!=null && _cmpBeforeIdx<photos.length) ? _cmpBeforeIdx : 0;
-  let ai = (_cmpAfterIdx!=null && _cmpAfterIdx<photos.length) ? _cmpAfterIdx : photos.length - 1;
-  if (bi >= ai) { bi = 0; ai = photos.length - 1; }
-  const first = photos[bi], last = photos[ai];
-  const d1 = new Date(first.date + 'T00:00:00'), d2 = new Date(last.date + 'T00:00:00');
-  const days = Math.max(1, Math.round((d2 - d1) / 86400000));
-  const fmt = (dt) => dt.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
-
-  const lm = (S.bodyComp||[]).filter(e=>e.lm!=null);
-  const bf = (S.bodyComp||[]).filter(e=>e.bf!=null);
-  const wt = [...(S.weightLog||[])].filter(e=>e.weight!=null).sort((a,b)=>(a.date>b.date?1:-1));
-  let lmDelta=null, bfDelta=null, wtDelta=null;
-  if (lm.length>=2) lmDelta=(lm[lm.length-1].lm-lm[0].lm).toFixed(1);
-  if (bf.length>=2) bfDelta=(bf[bf.length-1].bf-bf[0].bf).toFixed(1);
-  if (wt.length>=2) wtDelta=(wt[wt.length-1].weight-wt[0].weight).toFixed(1);
-
-  const imgA = new Image(), imgB = new Image();
-  let loaded = 0;
-  const onReady = () => {
-    loaded++; if (loaded < 2) return;
-    try {
-      const W = 1080, H = 1350;
-      const cv = document.createElement('canvas');
-      cv.width = W; cv.height = H;
-      const ctx = cv.getContext('2d');
-      const rr = (x,y,w,h,r) => { ctx.beginPath(); ctx.moveTo(x+r,y);
-        ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r);
-        ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); };
-
-      // ---- Bright ombre background (light top -> green bottom) ----
-      const bg = ctx.createLinearGradient(0,0,W*0.4,H);
-      bg.addColorStop(0,'#F3F6D9');
-      bg.addColorStop(0.32,'#CDEBA6');
-      bg.addColorStop(0.62,'#6FC58C');
-      bg.addColorStop(1,'#0F5637');
-      ctx.fillStyle = bg; ctx.fillRect(0,0,W,H);
-
-      // ---- Radiant sunburst rays from top (celebration) ----
-      ctx.save();
-      ctx.translate(W/2, 40); 
-      const rays = 24;
-      for (let i=0;i<rays;i++){
-        ctx.rotate((Math.PI*2)/rays);
-        const grd = ctx.createLinearGradient(0,0,0,760);
-        grd.addColorStop(0,'rgba(255,255,255,0.16)');
-        grd.addColorStop(1,'rgba(255,255,255,0)');
-        ctx.fillStyle=grd;
-        ctx.beginPath(); ctx.moveTo(-26,0); ctx.lineTo(26,0); ctx.lineTo(10,760); ctx.lineTo(-10,760); ctx.closePath(); ctx.fill();
-      }
-      ctx.restore();
-      // soft top glow
-      const glow = ctx.createRadialGradient(W/2,150,0,W/2,150,620);
-      glow.addColorStop(0,'rgba(255,255,255,0.5)'); glow.addColorStop(1,'rgba(255,255,255,0)');
-      ctx.fillStyle=glow; ctx.fillRect(0,0,W,H);
-
-      // ---- Confetti in brand colours (margins only) ----
-      const conf = [
-        [70,300,'#FF6E2C',9],[1010,250,'#1B6E4F',8],[46,620,'#C8F24E',10],[1030,560,'#FF6E2C',7],
-        [58,860,'#0A3D2C',8],[1024,900,'#C8F24E',9],[90,1120,'#FF6E2C',8],[996,1160,'#1B6E4F',9],
-        [150,180,'#C8F24E',7],[930,150,'#FF6E2C',7],[40,1000,'#C8F24E',7],[1040,1050,'#0A3D2C',6]
-      ];
-      conf.forEach(c=>{ ctx.fillStyle=c[2]; ctx.globalAlpha=0.9;
-        ctx.beginPath(); ctx.arc(c[0],c[1],c[3],0,7); ctx.fill(); });
-      // a few little plus-sparkles
-      ctx.globalAlpha=0.85; ctx.strokeStyle='#FF6E2C'; ctx.lineWidth=4; ctx.lineCap='round';
-      const spark=(x,y,s)=>{ctx.beginPath();ctx.moveTo(x-s,y);ctx.lineTo(x+s,y);ctx.moveTo(x,y-s);ctx.lineTo(x,y+s);ctx.stroke();};
-      spark(120,240,10); spark(970,320,9); spark(80,720,9); spark(1000,760,10);
-      ctx.globalAlpha=1;
-
-      // ---- VF logo mark (hero) ----
-      const drawMark = (cx, cy, r) => {
-        ctx.save(); ctx.translate(cx, cy);
-        // green disc
-        ctx.fillStyle='#0A3D2C'; ctx.beginPath(); ctx.arc(0,0,r,0,7); ctx.fill();
-        // cream ring
-        ctx.strokeStyle='#F7F6F3'; ctx.lineWidth=r*0.028; ctx.beginPath(); ctx.arc(0,0,r*0.92,0,7); ctx.stroke();
-        // VF paths (from logo viewBox 151 105 1012 429). Scale to fit ~1.3r wide.
-        const vbW=1012, vbH=429, target=r*1.3, sc=target/vbW;
-        ctx.save();
-        ctx.scale(sc, sc);
-        ctx.translate(-(151+vbW/2), -(105+vbH/2));
-        ctx.fillStyle='#FFFFFF';
-        const p1=new Path2D('M 150 105 L 455.16 523.03 A 30 30 0 0 0 503.62 523.03 L 709.77 240.64 A 100 100 0 0 1 790.54 199.6 L 1040.59 199.6 A 80 80 0 0 0 1098.59 174.7 L 1164.8 105 L 745.01 105 A 105 105 0 0 0 660.2 148.09 L 482.62 391.35 A 4 4 0 0 1 476.16 391.35 L 288.1 133.73 A 70 70 0 0 0 231.56 105 Z');
-        const p2=new Path2D('M 1011.57 273.39 L 828.03 273.39 A 100 100 0 0 0 747.26 314.43 L 591.55 527.73 Q 586.24 535 595.24 535 L 694.37 535 Q 703.37 535 708.67 527.73 L 811.8 386.46 A 45 45 0 0 1 848.15 367.99 L 887.35 367.99 A 80 80 0 0 0 945.35 343.09 Z');
-        ctx.fill(p1); ctx.fill(p2);
-        ctx.fillStyle='#FF8A00'; ctx.beginPath(); ctx.arc(886.5,488.4,46.6,0,7); ctx.fill();
-        ctx.restore();
-        ctx.restore();
-      };
-      drawMark(80, 96, 52);
-
-      // ---- Header wordmark (matches top-of-page lockup) + tag ----
-      const drawWordmark = (ox, oy, sc) => {
-        ctx.save(); ctx.translate(ox, oy); ctx.scale(sc, sc);
-        ctx.strokeStyle='#0A3D2C'; ctx.lineCap='butt'; ctx.lineJoin='miter';
-        ctx.save(); ctx.translate(581.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M6.5,0 L52,85.2 L97.5,0')); ctx.restore();
-        ctx.save(); ctx.translate(790.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M6.5,0 L6.5,100')); ctx.restore();
-        ctx.save(); ctx.translate(790.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M0,6.5 L77,6.5')); ctx.restore();
-        ctx.save(); ctx.translate(790.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M0,50 L70,50')); ctx.restore();
-        ctx.save(); ctx.translate(790.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M0,93.5 L77,93.5')); ctx.restore();
-        ctx.save(); ctx.translate(972.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M6.5,0 L6.5,100')); ctx.restore();
-        ctx.save(); ctx.translate(972.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M6.5,6.5 L53.5,6.5 A27,27 0 0 1 53.5,60.5 L6.5,60.5')); ctx.restore();
-        ctx.save(); ctx.translate(972.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M47,60.5 L80.5,100')); ctx.restore();
-        ctx.save(); ctx.translate(1164.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M6.5,100 L51,14.8 L95.5,100')); ctx.restore();
-        ctx.save(); ctx.translate(1371.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M6.5,0 L6.5,100')); ctx.restore();
-        ctx.save(); ctx.translate(1371.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M0,6.5 L74,6.5')); ctx.restore();
-        ctx.save(); ctx.translate(1371.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M0,50 L66,50')); ctx.restore();
-        ctx.save(); ctx.translate(1550.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M6.5,0 L6.5,55 A38,38.5 0 0 0 82.5,55 L82.5,0')); ctx.restore();
-        ctx.save(); ctx.translate(1744.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M6.5,0 L6.5,100')); ctx.restore();
-        ctx.save(); ctx.translate(1744.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M0,6.5 L77,6.5')); ctx.restore();
-        ctx.save(); ctx.translate(1744.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M0,50 L70,50')); ctx.restore();
-        ctx.save(); ctx.translate(1744.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M0,93.5 L77,93.5')); ctx.restore();
-        ctx.save(); ctx.translate(1926.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M6.5,0 L6.5,100')); ctx.restore();
-        ctx.save(); ctx.translate(1926.79,0.00); ctx.lineWidth=14.50; ctx.stroke(new Path2D('M0,93.5 L70,93.5')); ctx.restore();
-        ctx.restore();
-      };
-      drawWordmark(182 - 581.79*0.55, 70, 0.55);
-
-
-      // ---- Hero headline ----
-      ctx.fillStyle='#0A3D2C'; ctx.font='800 66px Sora, sans-serif';
-      ctx.fillText(days + ' days.', 60, 214);
-      ctx.fillStyle='#1B6E4F'; ctx.font='800 66px Sora, sans-serif';
-      ctx.fillText('Fuelled by plants.', 60, 286);
-
-      // ---- Photo panels (light frames + soft shadow) ----
-      const pad=60, gap=26, top=330, ph=640;
-      const pw=(W-pad*2-gap)/2;
-      const drawPhoto=(img,x,y,w,h,tag,dateStr)=>{
-        ctx.save();
-        ctx.shadowColor='rgba(10,61,44,0.35)'; ctx.shadowBlur=34; ctx.shadowOffsetY=16;
-        ctx.fillStyle='#ffffff'; rr(x-6,y-6,w+12,h+12,26); ctx.fill();
-        ctx.restore();
-        ctx.save(); rr(x,y,w,h,20); ctx.clip();
-        const r=Math.max(w/img.width,h/img.height);
-        const iw=img.width*r, ih=img.height*r;
-        ctx.drawImage(img, x+(w-iw)/2, y+(h-ih)/2, iw, ih);
-        const g=ctx.createLinearGradient(0,y+h-130,0,y+h);
-        g.addColorStop(0,'rgba(6,20,16,0)'); g.addColorStop(1,'rgba(6,20,16,0.78)');
-        ctx.fillStyle=g; ctx.fillRect(x,y+h-130,w,130);
-        ctx.restore();
-        ctx.fillStyle='#C8F24E'; ctx.font='700 22px "Space Mono", monospace';
-        ctx.fillText(tag, x+20, y+h-56);
-        ctx.fillStyle='#fff'; ctx.font='600 25px Inter, sans-serif';
-        ctx.fillText(dateStr, x+20, y+h-24);
-      };
-      drawPhoto(imgA,pad,top,pw,ph,'BEFORE',fmt(d1));
-      drawPhoto(imgB,pad+pw+gap,top,pw,ph,'AFTER',fmt(d2));
-
-      // ---- Celebratory banner (centered, under photos) ----
-      const bannerY = top+ph+30;
-      const bannerW = 300, bannerH = 56, bannerX = (W-bannerW)/2;
-      ctx.fillStyle='#FF6E2C';
-      rr(bannerX, bannerY, bannerW, bannerH, 28); ctx.fill();
-      ctx.fillStyle='#fff'; ctx.font='700 26px "Space Mono", monospace'; ctx.textAlign='center'; ctx.textBaseline='middle';
-      ctx.fillText('GREAT PROGRESS', W/2, bannerY+bannerH/2+2); ctx.textAlign='left'; ctx.textBaseline='alphabetic';
-
-      // ---- Stats band (bright glass panel) ----
-      const sy=top+ph+30+bannerH+30, sh=158;
-      ctx.save();
-      ctx.shadowColor='rgba(10,61,44,0.25)'; ctx.shadowBlur=30; ctx.shadowOffsetY=12;
-      ctx.fillStyle='rgba(255,255,255,0.92)'; rr(60,sy,W-120,sh,24); ctx.fill();
-      ctx.restore();
-      const stats=[];
-      stats.push(['DAYS', String(days), '#1B6E4F']);
-      if(wtDelta!==null) stats.push(['WEIGHT',(wtDelta>0?'+':'')+wtDelta+'kg', '#1B6E4F']);
-      if(bfDelta!==null) stats.push(['BODY FAT',(bfDelta>0?'+':'')+bfDelta+'%', '#FF6E2C']);
-      // fall back to lean mass only if weight isn't available, so the card still fills nicely
-      if(wtDelta===null && lmDelta!==null) stats.splice(1,0,['LEAN MASS',(lmDelta>0?'+':'')+lmDelta+'kg', '#1B6E4F']);
-      const cellW=(W-120)/stats.length;
-      stats.forEach((st,idx)=>{
-        const cx=60+cellW*idx+cellW/2;
-        ctx.textAlign='center';
-        ctx.fillStyle=st[2]; ctx.font='800 58px Sora, sans-serif'; ctx.textBaseline='alphabetic';
-        ctx.fillText(st[1], cx, sy+80);
-        ctx.fillStyle='#6F7E74'; ctx.font='700 22px "Space Mono", monospace';
-        ctx.fillText(st[0], cx, sy+118);
-        if(idx>0){ ctx.strokeStyle='rgba(10,61,44,0.12)'; ctx.lineWidth=1.5;
-          ctx.beginPath(); ctx.moveTo(60+cellW*idx,sy+34); ctx.lineTo(60+cellW*idx,sy+sh-34); ctx.stroke(); }
-      });
-      ctx.textAlign='left';
-
-      // ---- Footer ----
-      ctx.fillStyle='#ffffff'; ctx.font='700 26px "Space Mono", monospace';
-      ctx.textAlign='center';
-      ctx.fillText('@verafuelperformance  \u00b7  #FuelTheFinish', W/2, H-58);
-      ctx.textAlign='left';
-
-      cv.toBlob((blob)=>{
-        if(!blob){ toast('Could not create card'); return; }
-        // Stash the blob and show a preview modal — share only when the user confirms
-        window._shareCardBlob = blob;
-        const imgEl = document.getElementById('sharecard-img');
-        if(imgEl){
-          if(window._shareCardURL) URL.revokeObjectURL(window._shareCardURL);
-          window._shareCardURL = URL.createObjectURL(blob);
-          imgEl.src = window._shareCardURL;
-        }
-        // Collapse the Progress/compare screen so the preview takes over cleanly
-        var _co = document.getElementById('compare-overlay');
-        if(_co) _co.classList.remove('open');
-        openModal('sharecard-modal');
-      },'image/png');
-    } catch(err){ toast('Could not create card'); }
-  };
-  imgA.onload=onReady; imgB.onload=onReady;
-  imgA.onerror=()=>toast('Could not load photo'); imgB.onerror=()=>toast('Could not load photo');
-  imgA.src=first.data; imgB.src=last.data;
+  const bi = (_cmpBeforeIdx!=null && _cmpBeforeIdx<photos.length) ? _cmpBeforeIdx : 0;
+  const ai = (_cmpAfterIdx!=null && _cmpAfterIdx<photos.length) ? _cmpAfterIdx : photos.length - 1;
+  _buildPhotoCanvas(function(cv){ shareCanvasImage(cv, 'verafuel-progress.png', 'My VeraFuel progress'); }, bi, ai);
 }
 
 function closeShareCard(){
