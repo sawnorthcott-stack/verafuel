@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0086)file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T115010.226.html -->
+<!-- saved from url=(0086)file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T120453.320.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -815,15 +815,7 @@ select option{background:var(--surface);color:var(--text)}
         <div id="carbload-flash" style="display:none;margin-bottom:12px"></div>
         <div id="race-coach-msg" style="display:none;margin-bottom:12px"></div>
         <div id="fuelling-strategy" style="display:none;margin-bottom:12px"></div>
-        <div id="dash-nudges">
-    <div style="background:var(--gray-light);border-radius:var(--radius);padding:13px 15px;margin-bottom:10px;display:flex;gap:11px;align-items:flex-start">
-      <span style="font-size:20px;flex-shrink:0;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></span>
-      <div style="flex:1">
-        <div style="font-size:13px;font-weight:700;color:var(--text2);margin-bottom:2px">Log last night’s sleep</div>
-        <div style="font-size:12px;color:var(--text);line-height:1.5;opacity:.85">Sleep is the biggest recovery driver. Log it in Insights <svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> Recovery to see your readiness score for today.</div>
-      </div>
-    </div>
-  </div>
+        <div id="dash-nudges"></div>
 
         
         <div id="streak-card" class="streak-badge" style="display:none">
@@ -1254,49 +1246,57 @@ select option{background:var(--surface);color:var(--text)}
             <button type="button" onclick="var s=this.nextElementSibling;var op=s.style.display!==&#39;none&#39;;s.style.display=op?&#39;none&#39;:&#39;block&#39;;this.querySelector(&#39;span&#39;).textContent=op?&#39;Why this matters&#39;:&#39;Hide&#39;;this.querySelector(&#39;i&#39;).style.transform=op?&#39;rotate(0deg)&#39;:&#39;rotate(90deg)&#39;;" style="background:none;border:none;padding:6px 0 0;font-size:11.5px;font-weight:600;color:var(--green);cursor:pointer;display:inline-flex;align-items:center;gap:4px"><i style="font-style:normal;display:inline-block;transition:transform .2s">▸</i> <span>Why this matters</span></button><div style="display:none;margin-top:4px"><div style="margin-top:10px;padding:12px 14px;background:var(--gray-light);border-radius:var(--radius-sm);font-size:12.5px;color:var(--text2);line-height:1.6">
               <strong style="color:var(--text)">Leucine threshold:</strong> Each meal needs ~2.5g leucine to maximally stimulate muscle protein synthesis (MPS). Plant sources require larger portions to hit this threshold.
             </div></div>
-          </div><div class="section-label">Critical for plant-based athletes</div><div class="micro-card" style="padding:8px 16px" id="micro-critical"></div><div id="supp-streak-bar" style="margin:8px 0 14px"></div><div class="section-label">Performance &amp; recovery</div><div class="micro-card" style="padding:8px 16px" id="micro-performance"></div><div class="card" style="padding:8px 16px;margin-bottom:10px">
-            <div id="iron-absorption-list">
-              <div style="text-align:center;padding:16px;color:var(--text2);font-size:13px">Log meals to see iron bioavailability analysis</div>
-            </div>
-            <button type="button" onclick="var s=this.nextElementSibling;var op=s.style.display!==&#39;none&#39;;s.style.display=op?&#39;none&#39;:&#39;block&#39;;this.querySelector(&#39;span&#39;).textContent=op?&#39;Why this matters&#39;:&#39;Hide&#39;;this.querySelector(&#39;i&#39;).style.transform=op?&#39;rotate(0deg)&#39;:&#39;rotate(90deg)&#39;;" style="background:none;border:none;padding:6px 0 0;font-size:11.5px;font-weight:600;color:var(--green);cursor:pointer;display:inline-flex;align-items:center;gap:4px"><i style="font-style:normal;display:inline-block;transition:transform .2s">▸</i> <span>Why this matters</span></button><div style="display:none;margin-top:4px"><div style="font-size:11px;color:var(--text2);line-height:1.5;margin:8px 2px 0;font-style:italic">Estimated absorption is a directional guide to help you pair foods well — not a clinical measurement, and not for diagnosing or managing iron deficiency. If you’re concerned about iron status, ask your GP for a blood test.</div></div>
-          
-<div id="iron-absorbed-total" style="display:none">
-              <div class="card" style="margin:0;background:#0A3D2C;color:#fff;padding:16px 16px 15px">
-                <div style="font-size:11px;color:#C8F24E;text-transform:uppercase;letter-spacing:.07em;font-weight:700;margin-bottom:14px">Iron today</div>
-                <div style="display:flex;align-items:center;gap:16px">
-                  <div style="position:relative;width:96px;height:96px;flex-shrink:0">
-                    <svg width="96" height="96" viewBox="0 0 96 96" style="transform:rotate(-90deg)">
+          </div><div class="section-label">Critical for plant-based athletes</div><div class="micro-card" style="padding:8px 16px" id="micro-critical"></div><div id="supp-streak-bar" style="margin:8px 0 14px"></div><div class="section-label">Performance &amp; recovery</div><div class="micro-card" style="padding:8px 16px" id="micro-performance"></div><div class="card" style="padding:14px 16px 10px;margin-bottom:10px">
+        <div style="font-family:var(--font-display);font-size:17px;font-weight:700;color:var(--text);margin-bottom:2px">Iron you'll actually absorb</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:12px">Plant iron is only <em>partly</em> absorbed — and what you eat alongside it changes everything. Here's your real iron, and how to unlock more.</div>
+
+        <div id="iron-absorbed-total" style="display:none">
+          <div class="card" style="margin:0 0 12px;background:#0A3D2C;color:#fff;padding:16px 16px 15px">
+            <div style="font-size:11px;color:#C8F24E;text-transform:uppercase;letter-spacing:.07em;font-weight:700;margin-bottom:14px">Iron today</div>
+            <div style="display:flex;align-items:center;gap:16px">
+              <div style="position:relative;width:96px;height:96px;flex-shrink:0">
+                <svg width="96" height="96" viewBox="0 0 96 96" style="transform:rotate(-90deg)">
                       <circle cx="48" cy="48" r="42" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="8"></circle>
                       <circle id="iron-ring" cx="48" cy="48" r="42" fill="none" stroke="#4FB286" stroke-width="8" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="263.9" style="transition:stroke-dashoffset .5s cubic-bezier(.4,0,.2,1)"></circle>
                     </svg>
-                    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
-                      <span id="iron-absorbed-val" style="font-family:var(--font-display);font-size:26px;font-weight:700;line-height:1;letter-spacing:-0.5px;color:#fff">0</span>
-                      <span id="iron-target-label" style="font-size:9.5px;color:rgba(255,255,255,.55);margin-top:3px">mg of target</span>
-                    </div>
-                  </div>
-                  <div style="flex:1;min-width:0">
-                    <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:2px">
-                      <span id="iron-target-pct" style="font-family:var(--font-display);font-size:19px;font-weight:700;color:#C8F24E">0%</span>
-                      <span style="font-size:11px;color:rgba(255,255,255,.6)">of daily target</span>
-                    </div>
-                    <div style="font-size:11px;color:rgba(255,255,255,.7);line-height:1.5" id="iron-absorbed-pct">~0% est. absorption</div>
-                    <div style="height:1px;background:rgba(255,255,255,.1);margin:9px 0"></div>
-                    <div style="display:flex;justify-content:space-between;font-size:11px">
-                      <span style="color:rgba(255,255,255,.6)">Consumed</span>
-                      <span id="iron-consumed-val" style="font-weight:600;color:#fff">0mg</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;font-size:11px;margin-top:3px">
-                      <span style="color:rgba(255,255,255,.6)">Est. absorbed</span>
-                      <span id="iron-absorbed-val2" style="font-weight:600;color:#4FB286">0mg</span>
-                    </div>
-                  </div>
+                <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+                  <span id="iron-absorbed-val" style="font-family:var(--font-display);font-size:26px;font-weight:700;line-height:1;letter-spacing:-0.5px;color:#fff">0</span>
+                  <span id="iron-target-label" style="font-size:9.5px;color:rgba(255,255,255,.55);margin-top:3px">mg of target</span>
                 </div>
               </div>
-              <div style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.5">
-                Non-haem iron (plant sources) absorbs at 2-20% depending on meal composition. Vitamin C increases absorption up to 3×. Tea, coffee and calcium within 1hr reduce it.
+              <div style="flex:1;min-width:0">
+                <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:2px">
+                  <span id="iron-target-pct" style="font-family:var(--font-display);font-size:19px;font-weight:700;color:#C8F24E">0%</span>
+                  <span style="font-size:11px;color:rgba(255,255,255,.6)">of daily target</span>
+                </div>
+                <div style="font-size:11px;color:rgba(255,255,255,.7);line-height:1.5" id="iron-absorbed-pct">~0% est. absorption</div>
+                <div style="height:1px;background:rgba(255,255,255,.1);margin:9px 0"></div>
+                <div style="display:flex;justify-content:space-between;font-size:11px">
+                  <span style="color:rgba(255,255,255,.6)">Consumed</span>
+                  <span id="iron-consumed-val" style="font-weight:600;color:#fff">0mg</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;font-size:11px;margin-top:3px">
+                  <span style="color:rgba(255,255,255,.6)">Est. absorbed</span>
+                  <span id="iron-absorbed-val2" style="font-weight:600;color:#4FB286">0mg</span>
+                </div>
               </div>
             </div>
-          </div><div class="card" id="shopping-list-card" style="display:none;margin-bottom:12px"></div><div id="micro-suggestions-wrap" style="display:none">
+          </div>
+        </div>
+
+        <div id="iron-coach-line" style="display:none;font-size:12.5px;line-height:1.55;color:var(--text);background:var(--green-light);border-radius:10px;padding:11px 13px;margin-bottom:12px"></div>
+
+        <div style="font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin:2px 2px 8px">Meal by meal</div>
+        <div id="iron-absorption-list">
+          <div style="text-align:center;padding:16px;color:var(--text2);font-size:13px">Log meals to see iron bioavailability analysis</div>
+        </div>
+
+        <button type="button" onclick="var s=this.nextElementSibling;var op=s.style.display!==&#39;none&#39;;s.style.display=op?&#39;none&#39;:&#39;block&#39;;this.querySelector(&#39;span&#39;).textContent=op?&#39;The science&#39;:&#39;Hide&#39;;this.querySelector(&#39;i&#39;).style.transform=op?&#39;rotate(0deg)&#39;:&#39;rotate(90deg)&#39;;" style="background:none;border:none;padding:8px 0 0;font-size:11.5px;font-weight:600;color:var(--green);cursor:pointer;display:inline-flex;align-items:center;gap:4px"><i style="font-style:normal;display:inline-block;transition:transform .2s">▸</i> <span>The science</span></button>
+        <div style="display:none;margin-top:6px">
+          <div style="font-size:11px;color:var(--text3);line-height:1.5">Non-haem iron (plant sources) absorbs at 2–20% depending on meal composition. Vitamin C can increase absorption up to 3×; tea, coffee and calcium within an hour reduce it.</div>
+          <div style="font-size:11px;color:var(--text3);line-height:1.5;margin-top:6px;font-style:italic">Estimated absorption is a directional guide to help you pair foods well — not a clinical measurement, and not for diagnosing or managing iron deficiency. If you’re concerned about iron status, ask your GP for a blood test.</div>
+        </div>
+      </div><div class="card" id="shopping-list-card" style="display:none;margin-bottom:12px"></div><div id="micro-suggestions-wrap" style="display:none">
             <div style="font-size:12px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin:14px 0 8px">Today's action plan</div>
             <div id="micro-suggestions"></div>
           </div><div style="font-size:12px;color:var(--text3);text-align:center;padding:8px;line-height:1.5">Estimates based on logged meals. B12, D3 and iodine require supplementation.</div><div class="section-label" style="display:flex;align-items:center;gap:6px">Creatine intelligence  Plant-specific</div><div class="creatine-card" id="creatine-card">
@@ -1329,7 +1329,7 @@ select option{background:var(--surface);color:var(--text)}
               <strong>Maintenance:</strong> 3-5g/day (keep muscles saturated)<br>
               <strong>Best time:</strong> Post-workout with carbs for best uptake
             </div>
-          </div><div style="font-size:12px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin:14px 0 8px">Iron absorption optimiser  Bioavailability</div></div>
+          </div></div>
         <div id="insight-recovery" style="display:none">
           <!-- FEMALE ATHLETE (shown only when profile sex = F) -->
           <div class="card" id="recovery-scorecard" style="display:none;margin-bottom:12px"></div>
@@ -1640,7 +1640,7 @@ select option{background:var(--surface);color:var(--text)}
           <div style="position:relative;flex-shrink:0" onclick="changeProfilePhoto()" title="Tap to change photo">
             <div id="profile-photo-wrap" style="width:56px;height:56px;border-radius:50%;background:var(--green-light);overflow:hidden;display:flex;align-items:center;justify-content:center;border:2px solid var(--green)">
               <span style="font-size:26px;color:var(--green);font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
-              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T115010.226.html">
+              <img id="profile-photo-img" style="width:100%;height:100%;object-fit:cover;display:none" alt="Profile" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T120453.320.html">
             </div>
             <div style="position:absolute;bottom:-2px;right:-2px;width:20px;height:20px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface)">
               <span style="font-size:10px;color:#fff;font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"></path><circle cx="12" cy="13" r="3"></circle></svg></span>
@@ -1732,7 +1732,7 @@ select option{background:var(--surface);color:var(--text)}
     <path fill="#0A3D2C" d="M 1011.57 273.39 L 828.03 273.39 A 100.00 100.00 0 0 0 747.26 314.43 L 591.55 527.73 Q 586.24 535.00 595.24 535.00 L 694.37 535.00 Q 703.37 535.00 708.67 527.73 L 811.80 386.46 A 45.00 45.00 0 0 1 848.15 367.99 L 887.35 367.99 A 80.00 80.00 0 0 0 945.35 343.09 Z"></path>
     <circle cx="886.5" cy="488.4" r="46.6" fill="#FF8A00"></circle>
   </svg>
-</svg><div style="font-size:13px;color:var(--text2);line-height:1.6">Performance nutrition built for plant-based athletes — not a generic tracker with a vegan filter. It watches the nutrients plant-based training makes hardest (B12, iron, omega-3, calcium), fuels your training days without the guilt, and coaches you in plain, honest language. Data you can act on, never hype.</div></div><div id="backup-indicator" style="margin-top:12px;font-size:11.5px;color:var(--text3);text-align:left;min-height:14px"></div><div style="margin-top:6px;font-size:10.5px;color:var(--text3);text-align:left">VeraFuel  ·  v0908.1047</div><div style="margin-top:10px;padding-top:12px;border-top:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center"><span style="font-size:12px;color:var(--text3)">Version 1.0</span><button onclick="confirmReset()" style="background:none;border:none;font-size:12px;color:var(--text3);cursor:pointer">Reset all data</button></div></div>
+</svg><div style="font-size:13px;color:var(--text2);line-height:1.6">Performance nutrition built for plant-based athletes — not a generic tracker with a vegan filter. It watches the nutrients plant-based training makes hardest (B12, iron, omega-3, calcium), fuels your training days without the guilt, and coaches you in plain, honest language. Data you can act on, never hype.</div></div><div id="backup-indicator" style="margin-top:12px;font-size:11.5px;color:var(--text3);text-align:left;min-height:14px"></div><div style="margin-top:6px;font-size:10.5px;color:var(--text3);text-align:left">VeraFuel  ·  v0908.1104</div><div style="margin-top:10px;padding-top:12px;border-top:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center"><span style="font-size:12px;color:var(--text3)">Version 1.0</span><button onclick="confirmReset()" style="background:none;border:none;font-size:12px;color:var(--text3);cursor:pointer">Reset all data</button></div></div>
     
 
       </div>
@@ -1884,7 +1884,7 @@ select option{background:var(--surface);color:var(--text)}
     </div>
   </div>
   <div class="photo-viewer" id="photo-viewer" onclick="closePhotoViewer()">
-  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T115010.226.html" alt="Progress photo">
+  <img id="pv-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T120453.320.html" alt="Progress photo">
   <div class="photo-viewer-meta" id="pv-meta"></div>
   <button style="margin-top:12px;background:var(--coral-light);color:var(--coral-dark);border:none;border-radius:var(--radius-sm);padding:8px 16px;cursor:pointer;font-size:13px" onclick="event.stopPropagation();deletePhoto(window._pvIdx)"><span style=";font-style:normal"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg></span> Delete</button>
 </div>
@@ -1898,9 +1898,9 @@ select option{background:var(--surface);color:var(--text)}
       <div class="compare-sub" id="compare-span"></div>
     </div>
     <div class="compare-stage" id="compare-stage">
-      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T115010.226.html" alt="Latest photo">
+      <img id="cmp-after" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T120453.320.html" alt="Latest photo">
       <div id="cmp-before-wrap" class="cmp-before-wrap">
-        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T115010.226.html" alt="First photo">
+        <img id="cmp-before" class="cmp-img" src="file:///C:/Users/sawno/Downloads/sports_nutrition_app%20-%202026-09-08T120453.320.html" alt="First photo">
       </div>
       <div id="cmp-divider" class="cmp-divider"><div class="cmp-handle">⟺</div></div>
       <div class="cmp-tag cmp-tag-before">First</div>
@@ -10594,6 +10594,27 @@ function renderIronAbsorption() {
         const _itl = document.getElementById('iron-target-label'); if(_itl && typeof getIronTargetMg==='function') _itl.textContent = 'mg of ' + getIronTargetMg() + 'mg';
     const pctEl = document.getElementById('iron-absorbed-pct');
     const overallPct = grandTotalIron > 0 ? Math.round(grandAbsorbed/grandTotalIron*100) : 0;
+      // Actionable coach line: turn the model into advice.
+      try {
+        const _cl = document.getElementById('iron-coach-line');
+        if(_cl){
+          const tgt = (typeof getIronTargetMg==='function') ? getIronTargetMg() : 14;
+          let msg='';
+          const absorbedShare = grandTotalIron>0 ? grandAbsorbed/grandTotalIron : 0;
+          const hasBlocker = rows.some(function(r){ return /block/i.test(r); });
+          const hasBooster = rows.some(function(r){ return /boost/i.test(r); });
+          if(grandAbsorbed >= tgt*0.9){
+            msg = '✓ Strong iron day — you’re absorbing roughly what you need. Keep pairing iron foods with vitamin C.';
+          } else if(overallPct < 8 || hasBlocker){
+            msg = 'You ate <strong>'+grandTotalIron.toFixed(1)+'mg</strong> but only ~<strong>'+grandAbsorbed.toFixed(1)+'mg</strong> is likely absorbed. Add a vitamin C source (peppers, citrus, berries) to your iron meals, and keep tea/coffee an hour either side — that alone can multiply what you take up.';
+          } else if(hasBooster){
+            msg = 'Good pairing today — the vitamin C in your meals is helping unlock the iron. A little more at your lower-absorption meals would close the gap.';
+          } else {
+            msg = 'You absorbed ~<strong>'+grandAbsorbed.toFixed(1)+'mg</strong> of the <strong>'+grandTotalIron.toFixed(1)+'mg</strong> you ate. Pair iron foods with vitamin C to lift that.';
+          }
+          _cl.innerHTML = msg; _cl.style.display='block';
+        }
+      } catch(e){}
     // Ring & target = INTAKE progress vs the 14mg dietary target (food + supplement).
     // Absorption is shown separately as the insight — never judged against 14mg.
     const targetPct = Math.round(grandTotalIron/14*100);
